@@ -8,8 +8,23 @@ layout: default
 <div class="content-post">
  
   <div class="size margin">
-      Latest Hypergraphs:
+    Latest Hypergraphs:
     {% include posts.html %}
+
+    {% for post in site.posts %}
+    <div class="row">
+      <div class="small-12 columns">
+        
+        <sub>{{ post.date | date: '%B %d, %Y' }}</sub>
+        <a href="{{ post.url }}"><h3>{{ post.title }}</h3></a>
+
+          {{ post.by }}
+
+
+      </div>
+    </div>
+    {% endfor %}
+ 
   </div>
 
 </div>
