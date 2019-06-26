@@ -18,14 +18,13 @@ layout: default
                 <th>Author</th>
             </tr>
         </thead>
-        <tbody>
-           
+        <tbody>  
             {% for post in site.posts %}
             <tr>
-                <td>{% post.date %}</td>
-                <td>{% post.categories %}</td>
-                <td>{% post.title %}</td>
-                <td>{% post.by %}</td>
+                <td>{{ post.date }}</td>
+                <td>{{ post.categories }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.by }}</td>
             </tr>
             {% endfor %} 
         </tbody>
