@@ -8,8 +8,8 @@ layout: default
 <div class="content-post">
  
   <div class="size margin">
-    Latest Hypergraphs:
-    {% include posts.html %}
+  
+   
 
    
 
@@ -18,6 +18,7 @@ layout: default
             <tr>
                 <th>Date</th>
                 <th>Title</th>
+                <th>Category</th>
                 <th>Author</th>
             </tr>
         </thead>
@@ -26,6 +27,7 @@ layout: default
             {% for post in site.posts %}
             <tr>
                 <td>{% post.date %}</td>
+                <td>{% post.categories %}</td>
                 <td>{% post.title %}</td>
                 <td>{% post.by %}</td>
             </tr>
@@ -37,6 +39,14 @@ layout: default
         $('#table_id').DataTable();
     } );
     </script>
+    <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
+        <h2 class="list-post-title">
+            Latest Hypergraphs:
+        </h2>
+      </div>
+      {% include posts.html %}
+    
+    
   </div>
 
 </div>
