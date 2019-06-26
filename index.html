@@ -15,7 +15,12 @@ layout: default
                 <th>Date</th>
                 <th>Title</th>
                 <th>Category</th>
-                <th>Author</th>
+                <th>Source</th>
+                <th>Type</th>
+                <th>|V|</th>
+                <th>|HE|</th>
+                <th>Size</th>
+                <th>Download</th>
             </tr>
         </thead>
         <tbody>  
@@ -24,6 +29,10 @@ layout: default
                 <td>{{ post.date }}</td>
                 <td>{{ post.categories }}</td>
                 <td>{{ post.title }}</td>
+                <td>{{ post.by }}</td>
+                <td>{{ post.by }}</td>
+                <td>{{ post.by }}</td>
+                <td>{{ post.by }}</td>
                 <td>{{ post.by }}</td>
             </tr>
             {% endfor %} 
