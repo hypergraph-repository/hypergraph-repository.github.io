@@ -4,6 +4,7 @@
   {% else %}
   
   {% for post in site.posts %}
+  {% if forloop.rindex <= 4 %}
   <a href="{{ site.baseurl }}{{ post.url }}" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
 
     <div class="list-item-icon container align-items-center justify-content-center">
@@ -28,5 +29,6 @@
     </div>
 
   </a>
+  {% endif %}
   {% endfor %} {% endif %}
 </div>
