@@ -13,4 +13,5 @@ $baseurl: '{{ site.baseurl }}';
 @import "icons";
 @import "post";
 @import "breadcrumbs";
+@import "mixins";
 @import "buttons";
