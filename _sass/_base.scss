@@ -86,3 +86,10 @@ img {
   min-height: calc(100vh - 80px - 200px);
   padding-top: 20px;
 }
+
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
