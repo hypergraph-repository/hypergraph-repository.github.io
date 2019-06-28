@@ -2,7 +2,7 @@
 layout: post
 title: "Karate Network"
 date:   2017-11-12 17:46:41 -0300
-description: "The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network."
+description: "The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network. The hypergraphs of the Karate Network."
 data-name: karate.json
 utl: htttp://bo.com/karate.hgf
 categories: Social-Network
