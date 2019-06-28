@@ -23,9 +23,21 @@ layout: default
                   col-md-6
                   col-lg-4">
           <div class="box" style="height:300px; background-color: red;">
-            Description <p>
-              {{ page.description }}
-            </p>
+            <div class="w3-container">
+                <div class="w3-card-4" style="width:50%;">
+                  <header class="w3-container w3-blue">
+                    <h1>Description</h1>
+                  </header>
+              
+                  <div class="w3-container">
+                    <p>    {{ page.description }}</p>
+                  </div>
+              
+                  <footer class="w3-container w3-blue">
+                    <h5><a href="{{ page.description }}">{{ page.description }}</a>></h5>
+                  </footer>
+              </div>
+            </div>
           
           </div>
       </div>
