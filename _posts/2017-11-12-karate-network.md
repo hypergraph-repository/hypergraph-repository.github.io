@@ -30,5 +30,6 @@ two-avg-degree: 4
 two-power-law-exp: 2
 two-diameter: 4
 two-cc: 0.6
+two-modularity: 0.6
 two-degree-distribution: 2:5-5:12
 ---
