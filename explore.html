@@ -30,6 +30,7 @@ permalink: /explore/
                 <th>Size</th>
                 <th>Vertex Type</th>
                 <th>Edge Type</th>
+                <th>View</th>
             
             </tr>
         </thead>
@@ -44,6 +45,9 @@ permalink: /explore/
                 <td>{{ post.size }}</td>
                 <td>{{ post.vertex-type }}</td>
                 <td>{{ post.edge-type }}</td>
+                <td><a href="{{ post.page }}">  <span class="feather-icon icon-globe"></span> </a></td>
+
+               
             </tr>
             {% endfor %} 
         </tbody>
