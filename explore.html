@@ -37,12 +37,13 @@ permalink: /explore/
             <tr>
                 <td>{{ post.date }}</td>
                 <td>{{ post.title }}</td>
-                <td>{{ post.categories }}</td>
-                <td>{{ post.by }}</td>
+                <td><div style="width:10px;">{{ post.categories }}</div></td>
+                <td><div style="width:10px;"></div>{{ post.by }}</div></td>
                 <td>{{ post.v }}</td>
                 <td>{{ post.e }}</td>
                 <td>{{ post.size }}</td>
-                <td>{{ post.link }}</td>
+                <td><div style="width:10px;"></div>
+                  <a href="{{ post.link }}">{{ post.link }}</a></div></td>
                
             </tr>
             {% endfor %} 
