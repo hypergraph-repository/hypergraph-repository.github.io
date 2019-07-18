@@ -9,30 +9,31 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-  <link rel="stylesheet" href="//css/main.css">
+  <link rel="stylesheet" href="https://github.com/hypergraph-repository/hypergraph-repository.github.io/blob/dev/css/main.scss">
 
-  <link rel="shortcut icon" href="http://localhost:4000//assets/img/favicon.png">
-  <link rel="icon" href="http://localhost:4000//assets/img/favicon.png">
+  <link rel="shortcut icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
+  <link rel="icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
 
   <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
 
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">  
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
 
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.css">  
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.css">
   <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
     <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-  
+
+
   <!-- facebook -->
   <meta property="og:title" content="Hypergraph Repository" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="http://localhost:4000" />
   <meta property="og:description" content="Simple and flexible Jekyll theme for help center." />
   <meta property="og:site_name" content="Hypergraph Repository" />
-  <meta property="og:image" content="http://localhost:4000//assets/img/image.png" />
+  <meta property="og:image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png" />
   <meta property="fb:app_id" content="1154262757941899" />
   <meta property="fb:admins" content="100002787447461" />
   <!-- facebook -->
@@ -42,10 +43,10 @@
   <meta name="twitter:title" content="Hypergraph Repository">
   <meta name="twitter:description" content="Simple and flexible Jekyll theme for help center.">
   <meta name="twitter:creator" content="">
-  <meta name="twitter:image" content="http://localhost:4000//assets/img/image.png">
+  <meta name="twitter:image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
   <meta itemprop="name" content="Hypergraph Repository">
   <meta itemprop="description" content="Simple and flexible Jekyll theme for help center.">
-  <meta itemprop="image" content="http://localhost:4000//assets/img/image.png">
+  <meta itemprop="image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
   <!-- twitter -->
 </head>
 
@@ -56,7 +57,7 @@
   <div class="size margin menu--content container align-items-center justify-content-between">
 
     <div class="" data-aos="fade-right" data-aos-delay="" data-aos-offset="0">
-      <a href="//"><span>Hypergraph Repository</span> </a>
+      <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
     </div>
 
     <a href="https://hypergraph-repository.github.io/explore" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
@@ -105,13 +106,13 @@
     <!-- <nav class="masthead-nav">
       
       
-      <a href="//about/">
+      <a href="/hypergraph-repository.github.io/about/">
         About
       </a>
       
       
       
-      <a href="//explore/">
+      <a href="/hypergraph-repository.github.io/explore/">
         Explore
       </a>
       
@@ -119,7 +120,7 @@
       
       
       
-      <a href="//hypergraphs/">
+      <a href="/hypergraph-repository.github.io/hypergraphs/">
         Hypergraphs
       </a>
       
@@ -139,7 +140,40 @@
 </div>
 
 
-    <!-- breadcrumbs -->
+    <style media="screen">
+  .w3-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  header >h3 {
+    position: relative;
+    color: #000;
+    text-decoration: none;
+  }
+
+  header > h3:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  header > h3:hover:before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
+</style>
+
+<!-- breadcrumbs -->
 <div class="size margin" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
   
 
@@ -148,7 +182,7 @@
 
 
 <div class="container wrap breadcrumbs">
-  <a href="http://localhost:4000/">Home</a>
+  <a href="http://localhost:4000/hypergraph-repository.github.io/">Home</a>
   
   <span class="prompt margin-left-10 margin-right-10">></span>
   
@@ -170,38 +204,41 @@
 
     </div>
 
+
     <div class="row" data-aos="zoom-in" style="margin-top:20px;">
+
       <div class="col-xs-12
-                  col-sm-8
-                  col-md-6
-                  col-lg-6">
-          <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white">Description</h1>
-                  </header>
-                  <div class="w3-container">
-                    <p>    The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During the study a conflict arose between the administrator John A and instructor Mr. Hi (pseudonyms), which led to the split of the club into two. Half of the members formed a new club around Mr. Hi; members from the other part found a new instructor or gave up karate. Based on collected data Zachary correctly assigned all but one member of the club to the groups they actually joined after the split.</p>
-                  </div>
-                  <footer class="w3-container w3-blue w3-padding-small">
-                    
-                      <h6> <span class="feather-icon icon-link w3-text-white"></span> <a class="w3-text-white" href="http://bo.com/karate.hgf">http://bo.com/karate.hgf</a></h5>
-                  </footer>
+                    col-sm-8
+                    col-md-6
+                    col-lg-6">
+            <div class="box">
+              <div class="w3-container" style="width:100%;  margin-top:20px;">
+                  <div class="w3-card-4" style="border-radius: 30px 30px 30px 30px;">
+                    <header class="w3-container w3-blue w3-padding-small " style="border-radius: 30px 30px 0 0;">
+                      <h3 class="w3-text-white" style="margin-left:10px;">Description</h3>
+                    </header>
+                    <div class="w3-container">
+                      <p>   The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During the study a conflict arose between the administrator John A and instructor Mr. Hi (pseudonyms), which led to the split of the club into two. Half of the members formed a new club around Mr. Hi; members from the other part found a new instructor or gave up karate. Based on collected data Zachary correctly assigned all but one member of the club to the groups they actually joined after the split.  </div>
+                    <footer class="w3-container w3-blue w3-padding-small" style="border-radius: 0 0 30px 30px;">
+
+                        <h6> <span class="feather-icon icon-link w3-text-white" style="margin-left: 20px;"></span>
+                          <a class="w3-text-white" href="http://bo.com/karate.hgf">http://bo.com/karate.hgf</a>
+                        </h6>
+                    </footer>
+                </div>
               </div>
+
             </div>
-          
-          </div>
-      </div>
+        </div>
       <div class="col-xs-12
             col-sm-8
             col-md-6
             col-lg-6">
           <div class="box" >
           <div class="w3-container" style="width:100%; margin-top:20px;">
-              <div class="w3-card-4">
-                <header class="w3-container w3-blue w3-padding-small ">
-                  <h3 class="w3-text-white">Hypergraph details</h1>
+              <div class="w3-card-4" style="border-radius: 30px 30px 30px 30px;">
+                <header class="w3-container w3-blue w3-padding-small " style="border-radius: 30px 30px 0 0;">
+                  <h3 class="w3-text-white" style="margin-left:10px;">Hypergraph Details</h3>
                 </header>
                 <div class="w3-container">
                   <table>
@@ -218,11 +255,12 @@
                     <tr><td>Modularity: </td><td>0.4</td></tr>
                   </table>
                 </div>
-              
+
             </div>
           </div>
           </div>
         </div>
+
 
         <div class="col-xs-12
               col-sm-8
@@ -230,9 +268,9 @@
               col-lg-6">
             <div class="box" >
             <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white">2-Section Graph details</h1>
+                <div class="w3-card-4" style="border-radius: 30px 30px 30px 30px;">
+                  <header class="w3-container w3-blue w3-padding-small " style="border-radius: 30px 30px 0 0;">
+                    <h3 class="w3-text-white" style="margin-left:10px;">2-Section Graph Details</h3>
                   </header>
                   <div class="w3-container">
                     <table>
@@ -249,7 +287,7 @@
                       <tr><td>Modularity: </td><td>0.4</td></tr>
                     </table>
                   </div>
-                
+
               </div>
             </div>
             </div>
@@ -263,31 +301,34 @@
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4">
                   <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white">Hypergraph Degree Distribution</h1>
+                    <h3 class="w3-text-white">Hypergraph Degree Distribution</h3>
                   </header>
                   <div class="w3-container">
                     <div class="ct-chart" id="chart_degree_distribution" style=" width: 100%; height:300px;"></div>
                   </div>
-                
+
               </div>
             </div>
             </div>
           </div>
+          </div>
   </div>
-
-
-
+  </div>
+  </div>
     
 
 
     <script>
-        
-      new Chartist.Line('#chart_degree_distribution', {
+      var data = {
         labels: [1, 2, 3, 4, 5, 6, 7, 8],
         series: [
           [5, 9, 7, 8, 5, 3, 5, 4]
         ]
-      }, {
+      }
+
+
+
+      new Chartist.Line('#chart_degree_distribution', data, {
         low: 0,
         showArea: true
       });
@@ -302,7 +343,7 @@
   <div class="footer container column align-items-center justify-content-center">
     <div class="footer--block text-align-center">
       <div class="" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
-        <a href="//"><span>Hypergraph Repository</span> </a>
+        <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
       </div>
      <!-- <div class="by" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">
         <a href="https://github.com/gustavoquinalha/jekyll-help-center-theme" target="_blank">Created with jekyll</a>
@@ -313,8 +354,10 @@
 
   </div>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-  <script src="//assets/js/simple-jekyll-search.min.js"></script>
-  
+<script type="text/javascript" src="https://github.com/hypergraph-repository/hypergraph-repository.github.io/blob/dev/assets/js/simple-jekyll-search.min.js">
+
+</script>
+
   <script>
     AOS.init({
       once: true
@@ -323,7 +366,7 @@
     SimpleJekyllSearch({
       searchInput: document.getElementById('search-input'),
       resultsContainer: document.getElementById('results-container'),
-      json: '//search.json'
+      json: '/hypergraph-repository.github.io/search.json'
     })
   </script>
 </body>
