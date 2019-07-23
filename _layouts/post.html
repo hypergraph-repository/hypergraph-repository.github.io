@@ -86,118 +86,6 @@ layout: default
         </div>
       </div>
 <!-- end of cell-->
-
-    <!-- Start of Cell-->
-    <div class="col-xs-12
-          col-sm-6
-          col-md-6
-          col-lg-6">
-        <div class="box" >
-        <div class="w3-container" style="width:100%;  margin-top:20px;">
-            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-              <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
-              </header>
-              <div class="w3-container">
-                <table>
-                  <table>
-                    <tr><td>Categories: </td><td>{{ page.categories}}</td></tr>
-                    <tr><td>Size: </td><td>{{ page.size}}</td></tr>
-                    <tr><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-                    <tr><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-                    <tr><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-                    <tr><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
-                    <tr><td>|V|: </td><td>{{ page.v}}</td></tr>
-                    <tr><td>|E|:  </td><td>{{ page.e}}</td></tr>
-                    <tr><td>Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                    <tr><td>Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                    <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
-                  </table>
-              </div>
-
-          </div>
-        </div>
-        </div>
-      </div>
-    <!-- end of cell-->
-
-        <!-- Start of Cell-->
-        <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graph Details</h3>
-                  </header>
-                  <div class="w3-container">
-                    <table>
-                      <tr><td>|E|: </td><td>{{ page.two-e}}</td></tr>
-                      <tr><td>LCC: </td><td>{{ page.two-lcc}}</td></tr>
-                      <tr><td>Density: </td><td>{{ page.two-density}}</td></tr>
-                      <tr><td>Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
-                      <tr><td>Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
-                      <tr><td>Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
-                      <tr><td>Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
-                      <tr><td>Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
-                      <tr><td>Diameter: </td><td>{{ page.two-diameter}}</td></tr>
-                      <tr><td>CC: </td><td>{{ page.two-cc}}</td></tr>
-                      <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
-                    </table>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-<!-- Start of Cell-->
-          <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
-                  </header>
-                  <div class="w3-container">
-                    <div class="ct-chart" id="chart_degree_distribution" style=" width: 100%; height:300px;"></div>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-
-<!-- Start of Cell-->
-          <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Loading</h3>
-                  </header>
-                  <div class="w3-container">
-                    <button class="btn btn-primary" type="button" disabled>
-                    <span class="spinner-grow spinner-grow-sm" role="status" aria-hidden="true"></span>
-                    Loading...
-                  </button>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-
 <!-- Start of Cell-->
 
           <div class="col-xs-12
@@ -250,6 +138,119 @@ layout: default
           </div>
 
 <!-- end of cell-->
+
+<!-- Start of Cell-->
+    <div class="col-xs-12
+          col-sm-6
+          col-md-6
+          col-lg-6">
+        <div class="box" >
+        <div class="w3-container" style="width:100%;  margin-top:20px;">
+            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+              <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+              </header>
+              <div class="w3-container">
+                <table>
+                  <table class="table">
+                    <th scope="col">Data</th>
+                    <th scope="col">Values</th>
+                    <tr><td>Categories: </td><td>{{ page.categories}}</td></tr>
+                    <tr><td>Size: </td><td>{{ page.size}}</td></tr>
+                    <tr><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+                    <tr><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+                    <tr><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+                    <tr><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+                    <tr><td>|V|: </td><td>{{ page.v}}</td></tr>
+                    <tr><td>|E|:  </td><td>{{ page.e}}</td></tr>
+                    <tr><td>Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                    <tr><td>Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                    <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
+                  </table>
+              </div>
+
+          </div>
+        </div>
+        </div>
+      </div>
+    <!-- end of cell-->
+
+        <!-- Start of Cell-->
+        <div class="col-xs-12
+              col-sm-6
+              col-md-6
+              col-lg-6">
+            <div class="box" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graph Details</h3>
+                  </header>
+                  <div class="w3-container">
+                    <table class="table">
+                      <tr><td>|E|: </td><td>{{ page.two-e}}</td></tr>
+                      <tr><td>LCC: </td><td>{{ page.two-lcc}}</td></tr>
+                      <tr><td>Density: </td><td>{{ page.two-density}}</td></tr>
+                      <tr><td>Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
+                      <tr><td>Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
+                      <tr><td>Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
+                      <tr><td>Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
+                      <tr><td>Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
+                      <tr><td>Diameter: </td><td>{{ page.two-diameter}}</td></tr>
+                      <tr><td>CC: </td><td>{{ page.two-cc}}</td></tr>
+                      <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
+                    </table>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+          </div>
+<!-- end of cell-->
+<!-- Start of Cell-->
+          <div class="col-xs-12
+              col-sm-6
+              col-md-6
+              col-lg-6">
+            <div class="box" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small ">
+                    <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
+                  </header>
+                  <div class="w3-container">
+                    <div class="ct-chart" id="chart_degree_distribution" style=" width: auto; height:auto;"></div>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+          </div>
+<!-- end of cell-->
+
+<!-- Start of Cell-->
+          <div class="col-xs-12
+              col-sm-6
+              col-md-6
+              col-lg-6">
+            <div class="box" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small ">
+                    <h3 class="w3-text-white ulanimate">Loading</h3>
+                  </header>
+                  <div class="w3-container">
+                    <div class="ct-chart" id="pie-chart">
+
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+          </div>
+<!-- end of cell-->
+
 <!-- Start of Cell-->
 <div class="col-xs-12
     col-sm-6
@@ -270,10 +271,10 @@ layout: default
     <!-- Card content -->
     <div class="card-body card-body-cascade text-center">
       <!-- Text -->
-      <p class="card-text">{{ page.degree-distribution  }}</p>
+      <div class="ct-chart" id="bar_degree_distribution" style=" width: auto; height:auto;"></div>
 
 
-      <hr>
+
       <!-- Twitter -->
       <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"> </i></a>
       <!-- Linkedin -->
@@ -313,6 +314,80 @@ layout: default
         low: 0,
         showArea: true
       });
+
+      new Chartist.Bar('#bar_degree_distribution', data, {
+        low: 0,
+        showArea: true
+      });
+
+      var data_pie = {
+  series: {{site.data.file.series | jsonify}}
+};
+
+var sum = function(a, b) { return a + b };
+
+new Chartist.Pie('pie-chart', data_pie, {
+  labelInterpolationFnc: function(value) {
+    return Math.round(value / data.series.reduce(sum) * 100) + '%';
+  }
+});
+
+var chart = new Chartist.Pie('#pie-chart', {
+  series: [10, 20, 50, 20, 5, 50, 15],
+  labels: [1, 2, 3, 4, 5, 6, 7]
+}, {
+  donut: true,
+  showLabel: false
+});
+
+chart.on('draw', function(data) {
+  if(data.type === 'slice') {
+    // Get the total path length in order to use for dash array animation
+    var pathLength = data.element._node.getTotalLength();
+
+    // Set a dasharray that matches the path length as prerequisite to animate dashoffset
+    data.element.attr({
+      'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+    });
+
+    // Create animation definition while also assigning an ID to the animation for later sync usage
+    var animationDefinition = {
+      'stroke-dashoffset': {
+        id: 'anim' + data.index,
+        dur: 1000,
+        from: -pathLength + 'px',
+        to:  '0px',
+        easing: Chartist.Svg.Easing.easeOutQuint,
+        // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+        fill: 'freeze'
+      }
+    };
+
+    // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+    if(data.index !== 0) {
+      animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+    }
+
+    // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+    data.element.attr({
+      'stroke-dashoffset': -pathLength + 'px'
+    });
+
+    // We can't use guided mode as the animations need to rely on setting begin manually
+    // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+    data.element.animate(animationDefinition, false);
+  }
+});
+
+// For the sake of the example we update the chart every time it's created with a delay of 8 seconds
+chart.on('created', function() {
+  if(window.__anim21278907124) {
+    clearTimeout(window.__anim21278907124);
+    window.__anim21278907124 = null;
+  }
+  window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
+});
+
       </script>
 
     <!-- content -->
