@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Karate Network</title>
 
-
 <!--MDB Packges-->
 
 <!-- Font Awesome -->
@@ -23,8 +22,8 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
-
 <!--MDB Packges-->
+
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
 
@@ -36,18 +35,12 @@
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
 
-  <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-
-
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-
-  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.css">
-  <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-    <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 
 
   <!-- facebook -->
@@ -71,6 +64,12 @@
   <meta itemprop="description" content="Simple and flexible Jekyll theme for help center.">
   <meta itemprop="image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
   <!-- twitter -->
+
+<!-- ChartistJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<!-- ChartistJS-->
+
 </head>
 
 
@@ -304,9 +303,6 @@
                         </div>
                       <!--Ends here -->
                   </div>
-                  <div class="card-footer bg-primary text-right">
-                  <a href="#" class="btn btn-info btn-sm">btn</a> <a href="#" class="btn btn-success btn-sm">btn</a>
-                  </div>
                   </div>
                   </div>
 
@@ -329,8 +325,7 @@
                 <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
               </header>
               <div class="w3-container">
-                <table>
-                  <table class="table">
+                <table class="table">
                     <th scope="col">Data</th>
                     <th scope="col">Values</th>
                     <tr><td>Categories: </td><td>Social-Network</td></tr>
@@ -366,6 +361,8 @@
                   </header>
                   <div class="w3-container">
                     <table class="table">
+                      <th scope="col">Data</th>
+                      <th scope="col">Values</th>
                       <tr><td>|E|: </td><td>40</td></tr>
                       <tr><td>LCC: </td><td>10</td></tr>
                       <tr><td>Density: </td><td>0.4</td></tr>
@@ -397,7 +394,7 @@
                     <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
                   </header>
                   <div class="w3-container">
-                    <div class="ct-chart" id="chart_degree_distribution" style=" width: auto; height:auto;"></div>
+                    <div class="ct-chart" id="chart_degree_distribution"></div>
                   </div>
 
               </div>
@@ -415,7 +412,7 @@
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4">
                   <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Loading</h3>
+                    <h3 class="w3-text-white ulanimate">Pie Chart</h3>
                   </header>
                   <div class="w3-container">
                     <div class="ct-chart" id="pie-chart">
@@ -429,43 +426,29 @@
           </div>
 <!-- end of cell-->
 
+
+
 <!-- Start of Cell-->
 <div class="col-xs-12
     col-sm-6
     col-md-6
     col-lg-6">
-      <div class="box">
-      <!-- Card -->
-  <div class="card card-cascade">
+  <div class="box" >
+  <div class="w3-container" style="width:100%;  margin-top:20px;">
+      <div class="w3-card-4">
+        <header class="w3-container w3-blue w3-padding-small ">
+          <h3 class="w3-text-white ulanimate">Bar Chart</h3>
+        </header>
+        <div class="w3-container">
+        <div class="ct-chart" id="bar_degree_distribution"></div>
 
-    <!-- Card image -->
-    <div class="view view-cascade gradient-card-header blue-gradient">
+          </div>
+        </div>
 
-      <!-- Title -->
-      <h2 class=" w3-container card-header-title mb-3" style="color:white;">Description</h2>
-      <!-- Subtitle -->
-
-    </div>
-    <!-- Card content -->
-    <div class="card-body card-body-cascade text-center">
-      <!-- Text -->
-      <div class="ct-chart" id="bar_degree_distribution" style=" width: auto; height:auto;"></div>
-
-
-
-      <!-- Twitter -->
-      <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"> </i></a>
-      <!-- Linkedin -->
-      <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"> </i></a>
-      <!-- Facebook -->
-      <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"> </i></a>
-      <!-- Email -->
-      <a class="px-2 fa-lg email-ic"><i class="fas fa-envelope"> </i></a>
     </div>
   </div>
-  <!-- Card -->
   </div>
-    </div>
+</div>
 <!-- end of cell-->
 </div>
 </div>
@@ -478,28 +461,31 @@
 
 
 
-    <script>
 
-      var data = {
-        labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],
-        series: [
-          [10,20,30,20,50,60,20,10,30,40,40,50,20,10,30,50,60,10,20,40,57,5,17,10,20,10,50,10]
-        ]
-      }
+    <!-- content -->
+  </article>
+</div>
 
+<script>
 
+  var data = {
+    labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],
+    series: [
+      [10,20,30,20,50,60,20,10,30,40,40,50,20,10,30,50,60,10,20,40,57,5,17,10,20,10,50,10]
+    ]
+  }
 
-      new Chartist.Line('#chart_degree_distribution', data, {
-        low: 0,
-        showArea: true
-      });
+  new Chartist.Line('#chart_degree_distribution', data, {
+    low: 0,
+    showArea: true
+  });
 
-      new Chartist.Bar('#bar_degree_distribution', data, {
-        low: 0,
-        showArea: true
-      });
+  new Chartist.Bar('#bar_degree_distribution', data, {
+    low: 0,
+    showArea: true
+  });
 
-      var data_pie = {
+var data_pie = {
   series: [10,20,30,20,50,60,20,10,30,40,40,50,20,10,30,50,60,10,20,40,57,5,17,10,20,10,50,10]
 };
 
@@ -507,76 +493,67 @@ var sum = function(a, b) { return a + b };
 
 new Chartist.Pie('pie-chart', data_pie, {
   labelInterpolationFnc: function(value) {
-    return Math.round(value / data.series.reduce(sum) * 100) + '%';
-  }
+return Math.round(value / data.series.reduce(sum) * 100) + '%';
+}
 });
 
 var chart = new Chartist.Pie('#pie-chart', {
-  series: [10, 20, 50, 20, 5, 50, 15],
-  labels: [1, 2, 3, 4, 5, 6, 7]
+series: [10, 20, 50, 20, 5, 50, 15],
+labels: [1, 2, 3, 4, 5, 6, 7]
 }, {
-  donut: true,
-  showLabel: false
+donut: true,
+showLabel: false
 });
 
 chart.on('draw', function(data) {
-  if(data.type === 'slice') {
-    // Get the total path length in order to use for dash array animation
-    var pathLength = data.element._node.getTotalLength();
+if(data.type === 'slice') {
+// Get the total path length in order to use for dash array animation
+var pathLength = data.element._node.getTotalLength();
 
-    // Set a dasharray that matches the path length as prerequisite to animate dashoffset
-    data.element.attr({
-      'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-    });
+// Set a dasharray that matches the path length as prerequisite to animate dashoffset
+data.element.attr({
+  'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+});
 
-    // Create animation definition while also assigning an ID to the animation for later sync usage
-    var animationDefinition = {
-      'stroke-dashoffset': {
-        id: 'anim' + data.index,
-        dur: 1000,
-        from: -pathLength + 'px',
-        to:  '0px',
-        easing: Chartist.Svg.Easing.easeOutQuint,
-        // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-        fill: 'freeze'
-      }
-    };
-
-    // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-    if(data.index !== 0) {
-      animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-    }
-
-    // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-    data.element.attr({
-      'stroke-dashoffset': -pathLength + 'px'
-    });
-
-    // We can't use guided mode as the animations need to rely on setting begin manually
-    // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-    data.element.animate(animationDefinition, false);
+// Create animation definition while also assigning an ID to the animation for later sync usage
+var animationDefinition = {
+  'stroke-dashoffset': {
+    id: 'anim' + data.index,
+    dur: 1000,
+    from: -pathLength + 'px',
+    to:  '0px',
+    easing: Chartist.Svg.Easing.easeOutQuint,
+    // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+    fill: 'freeze'
   }
+};
+
+// If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+if(data.index !== 0) {
+  animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+}
+
+// We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+data.element.attr({
+  'stroke-dashoffset': -pathLength + 'px'
+});
+
+// We can't use guided mode as the animations need to rely on setting begin manually
+// See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+data.element.animate(animationDefinition, false);
+}
 });
 
 // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
 chart.on('created', function() {
-  if(window.__anim21278907124) {
-    clearTimeout(window.__anim21278907124);
-    window.__anim21278907124 = null;
-  }
-  window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
+if(window.__anim21278907124) {
+clearTimeout(window.__anim21278907124);
+window.__anim21278907124 = null;
+}
+window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 });
 
-      </script>
-
-    <!-- content -->
-  </article>
-</div>
-
-<script type="text/javascript">
-  console.log("[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]")
-
-</script>
+  </script>
 
 
     <footer>
