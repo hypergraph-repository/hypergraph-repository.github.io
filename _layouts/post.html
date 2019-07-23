@@ -270,7 +270,11 @@ layout: default
     <!-- Card content -->
     <div class="card-body card-body-cascade text-center">
       <!-- Text -->
-      <p class="card-text">{{ page.description }}</p>
+      <p class="card-text">{{ page.degree-distribution | jsonify }}</p>
+{% for data in page.degree-distribution %}
+{{data | jsonify}}<hr>
+{{data[0]}}
+{%endfor%}
       <hr>
       <!-- Twitter -->
       <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"> </i></a>
@@ -297,6 +301,7 @@ layout: default
 
 
     <script>
+      var array = {{ page.degree-distribution}}
       var data = {
         labels: [1, 2, 3, 4, 5, 6, 7, 8],
         series: [

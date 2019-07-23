@@ -18,7 +18,7 @@ v: 32
 e: 10
 max-e-size: 4
 max-degree: 4
-degree-distribution: 2:4-3:10
+degree-distribution: 2:10,3:20,4:25,5:40
 edges-distribution: 2:5-5:12
 modularity: 0.40
 two-lcc: 10
