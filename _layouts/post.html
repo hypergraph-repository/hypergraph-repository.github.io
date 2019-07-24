@@ -32,6 +32,68 @@ layout: default
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
+  /* TAGS for Graph and iid data */
+.tags {
+  font: 12px/1.5 "ProximaNova", serif, sans-serif;
+  letter-spacing: 1px;
+  /*'PT Sans', serif,*/
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tags li {
+  float: left;
+}
+
+.tag {
+  background: #205469;
+  border-radius: 3px 0 0 3px;
+  /*color: #999;*/
+  color: #FFF;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #205469;
+  /*border-lefT: 10px solid #FF6600;*/
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: crimson;
+}
+}
 </style>
 
 <!--breadcrumbs-->
@@ -84,25 +146,182 @@ layout: default
           </div>
         </div>
         </div>
-      </div>
+
 <!-- end of cell-->
+
+
 <!-- Start of Cell-->
 
-          <div class="col-xs-12
+        <div class="box .row.row-eq-height" >
+        <div class="w3-container" style="width:100%;  margin-top:20px;">
+            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+              <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
+              </header>
+              <div class="w3-container">
+                <table class="">
+                    <tr><td class="tag">Categories: </td><td>{{ page.categories}}</td></tr>
+                    <tr><td class="tag">Size: </td><td>{{ page.size}}</td></tr>
+                    <tr><td class="tag">Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+                    <tr><td class="tag">Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+              </table>
+              </div>
+
+          </div>
+        </div>
+        </div>
+
+    <!-- end of cell-->
+
+    <!-- Start of Cell-->
+
+            <div class="box .row.row-eq-height" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+                  </header>
+                  <div class="w3-container">
+                    <table class="">
+
+                        <tr><td class="tag">Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+                        <tr><td class="tag">Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+                        <tr><td class="tag">|V|: </td><td>{{ page.v}}</td></tr>
+                        <tr><td class="tag">|E|:  </td><td>{{ page.e}}</td></tr>
+                        <tr><td class="tag">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                        <tr><td class="tag">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                        <tr><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+                      </table>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+</div>
+        <!-- end of cell-->
+
+        <!-- Start of Cell-->
+        <div class="col-xs-12
               col-sm-6
               col-md-6
               col-lg-6">
-            <div class="box" >
+            <div class="box .row.row-eq-height" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graph Details</h3>
+                  </header>
+                  <div class="w3-container">
+                    <table class="">
+                      <tr><td class="tag">|E|: </td><td>{{ page.two-e}}</td></tr>
+                      <tr><td class="tag">LCC: </td><td>{{ page.two-lcc}}</td></tr>
+                      <tr><td class="tag">Density: </td><td>{{ page.two-density}}</td></tr>
+                      <tr><td class="tag">Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
+                      <tr><td class="tag">Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
+                      <tr><td class="tag">Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
+                      <tr><td class="tag">Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
+                      <tr><td class="tag">Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
+                      <tr><td class="tag">Diameter: </td><td>{{ page.two-diameter}}</td></tr>
+                      <tr><td class="tag">CC: </td><td>{{ page.two-cc}}</td></tr>
+                      <tr><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+                    </table>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+
+<!-- end of cell-->
+<!-- Start of Cell-->
+
+            <div class="box .row.row-eq-height" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small ">
+                    <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
+                  </header>
+                  <div class="w3-container">
+                    <div class="ct-chart" id="chart_degree_distribution2"></div>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+
+<!-- end of cell-->
+
+<!-- Start of Cell-->
+
+            <div class="box .row.row-eq-height" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small ">
+                    <h3 class="w3-text-white ulanimate">Pie Chart</h3>
+                  </header>
+                  <div class="w3-container">
+                    <div class="ct-chart" id="pie-chart">
+
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+
+<!-- end of cell-->
+
+
+
+<!-- Start of Cell-->
+
+  <div class="box .row.row-eq-height" >
+  <div class="w3-container" style="width:100%;  margin-top:20px;">
+      <div class="w3-card-4">
+        <header class="w3-container w3-blue w3-padding-small ">
+          <h3 class="w3-text-white ulanimate">Bar Chart</h3>
+        </header>
+        <div class="w3-container">
+        <div class="ct-chart" id="bar_degree_distribution2"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+<!--ednof cell-->
+</div>
+</div>
+</div>
+<!-- Start of Cell-->
+            <div class="" >
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4" style="border-radius:10px 10px 0 0">
-                  <div class="col-med-6">
-                  <div class="card text-dark bg-light" style="border-radius:10px 10px 0 0">
-                  <div class="card-header bg-primary text-center text-dark" style="border-radius:10px 10px 0 0"><h4>DUMP</h4></div>
-                  <div class="card-body bg-white ">
-                  <h5 class="card-title">Category</h5>
+                  <header class="w3-container w3-blue w3-padding-small ">
+                    <h3 class="w3-text-white ulanimate">Visualization</h3>
+                  </header>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-6 col-sm-6">
+                          <!--panel # 1 -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="ct-chart" id="bar_degree_distribution"></div>
+                                  </div>
+                                </div>
+                              <!--panel # 1 end -->
+                            </div>
+                          <div class="col-md-6 col-sm-6">
+                        <!--panel # 2 start -->
+                      <div class="card">
+                        <div class="card-body">
+                            <div class="ct-chart" id="chart_degree_distribution"></div>
+                                    </div>
+                                      </div>
+                                      <!--panel # 2  ends-->
+                          </div>
 
+                        </div>
+                      </div>
+                    <br>
                     <!--Starting list group here -->
-
                         <div class="list-group">
                           <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
                           <span class="badge badge-primary badge-pill badge-secondary">55</span>
@@ -127,154 +346,16 @@ layout: default
                       <!--Ends here -->
                   </div>
                   </div>
-                  </div>
+
 
               </div>
             </div>
             </div>
-          </div>
+
 
 <!-- end of cell-->
 
-<!-- Start of Cell-->
-    <div class="col-xs-12
-          col-sm-6
-          col-md-6
-          col-lg-6">
-        <div class="box" >
-        <div class="w3-container" style="width:100%;  margin-top:20px;">
-            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-              <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
-              </header>
-              <div class="w3-container">
-                <table class="table">
-                    <th scope="col">Data</th>
-                    <th scope="col">Values</th>
-                    <tr><td>Categories: </td><td>{{ page.categories}}</td></tr>
-                    <tr><td>Size: </td><td>{{ page.size}}</td></tr>
-                    <tr><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-                    <tr><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-                    <tr><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-                    <tr><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
-                    <tr><td>|V|: </td><td>{{ page.v}}</td></tr>
-                    <tr><td>|E|:  </td><td>{{ page.e}}</td></tr>
-                    <tr><td>Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                    <tr><td>Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                    <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
-                  </table>
-              </div>
 
-          </div>
-        </div>
-        </div>
-      </div>
-    <!-- end of cell-->
-
-        <!-- Start of Cell-->
-        <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graph Details</h3>
-                  </header>
-                  <div class="w3-container">
-                    <table class="table">
-                      <th scope="col">Data</th>
-                      <th scope="col">Values</th>
-                      <tr><td>|E|: </td><td>{{ page.two-e}}</td></tr>
-                      <tr><td>LCC: </td><td>{{ page.two-lcc}}</td></tr>
-                      <tr><td>Density: </td><td>{{ page.two-density}}</td></tr>
-                      <tr><td>Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
-                      <tr><td>Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
-                      <tr><td>Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
-                      <tr><td>Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
-                      <tr><td>Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
-                      <tr><td>Diameter: </td><td>{{ page.two-diameter}}</td></tr>
-                      <tr><td>CC: </td><td>{{ page.two-cc}}</td></tr>
-                      <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
-                    </table>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-<!-- Start of Cell-->
-          <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
-                  </header>
-                  <div class="w3-container">
-                    <div class="ct-chart" id="chart_degree_distribution"></div>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-
-<!-- Start of Cell-->
-          <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Pie Chart</h3>
-                  </header>
-                  <div class="w3-container">
-                    <div class="ct-chart" id="pie-chart">
-
-                    </div>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-
-
-
-<!-- Start of Cell-->
-<div class="col-xs-12
-    col-sm-6
-    col-md-6
-    col-lg-6">
-  <div class="box" >
-  <div class="w3-container" style="width:100%;  margin-top:20px;">
-      <div class="w3-card-4">
-        <header class="w3-container w3-blue w3-padding-small ">
-          <h3 class="w3-text-white ulanimate">Bar Chart</h3>
-        </header>
-        <div class="w3-container">
-        <div class="ct-chart" id="bar_degree_distribution"></div>
-
-          </div>
-        </div>
-
-    </div>
-  </div>
-  </div>
-</div>
-<!-- end of cell-->
-</div>
-</div>
   </div>
   </div>
 
