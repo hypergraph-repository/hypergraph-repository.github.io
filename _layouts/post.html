@@ -33,8 +33,70 @@ layout: default
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
   }
-</style>
+  /* TAGS for Graph and iid data */
+.tags {
+  font: 12px/1.5 "ProximaNova", serif, sans-serif;
+  letter-spacing: 1px;
+  /*'PT Sans', serif,*/
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
 
+.tags li {
+  float: left;
+}
+
+.tag {
+  background: #205469;
+  border-radius: 3px 0 0 3px;
+  /*color: #999;*/
+  color: #FFF;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #205469;
+  /*border-lefT: 10px solid #FF6600;*/
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: crimson;
+}
+}
+</style>
+<br>
 <!--breadcrumbs-->
 <div class="size margin" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
   {% include breadcrumbs.html path=page.path title=page.title %}
@@ -85,24 +147,188 @@ layout: default
           </div>
         </div>
         </div>
-      </div>
+
 <!-- end of cell-->
+
+
 <!-- Start of Cell-->
 
-          <div class="col-xs-12
+        <div class="box .row.row-eq-height" >
+        <div class="w3-container" style="width:100%;  margin-top:20px;">
+            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+              <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
+              </header>
+              <div class="w3-container">
+                <table class="">
+                    <tr><td class="tag">Categories: </td><td>{{ page.categories}}</td></tr>
+                    <tr><td class="tag">Size: </td><td>{{ page.size}}</td></tr>
+                    <tr><td class="tag">Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+                    <tr><td class="tag">Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+              </table>
+              </div>
+
+          </div>
+        </div>
+        </div>
+
+    <!-- end of cell-->
+
+    <!-- Start of Cell-->
+
+            <div class="box .row.row-eq-height" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+                  </header>
+                  <div class="w3-container">
+                    <table class="">
+
+                        <tr><td class="tag">Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+                        <tr><td class="tag">Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+                        <tr><td class="tag">|V|: </td><td>{{ page.v}}</td></tr>
+                        <tr><td class="tag">|E|:  </td><td>{{ page.e}}</td></tr>
+                        <tr><td class="tag">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                        <tr><td class="tag">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                        <tr><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+                      </table>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+</div>
+        <!-- end of cell-->
+
+        <!-- Start of Cell-->
+        <div class="col-xs-12
               col-sm-6
               col-md-6
               col-lg-6">
-            <div class="box" >
+            <div class="box .row.row-eq-height" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graph Details</h3>
+                  </header>
+                  <div class="w3-container">
+                    <table class="">
+                      <tr><td class="tag">|E|: </td><td>{{ page.two-e}}</td></tr>
+                      <tr><td class="tag">LCC: </td><td>{{ page.two-lcc}}</td></tr>
+                      <tr><td class="tag">Density: </td><td>{{ page.two-density}}</td></tr>
+                      <tr><td class="tag">Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
+                      <tr><td class="tag">Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
+                      <tr><td class="tag">Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
+                      <tr><td class="tag">Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
+                      <tr><td class="tag">Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
+                      <tr><td class="tag">Diameter: </td><td>{{ page.two-diameter}}</td></tr>
+                      <tr><td class="tag">CC: </td><td>{{ page.two-cc}}</td></tr>
+                      <tr><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+                    </table>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+
+<!-- end of cell-->
+<!-- Start of Cell-->
+
+            <div class="box .row.row-eq-height" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small ">
+                    <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
+                  </header>
+                  <div class="w3-container">
+                    <div class="ct-chart" id="chart_degree_distribution2"></div>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+
+<!-- end of cell-->
+<div class="">
+
+</div>
+
+<!-- Start of Cell-->
+
+            <div class="box .row.row-eq-height" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small ">
+                    <h3 class="w3-text-white ulanimate">Pie Chart</h3>
+                  </header>
+                  <div class="w3-container">
+                    <div class="ct-chart" id="pie-chart">
+
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+            </div>
+
+<!-- end of cell-->
+
+
+
+<!-- Start of Cell-->
+
+  <div class="box .row.row-eq-height" >
+  <div class="w3-container" style="width:100%;  margin-top:20px;">
+      <div class="w3-card-4">
+        <header class="w3-container w3-blue w3-padding-small ">
+          <h3 class="w3-text-white ulanimate">Bar Chart</h3>
+        </header>
+        <div class="w3-container">
+        <div class="ct-chart" id="bar_degree_distribution2"></div>
+          </div>
+        </div>
+    </div>
+  </div>
+<!--ednof cell-->
+</div>
+</div>
+</div>
+<!-- Start of Cell-->
+            <div class="" >
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4" style="border-radius:10px 10px 0 0">
-                  <div class="col-med-6">
-                  <div class="card text-dark bg-light" style="border-radius:10px 10px 0 0">
-                  <div class="card-header bg-primary text-center text-dark" style="border-radius:10px 10px 0 0"><h4>DUMP</h4></div>
-                  <div class="card-body bg-white ">
-                  <h5 class="card-title">Category</h5>
+                  <header class="w3-container w3-blue w3-padding-small ">
+                    <h3 class="w3-text-white ulanimate">Visualization</h3>
+                  </header>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-md-6 col-sm-6">
+                          <!--panel # 1 -->
+                            <div class="card">
+                              <div class="card-body">
+                                <div class="ct-chart" id="bar_degree_distribution"></div>
+                                  </div>
+                                </div>
+                              <!--panel # 1 end -->
+                            </div>
+                          <div class="col-md-6 col-sm-6">
+                        <!--panel # 2 start -->
+                      <div class="card">
+                        <div class="card-body">
+                            <div class="ct-chart" id="chart_degree_distribution"></div>
+                                    </div>
+                                      </div>
+                                      <!--panel # 2  ends-->
+                          </div>
 
+                        </div>
+                      </div>
+                    <br>
                     <!--Starting list group here -->
+                  <div class="row">
+                      <div class="col">
+
 
                         <div class="list-group">
                           <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
@@ -125,176 +351,76 @@ layout: default
                           <span class="badge badge-primary badge-pill badge-warning">0</span>
                           </a>
                         </div>
+                        </div>
                       <!--Ends here -->
+                      <!--Starting list group here -->
+                      <div class="col">
+
+
+                          <div class="list-group">
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
+                            <span class="badge badge-primary badge-pill badge-secondary">55</span>
+                            </a>
+
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 2
+                            <span class="badge badge-primary badge-pill badge-danger">23</span>
+                            </a>
+
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 3
+                              <span class="badge badge-primary badge-pill badge-success">109</span>
+                            </a>
+
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 4
+                            <span class="badge badge-primary badge-pill badge-dark">10</span>
+                            </a>
+
+                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled">Dump 5
+                            <span class="badge badge-primary badge-pill badge-warning">0</span>
+                            </a>
+                          </div>
+                          </div>
+                        <!--Ends here -->
+                        <!--Starting list group here -->
+                        <div class="col">
+
+
+                            <div class="list-group">
+                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
+                              <span class="badge badge-primary badge-pill badge-secondary">55</span>
+                              </a>
+
+                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 2
+                              <span class="badge badge-primary badge-pill badge-danger">23</span>
+                              </a>
+
+                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 3
+                                <span class="badge badge-primary badge-pill badge-success">109</span>
+                              </a>
+
+                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 4
+                              <span class="badge badge-primary badge-pill badge-dark">10</span>
+                              </a>
+
+                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled">Dump 5
+                              <span class="badge badge-primary badge-pill badge-warning">0</span>
+                              </a>
+                            </div>
+                              </div>
+                          <!--Ends here -->
+                          </div>
+
                   </div>
-                  <div class="card-footer bg-primary text-right">
-                  <a href="#" class="btn btn-info btn-sm">btn</a> <a href="#" class="btn btn-success btn-sm">btn</a>
                   </div>
-                  </div>
-                  </div>
+
 
               </div>
             </div>
             </div>
-          </div>
+
 
 <!-- end of cell-->
 
-<!-- Start of Cell-->
-    <div class="col-xs-12
-          col-sm-6
-          col-md-6
-          col-lg-6">
-        <div class="box" >
-        <div class="w3-container" style="width:100%;  margin-top:20px;">
-            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-              <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
-              </header>
-              <div class="w3-container">
-                <table>
-                  <table class="table">
-                    <th scope="col">Data</th>
-                    <th scope="col">Values</th>
-                    <tr><td>Categories: </td><td>{{ page.categories}}</td></tr>
-                    <tr><td>Size: </td><td>{{ page.size}}</td></tr>
-                    <tr><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-                    <tr><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-                    <tr><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-                    <tr><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
-                    <tr><td>|V|: </td><td>{{ page.v}}</td></tr>
-                    <tr><td>|E|:  </td><td>{{ page.e}}</td></tr>
-                    <tr><td>Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                    <tr><td>Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                    <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
-                  </table>
-              </div>
 
-          </div>
-        </div>
-        </div>
-      </div>
-    <!-- end of cell-->
-
-        <!-- Start of Cell-->
-        <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graph Details</h3>
-                  </header>
-                  <div class="w3-container">
-                    <table class="table">
-                      <tr><td>|E|: </td><td>{{ page.two-e}}</td></tr>
-                      <tr><td>LCC: </td><td>{{ page.two-lcc}}</td></tr>
-                      <tr><td>Density: </td><td>{{ page.two-density}}</td></tr>
-                      <tr><td>Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
-                      <tr><td>Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
-                      <tr><td>Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
-                      <tr><td>Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
-                      <tr><td>Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
-                      <tr><td>Diameter: </td><td>{{ page.two-diameter}}</td></tr>
-                      <tr><td>CC: </td><td>{{ page.two-cc}}</td></tr>
-                      <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
-                    </table>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-<!-- Start of Cell-->
-          <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
-                  </header>
-                  <div class="w3-container">
-                    <div class="ct-chart" id="chart_degree_distribution" style=" width: auto; height:auto;"></div>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-<div class="">
-
-</div>
-
-<!-- Start of Cell-->
-          <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Loading</h3>
-                  </header>
-                  <div class="w3-container">
-                    <div class="ct-chart" id="pie-chart">
-
-                    </div>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-<!-- end of cell-->
-
-<!-- Start of Cell-->
-<div class="col-xs-12
-    col-sm-6
-    col-md-6
-    col-lg-6">
-      <div class="box">
-      <!-- Card -->
-  <div class="card card-cascade">
-
-    <!-- Card image -->
-    <div class="view view-cascade gradient-card-header blue-gradient">
-
-      <!-- Title -->
-      <h2 class=" w3-container card-header-title mb-3" style="color:white;">Description</h2>
-      <!-- Subtitle -->
-
-    </div>
-    <!-- Card content -->
-    <div class="card-body card-body-cascade text-center">
-      <!-- Text -->
-      <div class="ct-chart" id="bar_degree_distribution" style=" width: auto; height:auto;"></div>
-
-
-
-      <!-- Twitter -->
-      <a class="px-2 fa-lg tw-ic"><i class="fab fa-twitter"> </i></a>
-      <!-- Linkedin -->
-      <a class="px-2 fa-lg li-ic"><i class="fab fa-linkedin-in"> </i></a>
-      <!-- Facebook -->
-      <a class="px-2 fa-lg fb-ic"><i class="fab fa-facebook-f"> </i></a>
-      <!-- Email -->
-      <a class="px-2 fa-lg email-ic"><i class="fas fa-envelope"> </i></a>
-    </div>
-  </div>
-  <!-- Card -->
-  </div>
-    </div>
-<!-- end of cell-->
-</div>
-</div>
   </div>
   </div>
 
@@ -303,28 +429,31 @@ layout: default
     {{ content }}
 
 
-    <script>
 
-      var data = {
-        labels: {{site.data.file.labels | jsonify}},
-        series: [
-          {{site.data.file.series | jsonify}}
-        ]
-      }
+    <!-- content -->
+  </article>
+</div>
 
+<script>
 
+  var data = {
+    labels: {{site.data.file.labels | jsonify}},
+    series: [
+      {{site.data.file.series | jsonify}}
+    ]
+  }
 
-      new Chartist.Line('#chart_degree_distribution', data, {
-        low: 0,
-        showArea: true
-      });
+  new Chartist.Line('#chart_degree_distribution', data, {
+    low: 0,
+    showArea: true
+  });
 
-      new Chartist.Bar('#bar_degree_distribution', data, {
-        low: 0,
-        showArea: true
-      });
+  new Chartist.Bar('#bar_degree_distribution', data, {
+    low: 0,
+    showArea: true
+  });
 
-      var data_pie = {
+var data_pie = {
   series: {{site.data.file.series | jsonify}}
 };
 
@@ -332,73 +461,64 @@ var sum = function(a, b) { return a + b };
 
 new Chartist.Pie('pie-chart', data_pie, {
   labelInterpolationFnc: function(value) {
-    return Math.round(value / data.series.reduce(sum) * 100) + '%';
-  }
+return Math.round(value / data.series.reduce(sum) * 100) + '%';
+}
 });
 
 var chart = new Chartist.Pie('#pie-chart', {
-  series: [10, 20, 50, 20, 5, 50, 15],
-  labels: [1, 2, 3, 4, 5, 6, 7]
+series: [10, 20, 50, 20, 5, 50, 15],
+labels: [1, 2, 3, 4, 5, 6, 7]
 }, {
-  donut: true,
-  showLabel: false
+donut: true,
+showLabel: false
 });
 
 chart.on('draw', function(data) {
-  if(data.type === 'slice') {
-    // Get the total path length in order to use for dash array animation
-    var pathLength = data.element._node.getTotalLength();
+if(data.type === 'slice') {
+// Get the total path length in order to use for dash array animation
+var pathLength = data.element._node.getTotalLength();
 
-    // Set a dasharray that matches the path length as prerequisite to animate dashoffset
-    data.element.attr({
-      'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-    });
+// Set a dasharray that matches the path length as prerequisite to animate dashoffset
+data.element.attr({
+  'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+});
 
-    // Create animation definition while also assigning an ID to the animation for later sync usage
-    var animationDefinition = {
-      'stroke-dashoffset': {
-        id: 'anim' + data.index,
-        dur: 1000,
-        from: -pathLength + 'px',
-        to:  '0px',
-        easing: Chartist.Svg.Easing.easeOutQuint,
-        // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-        fill: 'freeze'
-      }
-    };
-
-    // If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-    if(data.index !== 0) {
-      animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-    }
-
-    // We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-    data.element.attr({
-      'stroke-dashoffset': -pathLength + 'px'
-    });
-
-    // We can't use guided mode as the animations need to rely on setting begin manually
-    // See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-    data.element.animate(animationDefinition, false);
+// Create animation definition while also assigning an ID to the animation for later sync usage
+var animationDefinition = {
+  'stroke-dashoffset': {
+    id: 'anim' + data.index,
+    dur: 1000,
+    from: -pathLength + 'px',
+    to:  '0px',
+    easing: Chartist.Svg.Easing.easeOutQuint,
+    // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
+    fill: 'freeze'
   }
+};
+
+// If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
+if(data.index !== 0) {
+  animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+}
+
+// We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
+data.element.attr({
+  'stroke-dashoffset': -pathLength + 'px'
+});
+
+// We can't use guided mode as the animations need to rely on setting begin manually
+// See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
+data.element.animate(animationDefinition, false);
+}
 });
 
 // For the sake of the example we update the chart every time it's created with a delay of 8 seconds
 chart.on('created', function() {
-  if(window.__anim21278907124) {
-    clearTimeout(window.__anim21278907124);
-    window.__anim21278907124 = null;
-  }
-  window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
+if(window.__anim21278907124) {
+clearTimeout(window.__anim21278907124);
+window.__anim21278907124 = null;
+}
+window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 });
 
-      </script>
-
-    <!-- content -->
-  </article>
-</div>
-
-<script type="text/javascript">
-  console.log("{{site.data.file.labels | jsonify}}")
-
-</script>
+  </script>
