@@ -24,5 +24,33 @@
 
 <header>
 
-  
+  <!-- Jumbotron -->
+   <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/forest2.jpg);width:100%">
+     <div class="text-white text-center rgba-stylish-strong py-5 px-5" >
+       <div class="py-6">
+
+         <!-- Content -->
+         <!--<h5 class="h5 orange-text"><i class="fas fa-camera-retro"></i> Category</h5>-->
+          <div class="" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+
+{% if page.title == "Explore"%}
+    <h2 class="card-title h2 my-4 py-2">Explore Hypergraphs</h2>
+{% else %}
+    <h2 class="card-title h2 my-4 py-2">Welcome to Hypergraph Repository</h2>
+    <p class="mb-4 pb-2 px-md-5 mx-md-5">A simple hypergraphs package for the Julia programming language.</p>
+{% endif %}
+
+         <!--<a class="btn peach-gradient"><i class="fas fa-clone left"></i> View project</a>-->
+      {% if page.title == "Explore"%}
+          <button type="button" class="btn peach-gradient"  onclick="location.href='explore'" style="vertical-align:middle" hidden><span>Explore </span> </button>
+      {% else %}
+          <button type="button" class="btn peach-gradient"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button>
+      {% endif %}
+
+        </div>
+       </div>
+     </div>
+   </div>
+   <!-- Jumbotron -->
+
 </header>

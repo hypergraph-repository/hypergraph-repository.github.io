@@ -2,6 +2,9 @@
 layout: default
 ---
 <style media="screen">
+  .jumbotron{
+    border-style: ;
+  }
   .w3-container{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -285,7 +288,7 @@ layout: default
           <h3 class="w3-text-white ulanimate">Bar Chart</h3>
         </header>
         <div class="w3-container">
-        <div class="ct-chart" id="bar_degree_distribution2"></div>
+        <div class="ct-chart" id="my-chart"></div>
           </div>
         </div>
     </div>
@@ -302,8 +305,8 @@ layout: default
                     <h3 class="w3-text-white ulanimate">Visualization</h3>
                   </header>
                       <div class="container">
-                        <div class="row">
-                          <div class="col-md-6 col-sm-6">
+                        <div class="row align-items-center">
+                          <div class="col-md-6 col-sm-6 my-auto">
                           <!--panel # 1 -->
                             <div class="card">
                               <div class="card-body">
@@ -312,7 +315,7 @@ layout: default
                                 </div>
                               <!--panel # 1 end -->
                             </div>
-                          <div class="col-md-6 col-sm-6">
+                          <div class="col-md-6 col-sm-6 my-auto">
                         <!--panel # 2 start -->
                       <div class="card">
                         <div class="card-body">
@@ -321,101 +324,18 @@ layout: default
                                       </div>
                                       <!--panel # 2  ends-->
                           </div>
-
                         </div>
                       </div>
                     <br>
-                    <!--Starting list group here -->
-                  <div class="row">
-                      <div class="col">
-
-
-                        <div class="list-group">
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
-                          <span class="badge badge-primary badge-pill badge-secondary">55</span>
-                          </a>
-
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 2
-                          <span class="badge badge-primary badge-pill badge-danger">23</span>
-                          </a>
-
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 3
-                            <span class="badge badge-primary badge-pill badge-success">109</span>
-                          </a>
-
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 4
-                          <span class="badge badge-primary badge-pill badge-dark">10</span>
-                          </a>
-
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled">Dump 5
-                          <span class="badge badge-primary badge-pill badge-warning">0</span>
-                          </a>
-                        </div>
-                        </div>
-                      <!--Ends here -->
-                      <!--Starting list group here -->
-                      <div class="col">
-
-
-                          <div class="list-group">
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
-                            <span class="badge badge-primary badge-pill badge-secondary">55</span>
-                            </a>
-
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 2
-                            <span class="badge badge-primary badge-pill badge-danger">23</span>
-                            </a>
-
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 3
-                              <span class="badge badge-primary badge-pill badge-success">109</span>
-                            </a>
-
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 4
-                            <span class="badge badge-primary badge-pill badge-dark">10</span>
-                            </a>
-
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled">Dump 5
-                            <span class="badge badge-primary badge-pill badge-warning">0</span>
-                            </a>
-                          </div>
-                          </div>
-                        <!--Ends here -->
-                        <!--Starting list group here -->
-                        <div class="col">
-
-
-                            <div class="list-group">
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
-                              <span class="badge badge-primary badge-pill badge-secondary">55</span>
-                              </a>
-
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 2
-                              <span class="badge badge-primary badge-pill badge-danger">23</span>
-                              </a>
-
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 3
-                                <span class="badge badge-primary badge-pill badge-success">109</span>
-                              </a>
-
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 4
-                              <span class="badge badge-primary badge-pill badge-dark">10</span>
-                              </a>
-
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled">Dump 5
-                              <span class="badge badge-primary badge-pill badge-warning">0</span>
-                              </a>
-                            </div>
-                              </div>
-                          <!--Ends here -->
-                          </div>
-
                   </div>
-                  </div>
+                </div>
 
 
               </div>
             </div>
             </div>
+
+    {% include footer_Categories.html %}
 
 
 <!-- end of cell-->
@@ -443,6 +363,25 @@ layout: default
     ]
   }
 
+  var responsiveOptions = [
+    ['screen and (min-width: 641px) and (max-width: 1024px)', {
+      showPoint: false,
+      axisX: {
+        labelInterpolationFnc: function(value) {
+          return 'Week ' + value;
+        }
+      }
+    }],
+    ['screen and (max-width: 640px)', {
+      showLine: false,
+      axisX: {
+        labelInterpolationFnc: function(value) {
+          return 'W' + value;
+        }
+      }
+    }]
+  ];
+
   new Chartist.Line('#chart_degree_distribution', data, {
     low: 0,
     showArea: true
@@ -459,7 +398,7 @@ var data_pie = {
 
 var sum = function(a, b) { return a + b };
 
-new Chartist.Pie('pie-chart', data_pie, {
+new Chartist.Pie('pie-chart', data_pie, responsiveOptions, {
   labelInterpolationFnc: function(value) {
 return Math.round(value / data.series.reduce(sum) * 100) + '%';
 }
@@ -520,5 +459,48 @@ window.__anim21278907124 = null;
 }
 window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 });
+
+<!-- responsive-chart -->
+var data = {
+labels: ['1', '2', '3', '4', '5', '6'],
+series: [
+  {
+    data: [1, 2, 3, 5, 8, 13]
+  }
+]
+};
+
+/* Set some base options (settings will override the default settings in Chartist.js *see default settings*). We are adding a basic label interpolation function for the xAxis labels. */
+var options = {
+axisX: {
+  labelInterpolationFnc: function(value) {
+    return 'Calendar Week ' + value;
+  }
+}
+};
+
+/* Now we can specify multiple responsive settings that will override the base settings based on order and if the media queries match. In this example we are changing the visibility of dots and lines as well as use different label interpolations for space reasons. */
+var responsiveOptions = [
+['screen and (min-width: 641px) and (max-width: 1024px)', {
+  showPoint: false,
+  axisX: {
+    labelInterpolationFnc: function(value) {
+      return 'Week ' + value;
+    }
+  }
+}],
+['screen and (max-width: 640px)', {
+  showLine: false,
+  axisX: {
+    labelInterpolationFnc: function(value) {
+      return 'W' + value;
+    }
+  }
+}]
+];
+
+/* Initialize the chart with the above settings */
+new Chartist.Line('#my-chart', data, options, responsiveOptions);
+<!-- responsive-chart -->
 
   </script>
