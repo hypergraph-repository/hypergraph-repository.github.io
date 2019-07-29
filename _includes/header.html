@@ -24,5 +24,19 @@
 
 <header>
 
-  
+  <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+    <div class="text-white text-center py-5 px-4">
+      <div>
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Welcome to Hypergraph Repository!</strong></h2>
+        <p class="mx-5 mb-5">A simple hypergraphs package for the Julia programming language.</p>
+        {% if page.title == "Explore"%}
+            <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle" hidden><span>Explore </span> </button>
+        {% else %}
+            <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+
+
 </header>
