@@ -425,7 +425,7 @@
                     <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
                   </header>
                   <div class="w3-container">
-                    <div class="ct-chart" id="chart_degree_distribution2"></div>
+                    <div class="ct-chart-line" id="chart_degree_distribution2"></div>
                   </div>
 
               </div>
@@ -468,7 +468,7 @@
           <h3 class="w3-text-white ulanimate">Bar Chart</h3>
         </header>
         <div class="w3-container">
-        <div class="ct-chart" id="bar_degree_distribution2"></div>
+        <div class="ct-chart-bar" id="bar_degree_distribution2"></div>
           </div>
         </div>
     </div>
@@ -490,7 +490,7 @@
                           <!--panel # 1 -->
                             <div class="card">
                               <div class="card-body">
-                                <div class="ct-chart" id="bar_degree_distribution"></div>
+                                <div class="ct-chart" id="bar-chart"></div>
                                   </div>
                                 </div>
                               <!--panel # 1 end -->
@@ -499,7 +499,7 @@
                         <!--panel # 2 start -->
                       <div class="card">
                         <div class="card-body">
-                            <div class="ct-chart" id="chart_degree_distribution"></div>
+                            <div class="ct-chart" id="line-chart"></div>
                                     </div>
                                       </div>
                                       <!--panel # 2  ends-->
@@ -654,23 +654,23 @@
 
 <script>
 
-var data ={
-  labels: [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28],
-  series: [10,20,30,20,50,60,20,10,30,40,40,50,20,10,30,50,60,10,20,40,57,5,17,10,20,10,50,10]
+var data = {
+  labels: [1,2,3,4,5,6,7,8],
+  series: [[5,9,7,8,5,3,5,4]]
 }
 
-  new Chartist.Line('#chart_degree_distribution', data, {
-    low: 0,
-    showArea: true
-  });
+new Chartist.Line('#line-chart', data , {
+low: 0,
+showArea: true
+});
 
-  new Chartist.Bar('#bar_degree_distribution', data, {
+  new Chartist.Bar('#bar-chart', data, {
     low: 0,
     showArea: true
   });
 
 var data_pie = {
-  series: [10,20,30,20,50,60,20,10,30,40,40,50,20,10,30,50,60,10,20,40,57,5,17,10,20,10,50,10]
+  series: [[5,9,7,8,5,3,5,4]]
 };
 
 var sum = function(a, b) { return a + b };
@@ -736,6 +736,63 @@ window.__anim21278907124 = null;
 }
 window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 });
+
+var chart = new Chartist.Line('.ct-chart-line', {
+  labels: [1, 2, 3, 4, 5],
+  series: [
+    [12, 9, 7, 8, 5]
+  ]
+});
+
+// Listening for draw events that get emitted by the Chartist chart
+chart.on('draw', function(data) {
+  // If the draw event was triggered from drawing a point on the line chart
+  if(data.type === 'point') {
+    // We are creating a new path SVG element that draws a triangle around the point coordinates
+    var triangle = new Chartist.Svg('path', {
+      d: ['M',
+        data.x,
+        data.y - 15,
+        'L',
+        data.x - 15,
+        data.y + 8,
+        'L',
+        data.x + 15,
+        data.y + 8,
+        'z'].join(' '),
+      style: 'fill-opacity: 1'
+    }, 'ct-area');
+
+    // With data.element we get the Chartist SVG wrapper and we can replace the original point drawn by Chartist with our newly created triangle
+    data.element.replace(triangle);
+  }
+});
+
+var data = {
+  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+  series: [
+    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
+    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
+  ]
+};
+
+var options = {
+  seriesBarDistance: 10
+};
+
+var responsiveOptions = [
+  ['screen and (max-width: 640px)', {
+    seriesBarDistance: 5,
+    axisX: {
+      labelInterpolationFnc: function (value) {
+        return value[0];
+      }
+    }
+  }]
+];
+
+new Chartist.Bar('.ct-chart-bar', data, options, responsiveOptions);
+
 
   </script>
 
