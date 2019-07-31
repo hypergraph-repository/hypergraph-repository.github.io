@@ -1,25 +1,25 @@
 [
   
     {
-      "title"       : "Quantum Computing",
-      "description" : "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically.",
-      "date"        : "2017-11-12 21:46:41 +0100",
-      "categories"  : "Scientific",
-      "by"          : "https://en.wikipedia.org/wiki/Zachary%27s_karate_club",
-      "url"         : "/hypergraph-repository.github.io/quantum-computing/",
-      "icon"        : "credit-card",
+      "title"       : "",
+      "description" : "",
+      "date"        : "2019-07-31 11:54:21 +0200",
+      "categories"  : "",
+      "by"          : "",
+      "url"         : "/hypergraph-repository.github.io/2019-07-29-quantum-computing/",
+      "icon"        : "",
       "questions"   : null
 
     } ,
   
     {
-      "title"       : "Karate Network",
-      "description" : "The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During the study a conflict arose between the administrator John A and instructor Mr. Hi (pseudonyms), which led to the split of the club into two. Half of the members formed a new club around Mr. Hi; members from the other part found a new instructor or gave up karate. Based on collected data Zachary correctly assigned all but one member of the club to the groups they actually joined after the split.",
-      "date"        : "2017-11-12 21:46:41 +0100",
-      "categories"  : "Social-Network",
-      "by"          : "https://en.wikipedia.org/wiki/Zachary%27s_karate_club",
-      "url"         : "/hypergraph-repository.github.io/karate-network/",
-      "icon"        : "credit-card",
+      "title"       : "",
+      "description" : "",
+      "date"        : "2019-07-31 11:54:21 +0200",
+      "categories"  : "",
+      "by"          : "",
+      "url"         : "/hypergraph-repository.github.io/2017-11-12-karate-network/",
+      "icon"        : "",
       "questions"   : null
 
     } 
