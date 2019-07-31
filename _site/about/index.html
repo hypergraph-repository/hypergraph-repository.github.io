@@ -75,9 +75,8 @@
 
 <body>
   <div class="">
-    <div class="navbar navbar-expand-lg navbar-dark">
-<div class="menu" style="align-text:inline">
-  <div class="px-5 size margin menu--content container align-items-center justify-content-between ">
+    <!-- <div class="navbar navbar-expand-lg navbar-light ">
+  <div class="size margin menu--content container align-items-center justify-content-between">
 
     <div class="" data-aos="fade-right" data-aos-delay="" data-aos-offset="0">
       <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
@@ -116,6 +115,8 @@
       </div>
     </a>
 
+
+<!--
     <a href="https://github.com/pszufe/SimpleHypergraphs.jl" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
       <div class="container align-items-baseline back-to-site">
         <div class="">
@@ -126,14 +127,14 @@
         </div>
       </div>
     </a>
-    <!-- Search form -->
-<div class="container align-items-baseline px-6" style="margin-top:10px;" data-aos="fade-right" data-aos-delay="" data-aos-offset="0">
-  <form class="form-inline md-form form-sm mt-0">
-    <i class="fas fa-search" aria-hidden="true"></i>
-    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-      aria-label="Search">
-  </form>
-</div>
+<!--
+
+<form class="form-inline md-form form-sm mt-0">
+  <i class="fas fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+    aria-label="Search">
+</form>
+-->
     <!-- <nav class="masthead-nav">
       
       
@@ -166,13 +167,94 @@
       
       
       
-      
-      
-    </nav> -->
+    </nav>
   </div>
 </div>
 
-</div>
+-->
+
+<style media="screen">
+
+    .searchbar{
+     margin-bottom: auto;
+     margin-top: auto;
+     height: 60px;
+     background-color: #85C1E9;
+     border-radius: 30px;
+     padding: 10px;
+     }
+
+     .search_input{
+     color: white;
+     border: 0;
+     outline: 0;
+     background: none;
+     width: 0;
+     caret-color:transparent;
+     line-height: 40px;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_input{
+     padding: 0 10px;
+     width: 250px;
+     caret-color:red;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_icon{
+     background: white;
+     color: black;
+     }
+
+     .search_icon{
+     height: 40px;
+     width: 40px;
+     float: right;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     color:white;
+     }
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="http://localhost:4000/hypergraph-repository.github.io/">Hypergraph Repository</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://hypergraph-repository.github.io/explore">Explore</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="  https://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="container h-50">
+            <div class="d-flex justify-content-center h-100">
+              <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here...">
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+              </div>
+            </div>
+            <div class="header--block--result">
+              <ul id="results-container"></ul>
+            </div>
+          </div>
+    </form>
+  </div>
+</nav>
 
 
     <header>
