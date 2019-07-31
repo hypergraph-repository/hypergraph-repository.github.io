@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/hypergraph-repository.github.io/2017-11-12-karate-network/</loc>
-<lastmod>2019-07-31T11:54:21+02:00</lastmod>
+<loc>http://localhost:4000/hypergraph-repository.github.io/karate-network/</loc>
+<lastmod>2017-11-12T21:46:41+01:00</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/hypergraph-repository.github.io/2019-07-29-quantum-computing/</loc>
-<lastmod>2019-07-31T11:54:21+02:00</lastmod>
+<loc>http://localhost:4000/hypergraph-repository.github.io/quantum-computing/</loc>
+<lastmod>2017-11-12T21:46:41+01:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/hypergraph-repository.github.io/about/</loc>

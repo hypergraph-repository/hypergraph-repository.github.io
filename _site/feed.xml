@@ -5,29 +5,33 @@
     <description>Simple and flexible Jekyll theme for help center.</description>
     <link>http://localhost:4000/hypergraph-repository.github.io/</link>
     <atom:link href="http://localhost:4000/hypergraph-repository.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 31 Jul 2019 11:54:21 +0200</pubDate>
-    <lastBuildDate>Wed, 31 Jul 2019 11:54:21 +0200</lastBuildDate>
+    <pubDate>Wed, 31 Jul 2019 11:58:09 +0200</pubDate>
+    <lastBuildDate>Wed, 31 Jul 2019 11:58:09 +0200</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
     
       <item>
-        <title></title>
+        <title>Quantum Computing</title>
         <description>
 </description>
-        <pubDate>Wed, 31 Jul 2019 11:54:21 +0200</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/2019-07-29-quantum-computing/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/2019-07-29-quantum-computing/</guid>
+        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
+        <link>http://localhost:4000/hypergraph-repository.github.io/quantum-computing/</link>
+        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/quantum-computing/</guid>
         
+        
+        <category>Scientific</category>
         
       </item>
     
       <item>
-        <title></title>
+        <title>Karate Network</title>
         <description>
 </description>
-        <pubDate>Wed, 31 Jul 2019 11:54:21 +0200</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/2017-11-12-karate-network/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/2017-11-12-karate-network/</guid>
+        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
+        <link>http://localhost:4000/hypergraph-repository.github.io/karate-network/</link>
+        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/karate-network/</guid>
         
+        
+        <category>Social-Network</category>
         
       </item>
     
