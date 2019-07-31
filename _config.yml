@@ -24,3 +24,9 @@ paginate: 5
 # Plugins
 plugins_dir:
   - jekyll-admin
+
+assets:
+ source:
+   - assets/js
+   - assets/fontawesome
+   - assets/img

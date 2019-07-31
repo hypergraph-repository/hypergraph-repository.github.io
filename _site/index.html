@@ -75,9 +75,8 @@
 
 <body>
   <div class="">
-    <div class="navbar navbar-expand-lg navbar-dark">
-<div class="menu" style="align-text:inline">
-  <div class="px-5 size margin menu--content container align-items-center justify-content-between ">
+    <!-- <div class="navbar navbar-expand-lg navbar-light ">
+  <div class="size margin menu--content container align-items-center justify-content-between">
 
     <div class="" data-aos="fade-right" data-aos-delay="" data-aos-offset="0">
       <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
@@ -116,6 +115,8 @@
       </div>
     </a>
 
+
+<!--
     <a href="https://github.com/pszufe/SimpleHypergraphs.jl" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
       <div class="container align-items-baseline back-to-site">
         <div class="">
@@ -126,14 +127,14 @@
         </div>
       </div>
     </a>
-    <!-- Search form -->
-<div class="container align-items-baseline px-6" style="margin-top:10px;" data-aos="fade-right" data-aos-delay="" data-aos-offset="0">
-  <form class="form-inline md-form form-sm mt-0">
-    <i class="fas fa-search" aria-hidden="true"></i>
-    <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-      aria-label="Search">
-  </form>
-</div>
+<!--
+
+<form class="form-inline md-form form-sm mt-0">
+  <i class="fas fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+    aria-label="Search">
+</form>
+-->
     <!-- <nav class="masthead-nav">
       
       
@@ -166,13 +167,94 @@
       
       
       
-      
-      
-    </nav> -->
+    </nav>
   </div>
 </div>
 
-</div>
+-->
+
+<style media="screen">
+
+    .searchbar{
+     margin-bottom: auto;
+     margin-top: auto;
+     height: 60px;
+     background-color: #85C1E9;
+     border-radius: 30px;
+     padding: 10px;
+     }
+
+     .search_input{
+     color: white;
+     border: 0;
+     outline: 0;
+     background: none;
+     width: 0;
+     caret-color:transparent;
+     line-height: 40px;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_input{
+     padding: 0 10px;
+     width: 250px;
+     caret-color:red;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_icon{
+     background: white;
+     color: black;
+     }
+
+     .search_icon{
+     height: 40px;
+     width: 40px;
+     float: right;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     color:white;
+     }
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="http://localhost:4000/hypergraph-repository.github.io/">Hypergraph Repository</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://hypergraph-repository.github.io/explore">Explore</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="  https://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="container h-50">
+            <div class="d-flex justify-content-center h-100">
+              <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here...">
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+              </div>
+            </div>
+            <div class="header--block--result">
+              <ul id="results-container"></ul>
+            </div>
+          </div>
+    </form>
+  </div>
+</nav>
 
 
     <div class="">
@@ -257,8 +339,51 @@
 
 
  <!-- Catergories Panel -->
+ <style media="screen">
+   .active-pink-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #f48fb1;
+box-shadow: 0 0 0 1px #f48fb1;
+}
+.active-pink-3 input[type=text] {
+border: 1px solid #f48fb1;
+box-shadow: 0 0 0 1px #f48fb1;
+}
+.active-purple-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #ce93d8;
+box-shadow: 0 0 0 1px #ce93d8;
+}
+.active-purple-3 input[type=text] {
+border: 1px solid #ce93d8;
+box-shadow: 0 0 0 1px #ce93d8;
+}
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #4dd0e1;
+box-shadow: 0 0 0 1px #4dd0e1;
+}
+.active-cyan-3 input[type=text] {
+border: 1px solid #4dd0e1;
+box-shadow: 0 0 0 1px #4dd0e1;
+}
+ </style>
+
+ <div class="container column position-search">
+         <div class="header--block--input" data-aos="fade-up" data-aos-delay="" data-aos-offset="0" id="search-container">
+           <div class="header--block--input--icon">
+             <!-- <img src="/hypergraph-repository.github.io/assets/img/icons/search-input.svg" width="30" alt=""> -->
+             <span class="feather-icon icon-search"></span>
+           </div>
+           <input class="input-search" type="text" name="" value="" placeholder="Search for hypergraph..." id="search-input">
+         </div>
+         <div class="header--block--result">
+           <ul id="results-container"></ul>
+         </div>
+       </div>
+
+
 
  <!-- Latest graphs Panel -->
+
+
         <!-- <div style=" margin: auto; width: 100px;"><button type="button" class="button"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button></div>-->
         <h4 class="list-post-title">
             <center>
@@ -271,7 +396,9 @@
   
   
   <a href="/hypergraph-repository.github.io/quantum-computing/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
-      <div class="container-fluid">
+
+<!-- My layout code -->
+  <!--    <div class="container-fluid">
         <div class="row">
           <div class="col-lg-3">
             <h3>Quantum Computing</h3>
@@ -279,24 +406,43 @@
           </div>
           <div class="col-lg-9">
             <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-              <span class="list-post-description">Quantum computing is computing using quantum-mechanical phenomena, such as superposition and entanglement. A quantum computer is a device that performs quantum computing.</span>
+              <span class="list-post-description">Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically.</span>
             </div>
 
             <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-              <small><time>29 Jul 2019</time></small>
+              <small><time>12 Nov 2017</time></small>
             </div>
           </div>
         </div>
 
       </div>
-  </div>
+  </div> -->
+
+  <!-- Carmine Layout-->
+  <div class="flex-grow-1">
+     <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
+       <h2 class="list-post-title">
+       Quantum Computing
+       </h2>
+     </div>
+
+     <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+       <span class="list-post-description">Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically.</span>
+     </div>
+
+     <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+       <small><time>12 Nov 2017</time></small>
+     </div>
+   </div>
 
   </a>
   
   
   
   <a href="/hypergraph-repository.github.io/karate-network/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
-      <div class="container-fluid">
+
+<!-- My layout code -->
+  <!--    <div class="container-fluid">
         <div class="row">
           <div class="col-lg-3">
             <h3>Karate Network</h3>
@@ -314,7 +460,24 @@
         </div>
 
       </div>
-  </div>
+  </div> -->
+
+  <!-- Carmine Layout-->
+  <div class="flex-grow-1">
+     <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
+       <h2 class="list-post-title">
+       Karate Network
+       </h2>
+     </div>
+
+     <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+       <span class="list-post-description">The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During the study a conflict arose between the administrator John A and instructor Mr. Hi (pseudonyms), which led to the split of the club into two. Half of the members formed a new club around Mr. Hi; members from the other part found a new instructor or gave up karate. Based on collected data Zachary correctly assigned all but one member of the club to the groups they actually joined after the split.</span>
+     </div>
+
+     <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+       <small><time>12 Nov 2017</time></small>
+     </div>
+   </div>
 
   </a>
   
@@ -326,8 +489,6 @@
 
 </div>
  <!-- Latest graphs Panel -->
-
- {
 
 
     <footer>

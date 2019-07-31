@@ -43,8 +43,51 @@ layout: default
 
 
  <!-- Catergories Panel -->
+ <style media="screen">
+   .active-pink-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #f48fb1;
+box-shadow: 0 0 0 1px #f48fb1;
+}
+.active-pink-3 input[type=text] {
+border: 1px solid #f48fb1;
+box-shadow: 0 0 0 1px #f48fb1;
+}
+.active-purple-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #ce93d8;
+box-shadow: 0 0 0 1px #ce93d8;
+}
+.active-purple-3 input[type=text] {
+border: 1px solid #ce93d8;
+box-shadow: 0 0 0 1px #ce93d8;
+}
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #4dd0e1;
+box-shadow: 0 0 0 1px #4dd0e1;
+}
+.active-cyan-3 input[type=text] {
+border: 1px solid #4dd0e1;
+box-shadow: 0 0 0 1px #4dd0e1;
+}
+ </style>
+
+ <div class="container column position-search">
+         <div class="header--block--input" data-aos="fade-up" data-aos-delay="" data-aos-offset="0" id="search-container">
+           <div class="header--block--input--icon">
+             <!-- <img src="{{ site.baseurl }}/assets/img/icons/search-input.svg" width="30" alt=""> -->
+             <span class="feather-icon icon-search"></span>
+           </div>
+           <input class="input-search" type="text" name="" value="" placeholder="Search for hypergraph..." id="search-input">
+         </div>
+         <div class="header--block--result">
+           <ul id="results-container"></ul>
+         </div>
+       </div>
+
+
 
  <!-- Latest graphs Panel -->
+
+
         <!-- <div style=" margin: auto; width: 100px;"><button type="button" class="button"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button></div>-->
         <h4 class="list-post-title">
             <center>
@@ -57,5 +100,3 @@ layout: default
 
 </div>
  <!-- Latest graphs Panel -->
-
- {

@@ -118,7 +118,7 @@ layout: default
       <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%">
       <div class="text-white text-center py-5 px-4">
         <div>
-          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>Karate Network</strong></h2>
+          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>{{page.title}}</strong></h2>
           <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
             <time>{{ page.date | date_to_string }}</time>
 
@@ -462,18 +462,32 @@ layout: default
 </div>
 
 <script>
+  var options = {
+    seriesBarDistance: 10
+  };
+
+  var responsiveOptions = [
+    ['screen and (max-width: 640px)', {
+      seriesBarDistance: 5,
+      axisX: {
+        labelInterpolationFnc: function (value) {
+          return value[0];
+        }
+      }
+    }]
+  ];
 
 var data = {
   labels: {{ site.data.file.labels | jsonify }},
   series: {{ site.data.file.series | jsonify }}
 }
 
-new Chartist.Line('#line-chart', data , {
+new Chartist.Line('#line-chart', data ,options, responsiveOptions, {
 low: 0,
 showArea: true
 });
 
-  new Chartist.Bar('#bar-chart', data, {
+  new Chartist.Bar('#bar-chart', data,options, responsiveOptions, {
     low: 0,
     showArea: true
   });
@@ -585,22 +599,13 @@ var data = {
   ]
 };
 
-var options = {
-  seriesBarDistance: 10
-};
-
-var responsiveOptions = [
-  ['screen and (max-width: 640px)', {
-    seriesBarDistance: 5,
-    axisX: {
-      labelInterpolationFnc: function (value) {
-        return value[0];
-      }
-    }
-  }]
-];
-
 new Chartist.Bar('.ct-chart-bar', data, options, responsiveOptions);
 
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function())
+    $(window).resize();
+    var a = $(window).width();
+    console.log(a);
 
   </script>

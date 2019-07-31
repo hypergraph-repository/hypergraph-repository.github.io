@@ -2,10 +2,11 @@
 layout: post
 title: "Quantum Computing"
 page: quantum-computing
-description: "Quantum computing is computing using quantum-mechanical phenomena, such as superposition and entanglement. A quantum computer is a device that performs quantum computing."
-data-name: sub-dir2
+date:   2017-11-12 17:46:41 -0300
+description: "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically."
+data-name: karate.json
 link: http://bo.com/karate.hgf
-categories: Social-Network
+categories: Scientific
 by: 'https://en.wikipedia.org/wiki/Zachary%27s_karate_club'
 icon: 'credit-card'
 size: 5 MB
