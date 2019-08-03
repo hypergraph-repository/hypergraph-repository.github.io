@@ -477,9 +477,11 @@ layout: default
     }]
   ];
 
+  {% assign data_file = {{page.data-name}} %}
+
 var data = {
-  labels: {{ site.data.file.labels | jsonify }},
-  series: {{ site.data.file.series | jsonify }}
+  labels: {{ site.data[data_file].labels | jsonify}},
+  series: {{ site.data[data_file].series | jsonify }}
 }
 
 new Chartist.Line('#line-chart', data ,options, responsiveOptions, {
@@ -493,7 +495,7 @@ showArea: true
   });
 
 var data_pie = {
-  series: {{site.data.file.series | jsonify}}
+  series: {{ site.data[data_file].series | jsonify }}
 };
 
 var sum = function(a, b) { return a + b };
@@ -505,11 +507,12 @@ return Math.round(value / data.series.reduce(sum) * 100) + '%';
 });
 
 var chart = new Chartist.Pie('#pie-chart', {
-series: [10, 20, 50, 20, 5, 50, 15],
-labels: [1, 2, 3, 4, 5, 6, 7]
+  //series index is specified bcz pie chart accepts only one sereis
+series: {{ site.data.file.series[0] | jsonify}},
+labels: {{ site.data.file.labels | jsonify }}
 }, {
 donut: true,
-showLabel: false
+showLabel: true
 });
 
 chart.on('draw', function(data) {
@@ -560,11 +563,9 @@ window.__anim21278907124 = null;
 window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 });
 
-var chart = new Chartist.Line('.ct-chart-line', {
-  labels: [1, 2, 3, 4, 5],
-  series: [
-    [12, 9, 7, 8, 5]
-  ]
+var data_line = new Chartist.Line('.ct-chart-line', {
+  labels: {{ site.data[data_file].labels | jsonify }},
+  series: {{ site.data[data_file].series | jsonify }}
 });
 
 // Listening for draw events that get emitted by the Chartist chart
@@ -591,7 +592,7 @@ chart.on('draw', function(data) {
   }
 });
 
-var data = {
+var data_bar = {
   labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
   series: [
     [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],

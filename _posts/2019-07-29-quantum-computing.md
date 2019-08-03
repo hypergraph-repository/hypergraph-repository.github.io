@@ -4,7 +4,7 @@ title: "Quantum Computing"
 page: quantum-computing
 date:   2017-11-12 17:46:41 -0300
 description: "Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically."
-data-name: karate.json
+data-name: quantum
 link: http://bo.com/karate.hgf
 categories: Scientific
 by: 'https://en.wikipedia.org/wiki/Zachary%27s_karate_club'
