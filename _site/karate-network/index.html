@@ -24,6 +24,14 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
 <!--MDB Packges-->
 
+<!--CHartsJS Packges-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+
+<!--CHartsJS Packges-->
+
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
 
@@ -262,7 +270,7 @@
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   /* TAGS for Graph and iid data */
 .tags {
   font: 12px/1.5 "ProximaNova", serif, sans-serif;
@@ -492,7 +500,8 @@
                     <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
                   </header>
                   <div class="w3-container">
-                    <div class="ct-chart-line" id="chart_degree_distribution2"></div>
+                    <canvas id="myChart"></canvas>
+
                   </div>
 
               </div>
@@ -513,8 +522,7 @@
                     <h3 class="w3-text-white ulanimate">Pie Chart</h3>
                   </header>
                   <div class="w3-container">
-                    <div class="ct-chart" id="pie-chart">
-
+                    <canvas id="myChart-donut"></canvas>
                     </div>
                   </div>
 
@@ -524,23 +532,6 @@
 
 <!-- end of cell-->
 
-
-
-<!-- Start of Cell-->
-
-  <div class="box .row.row-eq-height zoom" >
-  <div class="w3-container" style="width:100%;  margin-top:20px;">
-      <div class="w3-card-4">
-        <header class="w3-container w3-blue w3-padding-small ">
-          <h3 class="w3-text-white ulanimate">Bar Chart</h3>
-        </header>
-        <div class="w3-container">
-        <div class="ct-chart-bar" id="bar_degree_distribution2"></div>
-          </div>
-        </div>
-    </div>
-  </div>
-<!--ednof cell-->
 </div>
 </div>
 </div>
@@ -557,7 +548,7 @@
                           <!--panel # 1 -->
                             <div class="card zoom">
                               <div class="card-body">
-                                <div class="ct-chart" id="bar-chart"></div>
+                                <canvas id="myChart-line"></canvas>
                                   </div>
                                 </div>
                               <!--panel # 1 end -->
@@ -566,7 +557,7 @@
                         <!--panel # 2 start -->
                       <div class="card zoom">
                         <div class="card-body">
-                            <div class="ct-chart" id="line-chart"></div>
+                          <canvas id="myChart-polar"></canvas>
                                     </div>
                                       </div>
                                       <!--panel # 2  ends-->
@@ -731,7 +722,7 @@
 
 var data = {
   labels: [1,2,3,4,5,6,7,8],
-  series: [[5,9,7,8,5,3,5,4]]
+  series: [5,9,7,8,5,3,5,4]
 }
 
 new Chartist.Line('#line-chart', data ,options, responsiveOptions, {
@@ -745,7 +736,7 @@ showArea: true
   });
 
 var data_pie = {
-  series: [[5,9,7,8,5,3,5,4]]
+  series: [5,9,7,8,5,3,5,4]
 };
 
 var sum = function(a, b) { return a + b };
@@ -758,7 +749,7 @@ return Math.round(value / data.series.reduce(sum) * 100) + '%';
 
 var chart = new Chartist.Pie('#pie-chart', {
   //series index is specified bcz pie chart accepts only one sereis
-series: [5,9,7,8,5,3,5,4],
+series: 5,
 labels: [1,2,3,4,5,6,7,8]
 }, {
 donut: true,
@@ -815,7 +806,7 @@ window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 
 var data_line = new Chartist.Line('.ct-chart-line', {
   labels: [1,2,3,4,5,6,7,8],
-  series: [[5,9,7,8,5,3,5,4]]
+  series: [5,9,7,8,5,3,5,4]
 });
 
 // Listening for draw events that get emitted by the Chartist chart
@@ -853,13 +844,147 @@ var data_bar = {
 new Chartist.Bar('.ct-chart-bar', data, options, responsiveOptions);
 
   </script>
-  <script type="text/javascript">
-    $(document).ready(function())
-    $(window).resize();
-    var a = $(window).width();
-    console.log(a);
 
-  </script>
+<!-- ChartsJS Script -->
+
+
+
+<script type="text/javascript">
+var data = '';
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: [1,2,3,4,5,6,7,8],
+          datasets: [{
+              label: '# of Votes',
+              data: [5,9,7,8,5,3,5,4],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+  });
+
+//DonutChart-Script
+var ctx = document.getElementById('myChart-donut').getContext('2d');
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: [1,2,3,4,5,6,7,8],
+        datasets: [{
+            label: '# of Votes',
+            data: [5,9,7,8,5,3,5,4],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+//Bar-chart-Script
+var ctx = document.getElementById('myChart-line').getContext('2d');
+
+var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [1,2,3,4,5,6,7,8],
+        datasets: [{
+            label: '# of Votes',
+            data: [5,9,7,8,5,3,5,4],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+//Polar-chart-Script
+var ctx = document.getElementById('myChart-polar').getContext('2d');
+
+var myLineChart = new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+        labels: [1,2,3,4,5,6,7,8],
+        datasets: [{
+            label: '# of Votes',
+            data: [5,9,7,8,5,3,5,4],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+</script>
 
 
     <footer>

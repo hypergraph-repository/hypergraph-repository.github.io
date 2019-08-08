@@ -6,7 +6,7 @@ layout: default
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   /* TAGS for Graph and iid data */
 .tags {
   font: 12px/1.5 "ProximaNova", serif, sans-serif;
@@ -220,7 +220,8 @@ layout: default
                     <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
                   </header>
                   <div class="w3-container">
-                    <div class="ct-chart-line" id="chart_degree_distribution2"></div>
+                    <canvas id="myChart"></canvas>
+
                   </div>
 
               </div>
@@ -241,8 +242,7 @@ layout: default
                     <h3 class="w3-text-white ulanimate">Pie Chart</h3>
                   </header>
                   <div class="w3-container">
-                    <div class="ct-chart" id="pie-chart">
-
+                    <canvas id="myChart-donut"></canvas>
                     </div>
                   </div>
 
@@ -252,23 +252,6 @@ layout: default
 
 <!-- end of cell-->
 
-
-
-<!-- Start of Cell-->
-
-  <div class="box .row.row-eq-height zoom" >
-  <div class="w3-container" style="width:100%;  margin-top:20px;">
-      <div class="w3-card-4">
-        <header class="w3-container w3-blue w3-padding-small ">
-          <h3 class="w3-text-white ulanimate">Bar Chart</h3>
-        </header>
-        <div class="w3-container">
-        <div class="ct-chart-bar" id="bar_degree_distribution2"></div>
-          </div>
-        </div>
-    </div>
-  </div>
-<!--ednof cell-->
 </div>
 </div>
 </div>
@@ -285,7 +268,7 @@ layout: default
                           <!--panel # 1 -->
                             <div class="card zoom">
                               <div class="card-body">
-                                <div class="ct-chart" id="bar-chart"></div>
+                                <canvas id="myChart-line"></canvas>
                                   </div>
                                 </div>
                               <!--panel # 1 end -->
@@ -294,7 +277,7 @@ layout: default
                         <!--panel # 2 start -->
                       <div class="card zoom">
                         <div class="card-body">
-                            <div class="ct-chart" id="line-chart"></div>
+                          <canvas id="myChart-polar"></canvas>
                                     </div>
                                       </div>
                                       <!--panel # 2  ends-->
@@ -581,10 +564,144 @@ var data_bar = {
 new Chartist.Bar('.ct-chart-bar', data, options, responsiveOptions);
 
   </script>
-  <script type="text/javascript">
-    $(document).ready(function())
-    $(window).resize();
-    var a = $(window).width();
-    console.log(a);
 
-  </script>
+<!-- ChartsJS Script -->
+
+{% assign data_file_chartjs = {{page.data-name}} %}
+
+<script type="text/javascript">
+var data = '';
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+          datasets: [{
+              label: '# of Votes',
+              data: {{ site.data[data_file_chartjs].series | jsonify}},
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+  });
+
+//DonutChart-Script
+var ctx = document.getElementById('myChart-donut').getContext('2d');
+var myDoughnutChart = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        datasets: [{
+            label: '# of Votes',
+            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+//Bar-chart-Script
+var ctx = document.getElementById('myChart-line').getContext('2d');
+
+var myLineChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        datasets: [{
+            label: '# of Votes',
+            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+//Polar-chart-Script
+var ctx = document.getElementById('myChart-polar').getContext('2d');
+
+var myLineChart = new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        datasets: [{
+            label: '# of Votes',
+            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+</script>
