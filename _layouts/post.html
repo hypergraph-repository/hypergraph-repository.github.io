@@ -6,33 +6,7 @@ layout: default
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  .ulanimate {
-    position: relative;
-    color: #000;
-    text-decoration: none;
-  }
-
-  .ulanimate:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: white;
-    visibility: hidden;
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transition: all 0.3s ease-in-out 0s;
-    transition: all 0.3s ease-in-out 0s;
-  }
-
-  .ulanimate:hover:before {
-    visibility: visible;
-
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-  }
+  
   /* TAGS for Graph and iid data */
 .tags {
   font: 12px/1.5 "ProximaNova", serif, sans-serif;
@@ -94,6 +68,17 @@ layout: default
 .tag:hover::after {
    border-left-color: crimson;
 }
+
+.zoom{
+  transition: transform .2s;
+
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+}
 }
 </style>
 <br>
@@ -134,11 +119,11 @@ layout: default
           col-sm-6
           col-md-6
           col-lg-6">
-        <div class="box" >
+        <div class="box zoom" >
         <div class="w3-container" style="width:100%;  margin-top:20px;">
             <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
               <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Description</h3>
+                <h3 class="w3-text-white ulanimate trans" style="margin-left:10px;">Description</h3>
               </header>
               <div class="w3-container">
                 <p>{{ page.description}}</p>
@@ -150,7 +135,7 @@ layout: default
 
 <!-- end of cell-->
 <!-- Start of Cell-->
-<div class="box .row.row-eq-height" >
+<div class="box .row.row-eq-height zoom" >
 <div class="w3-container" style="width:100%;  margin-top:20px;">
     <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
       <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
@@ -173,7 +158,7 @@ layout: default
 <!-- end of cell-->
 
 <!-- Start of Cell-->
-          <div class="box .row.row-eq-height" >
+          <div class="box .row.row-eq-height zoom" >
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
                   <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
@@ -199,7 +184,7 @@ layout: default
               col-sm-6
               col-md-6
               col-lg-6">
-            <div class="box .row.row-eq-height" >
+            <div class="box .row.row-eq-height zoom" >
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
                   <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
@@ -228,7 +213,7 @@ layout: default
 <!-- end of cell-->
 <!-- Start of Cell-->
 
-            <div class="box .row.row-eq-height" >
+            <div class="box .row.row-eq-height zoom" >
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4">
                   <header class="w3-container w3-blue w3-padding-small ">
@@ -249,7 +234,7 @@ layout: default
 
 <!-- Start of Cell-->
 
-            <div class="box .row.row-eq-height" >
+            <div class="box .row.row-eq-height zoom" >
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4">
                   <header class="w3-container w3-blue w3-padding-small ">
@@ -271,7 +256,7 @@ layout: default
 
 <!-- Start of Cell-->
 
-  <div class="box .row.row-eq-height" >
+  <div class="box .row.row-eq-height zoom" >
   <div class="w3-container" style="width:100%;  margin-top:20px;">
       <div class="w3-card-4">
         <header class="w3-container w3-blue w3-padding-small ">
@@ -298,7 +283,7 @@ layout: default
                         <div class="row">
                           <div class="col-md-6 col-sm-6">
                           <!--panel # 1 -->
-                            <div class="card">
+                            <div class="card zoom">
                               <div class="card-body">
                                 <div class="ct-chart" id="bar-chart"></div>
                                   </div>
@@ -307,7 +292,7 @@ layout: default
                             </div>
                           <div class="col-md-6 col-sm-6">
                         <!--panel # 2 start -->
-                      <div class="card">
+                      <div class="card zoom">
                         <div class="card-body">
                             <div class="ct-chart" id="line-chart"></div>
                                     </div>
@@ -448,18 +433,11 @@ layout: default
 <!-- end of cell-->
 
 
-  </div>
-  </div>
-
-
-  </div>
-    {{ content }}
-
-
-
     <!-- content -->
   </article>
 </div>
+
+
 
 <script>
   var options = {
