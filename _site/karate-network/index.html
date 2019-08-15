@@ -499,19 +499,14 @@
                   <header class="w3-container w3-blue w3-padding-small ">
                     <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
                   </header>
-                  <div class="w3-container">
-                    <canvas id="myChart"></canvas>
-
+                    <div class="w3-container">
+                      <canvas id="myChart"></canvas>
+                    </div>
                   </div>
-
+                </div>
               </div>
-            </div>
-            </div>
 
 <!-- end of cell-->
-<div class="">
-
-</div>
 
 <!-- Start of Cell-->
 
@@ -525,32 +520,30 @@
                     <canvas id="myChart-donut"></canvas>
                     </div>
                   </div>
-
+                </div>
               </div>
-            </div>
             </div>
 
 <!-- end of cell-->
-
-</div>
-</div>
-</div>
+      </div>
+    </div>
+  </div>
 <!-- Start of Cell-->
             <div class="" >
             <div class="w3-container" style="margin-top:20px;">
                 <div class="w3-card-4" style="border-radius:10px 10px 0 0">
                   <header class="w3-container w3-blue w3-padding-small ">
                     <h3 class="w3-text-white">Visualization</h3>
-                  </header>
-                      <div class="container" style="">
-                        <div class="row">
-                          <div class="col-md-6 col-sm-6 col-xs-12">
-                          <!--panel # 1 -->
-                          <div class="">
-                              <div class="card zoom">
-                                <canvas id="myChart-line" class="" style=""></canvas>
-                            </div>
-                              </div>
+                      </header>
+                        <div class="container" style="">
+                          <div class="row">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <!--panel # 1 -->
+                                <div class="">
+                                  <div class="card zoom">
+                                    <canvas id="myChart-line" class="" style=""></canvas>
+                                  </div>
+                                </div>
                               <!--panel # 1 end -->
                             </div>
                             <br>
@@ -671,7 +664,7 @@
                               </div>
                               <div class="col">
                                 <table class="table table-hover">
-                                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
+                                  <tr class=""><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
                                   <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
                                   <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
                                   <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
@@ -722,8 +715,8 @@
   
 
 var data = {
-  labels: [1,2,3,4,5,6,7,8],
-  series: [5,9,7,8,5,3,5,4]
+  labels: [1,2,3,4,5,6,7,8,9],
+  series: [5,9,7,8,5,3,5,4,4]
 }
 
 new Chartist.Line('#line-chart', data ,options, responsiveOptions, {
@@ -737,7 +730,7 @@ showArea: true
   });
 
 var data_pie = {
-  series: [5,9,7,8,5,3,5,4]
+  series: [5,9,7,8,5,3,5,4,4]
 };
 
 var sum = function(a, b) { return a + b };
@@ -751,7 +744,7 @@ return Math.round(value / data.series.reduce(sum) * 100) + '%';
 var chart = new Chartist.Pie('#pie-chart', {
   //series index is specified bcz pie chart accepts only one sereis
 series: 5,
-labels: [1,2,3,4,5,6,7,8]
+labels: [1,2,3,4,5,6,7,8,9]
 }, {
 donut: true,
 showLabel: true
@@ -806,8 +799,8 @@ window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 });
 
 var data_line = new Chartist.Line('.ct-chart-line', {
-  labels: [1,2,3,4,5,6,7,8],
-  series: [5,9,7,8,5,3,5,4]
+  labels: [1,2,3,4,5,6,7,8,9],
+  series: [5,9,7,8,5,3,5,4,4]
 });
 
 // Listening for draw events that get emitted by the Chartist chart
@@ -856,10 +849,10 @@ var data = '';
   var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-          labels: [1,2,3,4,5,6,7,8],
+          labels: [1,2,3,4,5,6,7,8,9],
           datasets: [{
               label: '# of Votes',
-              data: [5,9,7,8,5,3,5,4],
+              data: [5,9,7,8,5,3,5,4,4],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -895,10 +888,10 @@ var ctx = document.getElementById('myChart-donut').getContext('2d');
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: [1,2,3,4,5,6,7,8],
+        labels: [1,2,3,4,5,6,7,8,9],
         datasets: [{
             label: '# of Votes',
-            data: [5,9,7,8,5,3,5,4],
+            data: [5,9,7,8,5,3,5,4,4],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -927,10 +920,10 @@ var ctx = document.getElementById('myChart-line').getContext('2d');
 var myLineChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: [1,2,3,4,5,6,7,8],
+        labels: [1,2,3,4,5,6,7,8,9],
         datasets: [{
             label: '# of Votes',
-            data: [5,9,7,8,5,3,5,4],
+            data: [5,9,7,8,5,3,5,4,4],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -958,10 +951,10 @@ var ctx = document.getElementById('myChart-polar').getContext('2d');
 var myLineChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
-        labels: [1,2,3,4,5,6,7,8],
+        labels: [1,2,3,4,5,6,7,8,9],
         datasets: [{
             label: '# of Votes',
-            data: [5,9,7,8,5,3,5,4],
+            data: [5,9,7,8,5,3,5,4,4],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
