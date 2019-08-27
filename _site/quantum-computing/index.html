@@ -1,7 +1,271 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum Computing</title>
+
+<!--MDB Packges-->
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
+<!--MDB Packges-->
+
+<!--CHartsJS Packges-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+
+<!--CHartsJS Packges-->
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
+
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="/home/tanveer/Documents/hypergraph-repository.github.io/css/main.scss">
+
+<link rel="shortcut icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
+<link rel="icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+
+
+
+  <!-- facebook -->
+  <meta property="og:title" content="Hypergraph Repository" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://localhost:4000" />
+  <meta property="og:description" content="Simple and flexible Jekyll theme for help center." />
+  <meta property="og:site_name" content="Hypergraph Repository" />
+  <meta property="og:image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png" />
+  <meta property="fb:app_id" content="1154262757941899" />
+  <meta property="fb:admins" content="100002787447461" />
+  <!-- facebook -->
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hypergraph Repository">
+  <meta name="twitter:description" content="Simple and flexible Jekyll theme for help center.">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
+  <meta itemprop="name" content="Hypergraph Repository">
+  <meta itemprop="description" content="Simple and flexible Jekyll theme for help center.">
+  <meta itemprop="image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
+  <!-- twitter -->
+
+<!-- ChartistJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<!-- ChartistJS-->
+
+</head>
+
+
+<body>
+  <div class="">
+    <!-- <div class="navbar navbar-expand-lg navbar-light ">
+  <div class="size margin menu--content container align-items-center justify-content-between">
+
+    <div class="" data-aos="fade-right" data-aos-delay="" data-aos-offset="0">
+      <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
+    </div>
+
+    <a href="https://hypergraph-repository.github.io/explore" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-folder"></span>
+        </div>
+        <div class="back-to-site-text">
+          Explore
+        </div>
+      </div>
+    </a>
+
+    <a href="https://hypergraph-repository.github.io/hypergraphs" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-globe"></span>
+        </div>
+        <div class="back-to-site-text">
+          What is an Hypergraph?
+        </div>
+      </div>
+    </a>
+
+    <a href="https://hypergraph-repository.github.io/about" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-info"></span>
+        </div>
+        <div class="back-to-site-text">
+          About
+        </div>
+      </div>
+    </a>
+
+
+<!--
+    <a href="https://github.com/pszufe/SimpleHypergraphs.jl" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-external-link"></span>
+        </div>
+        <div class="back-to-site-text">
+            SimpleHypergraphs.jl
+        </div>
+      </div>
+    </a>
+<!--
+
+<form class="form-inline md-form form-sm mt-0">
+  <i class="fas fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+    aria-label="Search">
+</form>
+-->
+    <!-- <nav class="masthead-nav">
+      
+      
+      <a href="/hypergraph-repository.github.io/about/">
+        About
+      </a>
+      
+      
+      
+      <a href="/hypergraph-repository.github.io/explore/">
+        Explore
+      </a>
+      
+      
+      
+      
+      
+      <a href="/hypergraph-repository.github.io/hypergraphs/">
+        Hypergraphs
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+
+-->
+
 <style media="screen">
+
+    .searchbar{
+     margin-bottom: auto;
+     margin-top: auto;
+     height: 60px;
+     background-color: #13bcd6;
+     border-radius: 30px;
+     padding: 10px;
+     }
+
+     .search_input{
+     color: white;
+     border: 0;
+     outline: 0;
+     background: none;
+     width: 0;
+     caret-color:transparent;
+     line-height: 40px;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_input{
+     padding: 0 10px;
+     width: 250px;
+     caret-color:red;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_icon{
+     background: white;
+     color: black;
+     }
+
+     .search_icon{
+     height: 40px;
+     width: 40px;
+     float: right;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     color:white;
+     }
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="http://localhost:4000/hypergraph-repository.github.io/">Hypergraph Repository</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://hypergraph-repository.github.io/explore">Explore</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="  https://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="container h-50">
+            <div class="d-flex justify-content-center h-100">
+              <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here...">
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+              </div>
+            </div>
+            <div class="header--block--result">
+              <ul id="results-container"></ul>
+            </div>
+          </div>
+    </form>
+  </div>
+</nav>
+
+
+    <style media="screen">
   .w3-container{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -84,16 +348,32 @@ layout: default
 <br>
 <!--breadcrumbs-->
 <div class="size margin" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
-  {% include breadcrumbs.html path=page.path title=page.title %}
+  
+
+
+
+
+
+<div class="container wrap breadcrumbs">
+  <a href="http://localhost:4000/hypergraph-repository.github.io/">Home</a>
+  
+  <span class="prompt margin-left-10 margin-right-10">></span>
+  
+  
+  Quantum Computing
+  
+  
+</div>
+
 </div>
 <!--breadcrumbs-->
 
 <div class="size margin min-height">
   <article>
     <!-- titles -->
-    <!--<h1 class="post-title" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">{{ page.title }}</h1>
+    <!--<h1 class="post-title" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">Quantum Computing</h1>
     <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
-      <time>{{ page.date | date_to_string }}</time>
+      <time>12 Nov 2017</time>
 
     </div>
 -->
@@ -103,9 +383,9 @@ layout: default
       <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%">
       <div class="text-white text-center py-5 px-4">
         <div>
-          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>{{page.title}}</strong></h2>
+          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>Quantum Computing</strong></h2>
           <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
-            <time>{{ page.date | date_to_string }}</time>
+            <time>12 Nov 2017</time>
 
           </div>
           <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for karate network.
@@ -126,7 +406,7 @@ layout: default
                 <h3 class="w3-text-white ulanimate trans" style="margin-left:10px;">Description</h3>
               </header>
               <div class="w3-container">
-                <p>{{ page.description}}</p>
+                <p>Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically.</p>
               </div>
 
           </div>
@@ -143,12 +423,12 @@ layout: default
       </header>
       <div class="w3-container">
         <table class="table table-striped">
-          <tr><td>Categories: </td><td>{{ page.categories}}</td></tr>
-          <tr><td>Size: </td><td>{{ page.size}}</td></tr>
-          <tr><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-          <tr><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-          <tr><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-          <tr><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+          <tr><td>Categories: </td><td>Scientific</td></tr>
+          <tr><td>Size: </td><td>5 MB</td></tr>
+          <tr><td>Vertex Type: </td><td>person</td></tr>
+          <tr><td>Edge Type: </td><td>school</td></tr>
+          <tr><td>Vertex Meta: </td><td>personal information</td></tr>
+          <tr><td>Edge Meta: </td><td>school information</td></tr>
         </table>
       </div>
 
@@ -166,11 +446,11 @@ layout: default
                   </header>
                   <div class="w3-container">
                     <table class="table table-striped">
-                        <tr><td class="">|V|: </td><td>{{ page.v}}</td></tr>
-                        <tr><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
-                        <tr><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                        <tr><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                        <tr><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
+                        <tr><td class="">|V|: </td><td>32</td></tr>
+                        <tr><td class="">|E|:  </td><td>10</td></tr>
+                        <tr><td class="">Max Degree: </td><td>4</td></tr>
+                        <tr><td class="">Max Edge Size: </td><td>4</td></tr>
+                        <tr><td class="">Modularity: </td><td>0.4</td></tr>
                       </table>
                   </div>
               </div>
@@ -192,17 +472,17 @@ layout: default
                   </header>
                   <div class="w3-container">
                     <table class="">
-                      <tr><td class="tag">|E|: </td><td>{{ page.two-e}}</td></tr>
-                      <tr><td class="tag">LCC: </td><td>{{ page.two-lcc}}</td></tr>
-                      <tr><td class="tag">Density: </td><td>{{ page.two-density}}</td></tr>
-                      <tr><td class="tag">Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
-                      <tr><td class="tag">Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
-                      <tr><td class="tag">Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
-                      <tr><td class="tag">Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
-                      <tr><td class="tag">Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
-                      <tr><td class="tag">Diameter: </td><td>{{ page.two-diameter}}</td></tr>
-                      <tr><td class="tag">CC: </td><td>{{ page.two-cc}}</td></tr>
-                      <tr><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+                      <tr><td class="tag">|E|: </td><td>40</td></tr>
+                      <tr><td class="tag">LCC: </td><td>10</td></tr>
+                      <tr><td class="tag">Density: </td><td>0.4</td></tr>
+                      <tr><td class="tag">Number of triangles: </td><td>20</td></tr>
+                      <tr><td class="tag">Min degree: </td><td>3</td></tr>
+                      <tr><td class="tag">Max degree: </td><td>10</td></tr>
+                      <tr><td class="tag">Avg degree: </td><td>4</td></tr>
+                      <tr><td class="tag">Power law exp.:  </td><td>2</td></tr>
+                      <tr><td class="tag">Diameter: </td><td>4</td></tr>
+                      <tr><td class="tag">CC: </td><td>0.6</td></tr>
+                      <tr><td class="tag">Modularity: </td><td>0.4</td></tr>
                     </table>
                   </div>
 
@@ -439,11 +719,11 @@ layout: default
     }]
   ];
 
-  {% assign data_file = {{page.data-name}} %}
+  
 
 var data = {
-  labels: {{ site.data[data_file].labels | jsonify}},
-  series: {{ site.data[data_file].series | jsonify }}
+  labels: [10,20,30,40,50,60,70,80],
+  series: [[5,9,7,8,5,3,5,4]]
 }
 
 new Chartist.Line('#line-chart', data ,options, responsiveOptions, {
@@ -457,7 +737,7 @@ showArea: true
   });
 
 var data_pie = {
-  series: {{ site.data[data_file].series | jsonify }}
+  series: [[5,9,7,8,5,3,5,4]]
 };
 
 var sum = function(a, b) { return a + b };
@@ -470,8 +750,8 @@ return Math.round(value / data.series.reduce(sum) * 100) + '%';
 
 var chart = new Chartist.Pie('#pie-chart', {
   //series index is specified bcz pie chart accepts only one sereis
-series: {{ site.data.file.series[0] | jsonify}},
-labels: {{ site.data.file.labels | jsonify }}
+series: 5,
+labels: [1,2,3,4,5,6,7,8]
 }, {
 donut: true,
 showLabel: true
@@ -526,8 +806,8 @@ window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 });
 
 var data_line = new Chartist.Line('.ct-chart-line', {
-  labels: {{ site.data[data_file].labels | jsonify }},
-  series: {{ site.data[data_file].series | jsonify }}
+  labels: [10,20,30,40,50,60,70,80],
+  series: [[5,9,7,8,5,3,5,4]]
 });
 
 // Listening for draw events that get emitted by the Chartist chart
@@ -568,7 +848,7 @@ new Chartist.Bar('.ct-chart-bar', data, options, responsiveOptions);
 
 <!-- ChartsJS Script -->
 
-{% assign data_file_chartjs = {{page.data-name}} %}
+
 
 <script type="text/javascript">
 var data = '';
@@ -576,10 +856,10 @@ var data = '';
   var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-          labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+          labels: [10,20,30,40,50,60,70,80],
           datasets: [{
               label: '# of Votes',
-              data: {{ site.data[data_file_chartjs].series | jsonify}},
+              data: [[5,9,7,8,5,3,5,4]],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -615,10 +895,10 @@ var ctx = document.getElementById('myChart-donut').getContext('2d');
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        labels: [10,20,30,40,50,60,70,80],
         datasets: [{
             label: '# of Votes',
-            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            data: [[5,9,7,8,5,3,5,4]],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -647,10 +927,10 @@ var ctx = document.getElementById('myChart-line').getContext('2d');
 var myLineChart = new Chart(ctx, {
     type: 'line',
     data: {
-        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        labels: [10,20,30,40,50,60,70,80],
         datasets: [{
             label: '# of Votes',
-            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            data: [[5,9,7,8,5,3,5,4]],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -678,10 +958,10 @@ var ctx = document.getElementById('myChart-polar').getContext('2d');
 var myLineChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
-        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        labels: [10,20,30,40,50,60,70,80],
         datasets: [{
             label: '# of Votes',
-            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            data: [[5,9,7,8,5,3,5,4]],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -705,3 +985,38 @@ var myLineChart = new Chart(ctx, {
 });
 
 </script>
+
+
+    <footer>
+  <div class="footer container column align-items-center justify-content-center">
+    <div class="footer--block text-align-center">
+      <div class="" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+        <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
+      </div>
+     <!-- <div class="by" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">
+        <a href="https://github.com/gustavoquinalha/jekyll-help-center-theme" target="_blank">Created with jekyll</a>
+      </div>-->
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script type="text/javascript" src="https://github.com/hypergraph-repository/hypergraph-repository.github.io/blob/dev/assets/js/simple-jekyll-search.min.js">
+
+</script>
+
+  <script>
+    AOS.init({
+      once: true
+    });
+
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/hypergraph-repository.github.io/search.json'
+    })
+  </script>
+</body>
+
+</html>

@@ -3,22 +3,13 @@ layout: default
 title: Explore
 permalink: /explore/
 ---
-<header>
+{% include header.html %}
 
-        <div class="header container align-items-center justify-content-center">
-          <div class="header--block size margin container column">
-            <div class="header--block--text" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
-              Explore the  {{ site.title }} datasets
-            </div>
-          </div>
-        </div>
-</header>
-      
 
 <div class="content-post">
- 
+
     <div class="size margin" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
-    
+
     <table id="table_id" style=" font-size: 14px;">
         <thead>
             <tr>
@@ -32,10 +23,10 @@ permalink: /explore/
                 <th>Edge Type</th>
                 <th>Share</th>
                 <th>View</th>
-            
+
             </tr>
         </thead>
-        <tbody>  
+        <tbody>
             {% for post in site.posts %}
             <tr>
                 <td>{{ post.date }}</td>
@@ -47,12 +38,11 @@ permalink: /explore/
                 <td>{{ post.vertex-type }}</td>
                 <td>{{ post.edge-type }}</td>
                 <td><a href="https://hypergraph-repository.github.io/{{ post.page }}">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
-
                 <td><a href="https://hypergraph-repository.github.io/{{ post.page }}">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
 
-               
+
             </tr>
-            {% endfor %} 
+            {% endfor %}
         </tbody>
     </table>
     <script>
@@ -62,9 +52,9 @@ permalink: /explore/
         });
     } );
     </script>
-    
-       
-   
+
+
+
 
   </div>
 

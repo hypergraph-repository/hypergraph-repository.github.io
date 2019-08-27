@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Explore</title>
+
+<!--MDB Packges-->
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
+<!--MDB Packges-->
+
+<!--CHartsJS Packges-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+
+<!--CHartsJS Packges-->
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
+
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+<link rel="stylesheet" href="/home/tanveer/Documents/hypergraph-repository.github.io/css/main.scss">
+
+<link rel="shortcut icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
+<link rel="icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+
+
+
+  <!-- facebook -->
+  <meta property="og:title" content="Hypergraph Repository" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://localhost:4000" />
+  <meta property="og:description" content="Simple and flexible Jekyll theme for help center." />
+  <meta property="og:site_name" content="Hypergraph Repository" />
+  <meta property="og:image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png" />
+  <meta property="fb:app_id" content="1154262757941899" />
+  <meta property="fb:admins" content="100002787447461" />
+  <!-- facebook -->
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hypergraph Repository">
+  <meta name="twitter:description" content="Simple and flexible Jekyll theme for help center.">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
+  <meta itemprop="name" content="Hypergraph Repository">
+  <meta itemprop="description" content="Simple and flexible Jekyll theme for help center.">
+  <meta itemprop="image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
+  <!-- twitter -->
+
+<!-- ChartistJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<!-- ChartistJS-->
+
+</head>
+
+
+<body>
+  <div class="">
+    <!-- <div class="navbar navbar-expand-lg navbar-light ">
+  <div class="size margin menu--content container align-items-center justify-content-between">
+
+    <div class="" data-aos="fade-right" data-aos-delay="" data-aos-offset="0">
+      <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
+    </div>
+
+    <a href="https://hypergraph-repository.github.io/explore" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-folder"></span>
+        </div>
+        <div class="back-to-site-text">
+          Explore
+        </div>
+      </div>
+    </a>
+
+    <a href="https://hypergraph-repository.github.io/hypergraphs" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-globe"></span>
+        </div>
+        <div class="back-to-site-text">
+          What is an Hypergraph?
+        </div>
+      </div>
+    </a>
+
+    <a href="https://hypergraph-repository.github.io/about" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-info"></span>
+        </div>
+        <div class="back-to-site-text">
+          About
+        </div>
+      </div>
+    </a>
+
+
+<!--
+    <a href="https://github.com/pszufe/SimpleHypergraphs.jl" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-external-link"></span>
+        </div>
+        <div class="back-to-site-text">
+            SimpleHypergraphs.jl
+        </div>
+      </div>
+    </a>
+<!--
+
+<form class="form-inline md-form form-sm mt-0">
+  <i class="fas fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+    aria-label="Search">
+</form>
+-->
+    <!-- <nav class="masthead-nav">
+      
+      
+      <a href="/hypergraph-repository.github.io/about/">
+        About
+      </a>
+      
+      
+      
+      <a href="/hypergraph-repository.github.io/explore/">
+        Explore
+      </a>
+      
+      
+      
+      
+      
+      <a href="/hypergraph-repository.github.io/hypergraphs/">
+        Hypergraphs
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+
+-->
+
+<style media="screen">
+
+    .searchbar{
+     margin-bottom: auto;
+     margin-top: auto;
+     height: 60px;
+     background-color: #13bcd6;
+     border-radius: 30px;
+     padding: 10px;
+     }
+
+     .search_input{
+     color: white;
+     border: 0;
+     outline: 0;
+     background: none;
+     width: 0;
+     caret-color:transparent;
+     line-height: 40px;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_input{
+     padding: 0 10px;
+     width: 250px;
+     caret-color:red;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_icon{
+     background: white;
+     color: black;
+     }
+
+     .search_icon{
+     height: 40px;
+     width: 40px;
+     float: right;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     color:white;
+     }
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <a class="navbar-brand" href="http://localhost:4000/hypergraph-repository.github.io/">Hypergraph Repository</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://hypergraph-repository.github.io/explore">Explore</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="  https://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <div class="container h-50">
+            <div class="d-flex justify-content-center h-100">
+              <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here...">
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+              </div>
+            </div>
+            <div class="header--block--result">
+              <ul id="results-container"></ul>
+            </div>
+          </div>
+    </form>
+  </div>
+</nav>
+
+
+    <!--<header>
+
+  <div class="header container align-items-center justify-content-center">
+    <div class="header--block size margin container column">
+      <div class="header--block--text" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+        Welcome to the  Hypergraph Repository Project
+      </div>
+      <div class="container column position-search">
+        <div class="header--block--input" data-aos="fade-up" data-aos-delay="" data-aos-offset="0" id="search-container">
+          <div class="header--block--input--icon">
+             <img src="/hypergraph-repository.github.io/assets/img/icons/search-input.svg" width="30" alt="">
+            <span class="feather-icon icon-search"></span>
+          </div>
+          <input class="input-search" type="text" name="" value="" placeholder="Search for hypergraph..." id="search-input">
+        </div>
+        <div class="header--block--result">
+          <ul id="results-container"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+-->
+
+<header>
+
+  <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+    <div class="text-white text-center py-5 px-4">
+      <div data-aos="fade-left">
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Welcome to Hypergraph Repository!</strong></h2>
+        <p class="mx-5 mb-5">A simple hypergraphs package for the Julia programming language.</p>
+        
+            <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle" hidden><span>Explore </span> </button>
+        
+      </div>
+    </div>
+  </div>
+
+
+</header>
+
+
+
+<div class="content-post">
+
+    <div class="size margin" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+
+    <table id="table_id" style=" font-size: 14px;">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Categories</th>
+                <th>|V|</th>
+                <th>|E|</th>
+                <th>Size</th>
+                <th>Vertex Type</th>
+                <th>Edge Type</th>
+                <th>Share</th>
+                <th>View</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>2017-11-12 21:46:41 +0100</td>
+                <td>Quantum Computing</td>
+                <td><div style="width:10px;">Scientific</div></td>
+                <td>32</td>
+                <td>10</td>
+                <td>5 MB</td>
+                <td>person</td>
+                <td>school</td>
+                <td><a href="https://hypergraph-repository.github.io/quantum-computing">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
+                <td><a href="https://hypergraph-repository.github.io/quantum-computing">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
+
+
+            </tr>
+            
+            <tr>
+                <td>2017-11-12 21:46:41 +0100</td>
+                <td>Karate Network</td>
+                <td><div style="width:10px;">Social-Network</div></td>
+                <td>32</td>
+                <td>10</td>
+                <td>5 MB</td>
+                <td>person</td>
+                <td>school</td>
+                <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
+                <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
+
+
+            </tr>
+            
+        </tbody>
+    </table>
+    <script>
+      $(document).ready(function() {
+        $('#table_id').DataTable({
+          responsive: true
+        });
+    } );
+    </script>
+
+
+
+
+  </div>
+
+</div>
+
+
+    <footer>
+  <div class="footer container column align-items-center justify-content-center">
+    <div class="footer--block text-align-center">
+      <div class="" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+        <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
+      </div>
+     <!-- <div class="by" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">
+        <a href="https://github.com/gustavoquinalha/jekyll-help-center-theme" target="_blank">Created with jekyll</a>
+      </div>-->
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script type="text/javascript" src="https://github.com/hypergraph-repository/hypergraph-repository.github.io/blob/dev/assets/js/simple-jekyll-search.min.js">
+
+</script>
+
+  <script>
+    AOS.init({
+      once: true
+    });
+
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/hypergraph-repository.github.io/search.json'
+    })
+  </script>
+</body>
+
+</html>
