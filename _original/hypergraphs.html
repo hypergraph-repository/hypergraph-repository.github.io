@@ -1,0 +1,65 @@
+---
+layout: default
+title: Hypergraphs
+permalink: /hypergraphs/
+---
+<header>
+
+        <div class="header container align-items-center justify-content-center">
+          <div class="header--block size margin container column">
+            <div class="header--block--text" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+              Explore the  {{ site.title }} datasets
+            </div>
+          </div>
+        </div>
+</header>
+      
+
+<div class="content-post">
+ 
+    <div class="size margin" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+    
+    <table id="table_id" style=" font-size: 14px;">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Source</th>
+                <th>Type</th>
+                <th>|V|</th>
+                <th>|E|</th>
+                <th>Size</th>
+                <th>Download</th>
+            </tr>
+        </thead>
+        <tbody>  
+            {% for post in site.posts %}
+            <tr>
+                <td>{{ post.date }}</td>
+                <td>{{ post.categories }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.by }}</td>
+                <td>{{ post.by }}</td>
+                <td>{{ post.by }}</td>
+                <td>{{ post.by }}</td>
+                <td>{{ post.by }}</td>
+                <td>{{ post.by }}</td>
+            </tr>
+            {% endfor %} 
+        </tbody>
+    </table>
+    <script>
+      $(document).ready(function() {
+        $('#table_id').DataTable({
+          responsive: true
+        });
+    } );
+    </script>
+    
+       
+   
+
+  </div>
+
+</div>
