@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="">
+<div class="" style="">
   {% include header.html %}
 </div>
 
@@ -101,6 +101,91 @@ box-shadow: 0 0 0 1px #4dd0e1;
   </div>
 
 </div>
-
-
  <!-- Latest graphs Panel -->
+
+<!-- some stuff to try
+  <div class="maincontainer">
+    <div class="one">
+      <div class="card">
+        <h1>css</h1>
+        <h2>some sort of text</h2>
+      </div>
+
+    </div>
+    <div class="two">
+      <div class="card">
+    <h1>flexbox</h1>
+    <h2>some sort of text</h2>
+    </div>
+
+    </div>
+    <div class="three">
+      <div class="card">
+        <h1>is cool</h1>
+        <h2>some sort of text</h2>
+      </div>
+
+    </div>
+
+  </div>
+
+
+ <style media="screen">
+   .maincontainer{
+     display: flex;
+     width: 80vm;
+     margin-top: 20vh;
+     justify-content: space-evenly;
+   }
+
+   .maincontainer > div {
+     width: calc(50vm/3);
+     height: 60vh;
+     display: flex;
+     flex-grow: 1;
+     justify-content: center;
+     align-items: center;
+     transition: all 300ms ease-in-out;
+   }
+   .one{
+     background: orange;
+   }
+
+   .two{
+     background: cyan;
+   }
+   .three{
+     background:blue;
+   }
+
+   .maincontainer > div > div > h1 {
+     transform: rotate(-90deg);
+     transition: all 300ms ease-in-out;
+   }
+
+   .maincontainer > div > div > h2 {
+     visibility: hidden;
+     transform: rotate(-90deg);
+     transition: all 300ms ease-in-out;
+   }
+
+   .maincontainer > div:hover {
+     flex-grow: 4;
+
+   }
+
+   .maincontainer > div:hover > div h1{
+     transform: rotate(0deg);
+     transform: scale(1.5);
+     color: black;
+   }
+
+   .maincontainer > div:hover > div h2{
+     transform: rotate(0deg);
+     transform: scale(1.5);
+     transition: opacity 2s linear;
+     visibility: visible;
+   }
+ </style>
+
+ -->

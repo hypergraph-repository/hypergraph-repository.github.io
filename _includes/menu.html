@@ -78,7 +78,7 @@
      margin-bottom: auto;
      margin-top: auto;
      height: 60px;
-     background-color: #13bcd6;
+     background-color: rgb(32,150,243);
      border-radius: 30px;
      padding: 10px;
      }
@@ -89,7 +89,6 @@
      outline: 0;
      background: none;
      width: 0;
-     caret-color:transparent;
      line-height: 40px;
      transition: width 0.4s linear;
      }
@@ -97,8 +96,9 @@
      .searchbar:hover > .search_input{
      padding: 0 10px;
      width: 250px;
-     caret-color:red;
+     caret-color: white;
      transition: width 0.4s linear;
+     color: white;
      }
 
      .searchbar:hover > .search_icon{
@@ -119,7 +119,7 @@
 
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light ">
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:white;">
   <a class="navbar-brand" href="http://localhost:4000/hypergraph-repository.github.io/">Hypergraph Repository</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -139,11 +139,11 @@
         <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <form class="form-inline my-lg-0">
       <div class="container h-50">
             <div class="d-flex justify-content-center h-100">
               <div class="searchbar">
-                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here...">
+                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here..." style="color:white;">
                 <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
               </div>
             </div>

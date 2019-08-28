@@ -78,7 +78,10 @@ layout: default
   -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1);
+
 }
+
+
 }
 </style>
 <br>
@@ -98,27 +101,27 @@ layout: default
     </div>
 -->
 
-<div class="container">
+<div class="container" style="padding-top:0em;">
     <div class="row" data-aos="zoom-in" style="margin-top:20px;">
       <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%">
       <div class="text-white text-center py-5 px-4">
-        <div>
-          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>{{page.title}}</strong></h2>
-          <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
-            <time>{{ page.date | date_to_string }}</time>
-
-          </div>
+      <div>
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>{{page.title}}</strong></h2>
+        <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+        <time>{{ page.date | date_to_string }}</time>
+        </div>
           <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for karate network.
           </p>
           <a class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> Dataset files</a>
         </div>
       </div>
     </div>
-    <!-- Start of Cell-->
+
+    <!-- Start of Cell -- Description-->
     <div class="col-xs-12
-          col-sm-6
-          col-md-6
-          col-lg-6">
+          col-sm-12
+          col-md-4
+          col-lg-4">
         <div class="box zoom" >
         <div class="w3-container" style="width:100%;  margin-top:20px;">
             <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
@@ -128,113 +131,126 @@ layout: default
               <div class="w3-container">
                 <p>{{ page.description}}</p>
               </div>
-
           </div>
         </div>
         </div>
 
-<!-- end of cell-->
-<!-- Start of Cell-->
-<div class="box .row.row-eq-height zoom" >
-<div class="w3-container" style="width:100%;  margin-top:20px;">
-    <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-      <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-        <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
-      </header>
-      <div class="w3-container">
-        <table class="table table-striped">
-          <tr><td>Categories: </td><td>{{ page.categories}}</td></tr>
-          <tr><td>Size: </td><td>{{ page.size}}</td></tr>
-          <tr><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-          <tr><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-          <tr><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-          <tr><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
-        </table>
-      </div>
 
+<!-- end of cell description-->
+<!-- Start of Cell hyper details-->
+
+  <div class="box .row.row-eq-height zoom" >
+  <div class="w3-container" style="width:100%;  margin-top:20px;">
+      <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+        <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+          <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+        </header>
+        <div class="w3-container">
+          <table class="table table-striped">
+            <tr class="zoom"><td>Categories: </td><td>{{ page.categories}}</td></tr>
+            <tr class="zoom"><td>Size: </td><td>{{ page.size}}</td></tr>
+            <tr class="zoom"><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+            <tr class="zoom"><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+            <tr class="zoom"><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+            <tr class="zoom"><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+          </table>
+        </div>
+    </div>
+  </div>
   </div>
 </div>
-</div>
-<!-- end of cell-->
+<!-- end of cell hyper details-->
 
-<!-- Start of Cell-->
-          <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graphs</h3>
-                  </header>
-                  <div class="w3-container">
-                    <table class="table table-striped">
-                        <tr><td class="">|V|: </td><td>{{ page.v}}</td></tr>
-                        <tr><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
-                        <tr><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                        <tr><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                        <tr><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
-                      </table>
-                  </div>
-              </div>
-            </div>
-            </div>
-</div>
-        <!-- end of cell-->
+<!-- Start of Cell 2-section graphs-->
+<div class="col-xs-12
+      col-sm-12
+      col-md-4
+      col-lg-4">
+  <div class="box .row.row-eq-height zoom" >
+    <div class="w3-container" style="width:100%;  margin-top:20px;">
+        <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+          <div class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+            <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graphs</h3>
+          </div>
+          <div class="container">
+          <!--  <div class="card">
+              <ul class="list-group list-group-flush">
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              </ul>
+            </div> -->
+            <table class="table table-striped table-hover">
+                <tr class="zoom"><td class="">|V|: </td><td>{{ page.v}}</td></tr>
+                <tr class="zoom"><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
+                <tr class="zoom"><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                <tr class="zoom"><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                <tr class="zoom"><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
+              </table>
+          </div>
+      </div>
+    </div>
+    </div>
+        <!-- end of cell 2-section graphs-->
 
-        <!-- Start of Cell-->
-        <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
-                  </header>
-                  <div class="w3-container">
+        <!-- Start of Cell columns 2-Meta data-->
+        <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%;  margin-top:20px;">
+            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+              <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
+                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
+              </header>
+              <div class="w3-container">
                     <table class="">
-                      <tr><td class="tag">|E|: </td><td>{{ page.two-e}}</td></tr>
-                      <tr><td class="tag">LCC: </td><td>{{ page.two-lcc}}</td></tr>
-                      <tr><td class="tag">Density: </td><td>{{ page.two-density}}</td></tr>
-                      <tr><td class="tag">Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
-                      <tr><td class="tag">Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
-                      <tr><td class="tag">Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
-                      <tr><td class="tag">Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
-                      <tr><td class="tag">Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
-                      <tr><td class="tag">Diameter: </td><td>{{ page.two-diameter}}</td></tr>
-                      <tr><td class="tag">CC: </td><td>{{ page.two-cc}}</td></tr>
-                      <tr><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+                      <tr class="zoom"><td class="tag">|E|: </td><td>{{ page.two-e}}</td></tr>
+                      <tr class="zoom"><td class="tag">LCC: </td><td>{{ page.two-lcc}}</td></tr>
+                      <tr class="zoom"><td class="tag">Density: </td><td>{{ page.two-density}}</td></tr>
+                      <tr class="zoom"><td class="tag">Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
+                      <tr class="zoom"><td class="tag">Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
+                      <tr class="zoom"><td class="tag">Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
+                      <tr class="zoom"><td class="tag">Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
+                      <tr class="zoom"><td class="tag">Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
+                      <tr class="zoom"><td class="tag">Diameter: </td><td>{{ page.two-diameter}}</td></tr>
+                      <tr class="zoom"><td class="tag">CC: </td><td>{{ page.two-cc}}</td></tr>
+                      <tr class="zoom"><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
                     </table>
                   </div>
 
               </div>
             </div>
             </div>
+          </div>
 
-<!-- end of cell-->
-<!-- Start of Cell-->
-
-            <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
-                  </header>
-                    <div class="w3-container">
-                      <canvas id="myChart"></canvas>
-                    </div>
+<!-- end of cell- Column 2 - Meta data-->
+<!-- Start of Cell Hyper degree dist- Bar Chart-->
+        <div class="col-xs-12
+              col-sm-12
+              col-md-4
+              col-lg-4">
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%;  margin-top:20px;">
+              <div class="w3-card-4">
+                <header class="w3-container w3-blue w3-padding-small ">
+                  <h3 class="w3-text-white ulanimate">Degree Distribution</h3>
+                </header>
+                  <div class="w3-container">
+                    <canvas id="myChart"></canvas>
                   </div>
                 </div>
               </div>
+            </div>
 
-<!-- end of cell-->
 
-<!-- Start of Cell-->
+
+<!-- end of cell Hyper degree dist- Bar Chart-->
+
+<!-- Start of Cell Distribution parameters - donust chart-->
 
             <div class="box .row.row-eq-height zoom" >
             <div class="w3-container" style="width:100%;  margin-top:20px;">
                 <div class="w3-card-4">
                   <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Pie Chart</h3>
+                    <h3 class="w3-text-white ulanimate">Distibution Paramters</h3>
                   </header>
                   <div class="w3-container">
                     <canvas id="myChart-donut"></canvas>
@@ -244,11 +260,11 @@ layout: default
               </div>
             </div>
 
-<!-- end of cell-->
+<!-- end of cell Distribution parameters - donust chart-->
       </div>
     </div>
   </div>
-<!-- Start of Cell-->
+<!-- Start of Cell Visualization chart with Categories-->
             <div class="" >
             <div class="w3-container" style="margin-top:20px;">
                 <div class="w3-card-4" style="border-radius:10px 10px 0 0">
@@ -364,39 +380,40 @@ layout: default
                           <!--Ends here -->
 
                           <!-- table_-->
-                          <div class="container-fluid" style="">
-                            <div class="row">
-                              <div class="col">
-                                <table class="table table-hover">
-                                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-                                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-                                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-                                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-                                  </table>
-                              </div>
-                              <div class="col">
-                                <table class="table table-hover">
-                                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-                                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-                                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-                                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-                                  </table>
-                              </div>
-                              <div class="col">
-                                <table class="table table-hover">
-                                  <tr class=""><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-                                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-                                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-                                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-                                    </table>
+                          <div class="jumbotron" data-aos="fade-up" style="padding-top:20px;">
+                            <h3 class="w3-text-dark ulanimate" stle>Categories</h3>
+                                    <div class="row">
+                                      <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
+                                        <table class="table table-hover">
+                                          <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
+                                          <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
+                                          <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
+                                          <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
+                                          </table>
+                          <!--Starting list group here -->
 
+                                </div>
+                              <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
+                                <table class="table table-hover">
+                                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
+                                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
+                                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
+                                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
+                                  </table>
+                                <!--Starting list group here -->
+
+                              </div>
+                        <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
+                          <!--Starting list group here -->
+                          <table class="table table-hover">
+                            <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
+                            <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
+                            <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
+                            <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
+                              </table>
                             </div>
                           </div>
-
-
-
-                          <!-- table_-->
-                          </div>
+                        </div>
 
                   </div>
                   </div>
@@ -432,7 +449,7 @@ layout: default
     }]
   ];
 
-  {% assign data_file = {{page.data-name}} %}
+  {% assign data_file = {{ page.data-name }} %}
 
 var data = {
   labels: {{ site.data[data_file].labels | jsonify}},
@@ -608,7 +625,7 @@ var ctx = document.getElementById('myChart-donut').getContext('2d');
 var myDoughnutChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        labels: null,
         datasets: [{
             label: '# of Votes',
             data: {{ site.data[data_file_chartjs].series | jsonify}},
@@ -634,7 +651,7 @@ var myDoughnutChart = new Chart(ctx, {
     }
 });
 
-//Bar-chart-Script
+//Bar-chart-Script//////}
 var ctx = document.getElementById('myChart-line').getContext('2d');
 
 var myLineChart = new Chart(ctx, {
@@ -665,13 +682,13 @@ var myLineChart = new Chart(ctx, {
     }
 });
 
-//Polar-chart-Script
+//Polar-chart-Script////
 var ctx = document.getElementById('myChart-polar').getContext('2d');
 
 var myLineChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
-        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        labels: null,
         datasets: [{
             label: '# of Votes',
             data: {{ site.data[data_file_chartjs].series | jsonify}},
