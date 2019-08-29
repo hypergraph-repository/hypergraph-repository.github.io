@@ -6,6 +6,7 @@ layout: default
 </div>
 
 <!-- Catergories Panel -->
+<!--
   <div class="jumbotron" data-aos="fade-up" style="padding-top:20px;">
     <h3 class="w3-text-dark ulanimate" stle>Categories</h3>
             <div class="row">
@@ -16,7 +17,6 @@ layout: default
                   <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
                   <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
                   </table>
-  <!--Starting list group here -->
 
         </div>
       <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
@@ -26,11 +26,9 @@ layout: default
           <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
           <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
           </table>
-        <!--Starting list group here -->
 
       </div>
 <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
-  <!--Starting list group here -->
   <table class="table table-hover">
     <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
     <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
@@ -39,7 +37,7 @@ layout: default
       </table>
     </div>
   </div>
-</div>
+</div> -->
 
 
  <!-- Catergories Panel -->
@@ -69,33 +67,54 @@ border: 1px solid #4dd0e1;
 box-shadow: 0 0 0 1px #4dd0e1;
 }
  </style>
- <div class="container-fluid">
+ <div class="container">
    <div class="row">
      <h3 class="w3-text-dark ulanimate" >Categories</h3>
-            {% assign categories_list = site.categories %}
-            {% if categories_list.first[0] == null %}
-              {% for category in categories_list %}
-              <div class="col-md-12">
-                <a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
-                  {{ category | camelcase }}</a>
-                <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
-                  {{ site.tags[category].size }}
-                </span>
-              </div>
-              {% endfor %}
+
+       {% assign categories_list = site.categories %}
+       {% if categories_list.first[0] == null %}
+       <table class="table table-hover">
+         {% for category in categories_list %}
+         <div class="col-md-12">
+
+             <a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
+               {{ category | camelcase }}</a>
+             <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+               {{ site.tags[category].size }}
+             </span>
+
+           <a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
+             {{ category | camelcase }}</a>
+           <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+             {{ site.tags[category].size }}
+           </span>
+         </div>
+         {% endfor %}
+     </table>
+
             {% else %}
-              {% for category in categories_list %}
-              <div class="col-md-12">
+          <table class="table table-hover">
+            {% for category in categories_list %}
+            <tr>
+              <td>
                 <a href="/hypergraph-repository.github.io/explore#filter={{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
-                  {{ category[0] | camelcase }}</a>
-                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+            {{ category[0] | camelcase }}
+                </a>
+              </td>
+              <td>
+                <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
                     {{ category[1].size }}
                   </span>
-                </div>
+                </td>
+              </tr>
+
+
+
 
               {% endfor %}
             {% endif %}
           {% assign categories_list = nil %}
+            </table>
 
    </div>
 
