@@ -29,21 +29,15 @@
   </div> -->
 
 <!--Card Deck Layout for latest hypergraphs -->
-
-  <!-- Card -->
-  <div class="card mb-4" data-aos="fade-left">
-<!--Card content-->
+  <div class="card mb-2" data-aos="fade-left">
+    <a href="{{site.baseurl}}{{post.url}}">
+    <div class="card-header aqua-gradient lighten-3 text-white">{{ post.title }}</div>
     <div class="card-body" data-aod="fade-left">
-      <!--Title-->
-      <a href="{{site.baseurl}}{{post.url}}">
-      <h4 class="card-title" data-aos="fade-left" data-aos-delay="100">{{ post.title}}</h4>
-      <!--Text-->
       <p class="card-text" data-aos="fade-left" data-aos-delay="300">{{ post.description | truncatewords: 50 }}</p>
-      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
       </a>
     </div>
   </div>
-  <!-- Card -->
+
 
 <!--Card Deck Layout for latest hypergraphs -->
 
