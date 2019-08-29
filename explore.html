@@ -5,57 +5,149 @@ permalink: /explore/
 ---
 {% include header.html %}
 
+<style media="screen">
+  <style>
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
-<div class="content-post">
+.active, .collapsible:hover {
+  background-color: #555;
+}
 
-    <div class="size margin" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
 
-    <table id="table_id" style=" font-size: 14px;">
-        <thead>
-            <tr>
-                <th>Date</th>
-                <th>Title</th>
-                <th>Categories</th>
-                <th>|V|</th>
-                <th>|E|</th>
-                <th>Size</th>
-                <th>Vertex Type</th>
-                <th>Edge Type</th>
-                <th>Share</th>
-                <th>View</th>
+.active:after {
+  content: "\2212";
+}
 
-            </tr>
-        </thead>
-        <tbody>
-            {% for post in site.posts %}
-            <tr>
-                <td>{{ post.date }}</td>
-                <td>{{ post.title }}</td>
-                <td><div style="width:10px;">{{ post.categories }}</div></td>
-                <td>{{ post.v }}</td>
-                <td>{{ post.e }}</td>
-                <td>{{ post.size }}</td>
-                <td>{{ post.vertex-type }}</td>
-                <td>{{ post.edge-type }}</td>
-                <td><a href="https://hypergraph-repository.github.io/{{ post.page }}">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
-                <td><a href="https://hypergraph-repository.github.io/{{ post.page }}">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
-
-
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <script>
-      $(document).ready(function() {
-        $('#table_id').DataTable({
-          responsive: true
-        });
-    } );
-    </script>
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+</style>
+</style>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-2 fixed">
+      <!-- Sidebar navigation -->
+      <h2>Filters</h2>
 
 
+<p>Select the filter type:</p>
+<button class="collapsible btn btn-success">By Date</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible btn btn-danger">By Categories</button>
+<div class="content">
+  <table class="table table-dark table-hover">
+    <tr><td>Item 1</td></tr>
+    <tr><td>Item 2</td></tr>
+    <tr><td>Item 3</td></tr>
+    <tr><td>Item 4</td></tr>
+  </table>
+  </div>
+<button class="collapsible btn btn-warning">By Size</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
 
+    </div>
+    <div class="col-10">
+
+      <div class="content-post">
+
+          <div class=" margin" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+
+          <table id="table_id" style=" font-size: 14px;">
+              <thead>
+                  <tr>
+                      <th>Date</th>
+                      <th>Title</th>
+                      <th>Categories</th>
+                      <th>|V|</th>
+                      <th>|E|</th>
+                      <th>Size</th>
+                      <th>Vertex Type</th>
+                      <th>Edge Type</th>
+                      <th>Share</th>
+                      <th>View</th>
+
+                  </tr>
+              </thead>
+              <tbody>
+                  {% for post in site.posts %}
+                  <tr>
+                      <td>{{ post.date }}</td>
+                      <td>{{ post.title }}</td>
+                      <td><div style="width:10px;">{{ post.categories }}</div></td>
+                      <td>{{ post.v }}</td>
+                      <td>{{ post.e }}</td>
+                      <td>{{ post.size }}</td>
+                      <td>{{ post.vertex-type }}</td>
+                      <td>{{ post.edge-type }}</td>
+                      <td><a href="https://hypergraph-repository.github.io/{{ post.page }}">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
+                      <td><a href="https://hypergraph-repository.github.io/{{ post.page }}">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
+
+
+                  </tr>
+                  {% endfor %}
+              </tbody>
+          </table>
+
+          <script>
+              $(document).ready( function() {
+              var searchHash = location.hash.substr(1),
+              searchString = searchHash.substr(searchHash.indexOf('filter='))
+		                  .split('&')[0]
+		                  .split('=')[1];
+              $('#table_id').dataTable( {
+                  "oSearch": { "sSearch": searchString }
+                  } );
+                } )
+          </script>
+
+
+
+        </div>
+
+      </div>
+    </div>
 
   </div>
 
 </div>
+<script type="text/javascript">
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>

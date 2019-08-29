@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-
+  <link rel="stylesheet" href="/hypergraph-repository.github.io/css/main.css">
 <!--MDB Packges-->
 
-<!-- Font Awesome -->
+<!-- Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Bootstrap core CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
 
 <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="/home/tanveer/Documents/hypergraph-repository.github.io/css/main.scss">
 
 <link rel="shortcut icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
 <link rel="icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
@@ -86,7 +85,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 <!-- Swiper-->
 
-
+<script type="text/javascript" src="http://localhost:4000/hypergraph-repository.github.io/assets/js/simple-jekyll-search.js">
+<script type="text/javascript" src="http://localhost:4000/hypergraph-repository.github.io/assets/js/simple-jekyll-search.min.js">  
+</script>
 
 </head>
 
@@ -305,7 +306,7 @@
   <div class="jumbotron card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
     <div class="text-white text-center py-5 px-4">
       <div data-aos="fade-left">
-        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Welcome to Hypergraph Repository!</strong></h2>
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold text-white"><strong>Welcome to Hypergraph Repository!</strong></h2>
         <p class="mx-5 mb-5">A simple hypergraphs package for the Julia programming language.</p>
         
             <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button>
@@ -383,30 +384,73 @@ border: 1px solid #4dd0e1;
 box-shadow: 0 0 0 1px #4dd0e1;
 }
  </style>
+ <div class="container-fluid">
+   <div class="row">
+     <h3 class="w3-text-dark ulanimate" >Categories</h3>
+            
+            
+              
+              <div class="col-md-12">
+                <a href="/hypergraph-repository.github.io/explore#filter=social-network2">
+                  Social-Network2</a>
+                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                    1
+                  </span>
+                </div>
 
- <div class="container column position-search">
-         <div class="header--block--input" data-aos="fade-up" data-aos-delay="" data-aos-offset="0" id="search-container">
-           <div class="header--block--input--icon">
-             <!-- <img src="/hypergraph-repository.github.io/assets/img/icons/search-input.svg" width="30" alt=""> -->
-             <span class="feather-icon icon-search"></span>
-           </div>
-           <div class="active-blue-4 mb-4">
-           <input class="form-control input-search" type="text" name="" value="" placeholder="Search for latest hypergraphs here..." id="search-input">
-          </div>
-         </div>
-         <div class="header--block--result">
-           <ul id="results-container"></ul>
-         </div>
-       </div>
+              
+              <div class="col-md-12">
+                <a href="/hypergraph-repository.github.io/explore#filter=social-network3">
+                  Social-Network3</a>
+                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                    1
+                  </span>
+                </div>
 
- <!-- Latest graphs Panel -->
+              
+              <div class="col-md-12">
+                <a href="/hypergraph-repository.github.io/explore#filter=social-network">
+                  Social-Network</a>
+                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                    1
+                  </span>
+                </div>
 
+              
+              <div class="col-md-12">
+                <a href="/hypergraph-repository.github.io/explore#filter=scientific">
+                  Scientific</a>
+                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                    2
+                  </span>
+                </div>
 
-        <!-- <div style=" margin: auto; width: 100px;"><button type="button" class="button"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button></div>-->
-        <h4 class="list-post-title">
-            <center>
-              Latest Hypergraphs
-              </center>
+              
+            
+          
+
+   </div>
+
+ </div>
+ <div class="container position-search">
+   <div class="input-group md-form form-sm form-1 pl-0" data-aos="fade-up" data-aos-delay="" data-aos-offset="0" id="search-container">
+     <div class="input-group-prepend">
+       <span class="input-group-text cyan lighten-2" id="basic-text1"><i class="fas fa-search text-white"
+           aria-hidden="true"></i></span>
+     </div>
+     <input class="form-control my-0 py-1" type="text" placeholder="Search Latest Hypergraphs Here" aria-label="Search" id="search-input">
+   </div>
+   <div class="header--block--result">
+     <ul id="results-container"></ul>
+   </div>
+ </div>
+<br>
+<!-- Latest graphs Panel -->
+<!-- <div style=" margin: auto; width: 100px;"><button type="button" class="button"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button></div>-->
+      <h4 class="list-post-title">
+          <center>
+            Latest Hypergraphs
+          </center>
         </h4>
 <div class="container">
   <div class="card-deck">

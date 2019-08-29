@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Quantum Computing</title>
-
+  <link rel="stylesheet" href="/hypergraph-repository.github.io/css/main.css">
 <!--MDB Packges-->
 
-<!-- Font Awesome -->
+<!-- Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Bootstrap core CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,6 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
 
 <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="/home/tanveer/Documents/hypergraph-repository.github.io/css/main.scss">
 
 <link rel="shortcut icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
 <link rel="icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
@@ -86,7 +85,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
 <!-- Swiper-->
 
-
+<script type="text/javascript" src="http://localhost:4000/hypergraph-repository.github.io/assets/js/simple-jekyll-search.js">
+<script type="text/javascript" src="http://localhost:4000/hypergraph-repository.github.io/assets/js/simple-jekyll-search.min.js">  
+</script>
 
 </head>
 
@@ -392,7 +393,7 @@
 </div>
 <!--breadcrumbs-->
 
-<div class="size margin min-height">
+
   <article>
     <!-- titles -->
     <!--<h1 class="post-title" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">Quantum Computing</h1>
@@ -440,31 +441,78 @@
 
 
 <!-- end of cell description-->
-<!-- Start of Cell hyper details-->
-
-  <div class="box .row.row-eq-height zoom" >
+<!-- Start of Cell columns 2-Meta data-->
+<div class="box .row.row-eq-height zoom" >
   <div class="w3-container" style="width:100%;  margin-top:20px;">
-      <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-        <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;border-radius: 0px 0px 0 0;">
-          <i class="fas fa-info-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-          <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
-        </header>
-        <div class="w3-container">
-          <table class="table">
-            <tr class="tab-zoom"><td>Categories: </td><td>Scientific</td></tr>
-            <tr class="tab-zoom"><td>Size: </td><td>5 MB</td></tr>
-            <tr class="tab-zoom"><td>Vertex Type: </td><td>person</td></tr>
-            <tr class="tab-zoom"><td>Edge Type: </td><td>school</td></tr>
-            <tr class="tab-zoom"><td>Vertex Meta: </td><td>personal information</td></tr>
-            <tr class="tab-zoom"><td>Edge Meta: </td><td>school information</td></tr>
-          </table>
-        </div>
+    <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+      <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;border-radius: 0px 0px 0 0;display:flex;">
+        <i class="far fa-question-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+        <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
+      </header>
+      <div class="w3-container">
+            <table class="">
+              <tr class="zoom"><td class="tag">|E|: </td><td>40</td></tr>
+              <tr class="zoom"><td class="tag">LCC: </td><td>10</td></tr>
+              <tr class="zoom"><td class="tag">Density: </td><td>0.4</td></tr>
+              <tr class="zoom"><td class="tag">Number of triangles: </td><td>20</td></tr>
+              <tr class="zoom"><td class="tag">Min degree: </td><td>3</td></tr>
+              <tr class="zoom"><td class="tag">Max degree: </td><td>10</td></tr>
+              <tr class="zoom"><td class="tag">Avg degree: </td><td>4</td></tr>
+              <tr class="zoom"><td class="tag">Power law exp.:  </td><td>2</td></tr>
+              <tr class="zoom"><td class="tag">Diameter: </td><td>4</td></tr>
+              <tr class="zoom"><td class="tag">CC: </td><td>0.6</td></tr>
+              <tr class="zoom"><td class="tag">Modularity: </td><td>0.4</td></tr>
+            </table>
+          </div>
+
+      </div>
+    </div>
     </div>
   </div>
-  </div>
-</div>
-<!-- end of cell hyper details-->
 
+<!-- end of cell- Column 2 - Meta data-->
+
+<!-- Start of Cell Hyper degree dist- Bar Chart-->
+        <div class="col-xs-12
+              col-sm-12
+              col-md-4
+              col-lg-4">
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%;  margin-top:20px;">
+              <div class="w3-card-4">
+                <header class="w3-container text-white w3-blue w3-padding-small" style="display:flex;">
+                  <i class="fas fa-chart-bar mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="ulanimate text-white">Degree Distribution</h3>
+                </header>
+                  <div class="w3-container">
+                    <canvas id="myChart"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+<!-- end of cell Hyper degree dist- Bar Chart-->
+
+<!-- Start of Cell Distribution parameters - donust chart-->
+
+            <div class="box .row.row-eq-height zoom" >
+            <div class="w3-container" style="width:100%;  margin-top:20px;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                    <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                    <h3 class="w3-text-white ulanimate">Distribution Paramters</h3>
+                  </header>
+                  <div class="w3-container">
+                    <canvas id="myChart-donut"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!-- end of cell Distribution parameters - donust chart-->
 <!-- Start of Cell 2-section graphs-->
 <div class="col-xs-12
       col-sm-12
@@ -497,81 +545,34 @@
     </div>
     </div>
         <!-- end of cell 2-section graphs-->
+        <!-- Start of Cell hyper details-->
 
-        <!-- Start of Cell columns 2-Meta data-->
-        <div class="box .row.row-eq-height zoom" >
-          <div class="w3-container" style="width:100%;  margin-top:20px;">
-            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-              <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;border-radius: 0px 0px 0 0;display:flex;">
-                <i class="far fa-question-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
-              </header>
-              <div class="w3-container">
-                    <table class="">
-                      <tr class="zoom"><td class="tag">|E|: </td><td>40</td></tr>
-                      <tr class="zoom"><td class="tag">LCC: </td><td>10</td></tr>
-                      <tr class="zoom"><td class="tag">Density: </td><td>0.4</td></tr>
-                      <tr class="zoom"><td class="tag">Number of triangles: </td><td>20</td></tr>
-                      <tr class="zoom"><td class="tag">Min degree: </td><td>3</td></tr>
-                      <tr class="zoom"><td class="tag">Max degree: </td><td>10</td></tr>
-                      <tr class="zoom"><td class="tag">Avg degree: </td><td>4</td></tr>
-                      <tr class="zoom"><td class="tag">Power law exp.:  </td><td>2</td></tr>
-                      <tr class="zoom"><td class="tag">Diameter: </td><td>4</td></tr>
-                      <tr class="zoom"><td class="tag">CC: </td><td>0.6</td></tr>
-                      <tr class="zoom"><td class="tag">Modularity: </td><td>0.4</td></tr>
-                    </table>
-                  </div>
-
-              </div>
-            </div>
-            </div>
-          </div>
-
-<!-- end of cell- Column 2 - Meta data-->
-<!-- Start of Cell Hyper degree dist- Bar Chart-->
-        <div class="col-xs-12
-              col-sm-12
-              col-md-4
-              col-lg-4">
           <div class="box .row.row-eq-height zoom" >
           <div class="w3-container" style="width:100%;  margin-top:20px;">
-              <div class="w3-card-4">
-                <header class="w3-container text-white w3-blue w3-padding-small" style="display:flex;">
-                  <i class="fas fa-chart-bar mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                  <h3 class="ulanimate">Degree Distribution</h3>
+              <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
+                <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;border-radius: 0px 0px 0 0;">
+                  <i class="fas fa-info-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
                 </header>
-                  <div class="w3-container">
-                    <canvas id="myChart"></canvas>
-                  </div>
+                <div class="w3-container">
+                  <table class="table">
+                    <tr class="tab-zoom"><td>Categories: </td><td>Scientific</td></tr>
+                    <tr class="tab-zoom"><td>Size: </td><td>5 MB</td></tr>
+                    <tr class="tab-zoom"><td>Vertex Type: </td><td>person</td></tr>
+                    <tr class="tab-zoom"><td>Edge Type: </td><td>school</td></tr>
+                    <tr class="tab-zoom"><td>Vertex Meta: </td><td>personal information</td></tr>
+                    <tr class="tab-zoom"><td>Edge Meta: </td><td>school information</td></tr>
+                  </table>
                 </div>
-              </div>
             </div>
+          </div>
+          </div>
+        </div>
+        <!-- end of cell hyper details-->
 
-
-
-<!-- end of cell Hyper degree dist- Bar Chart-->
-
-<!-- Start of Cell Distribution parameters - donust chart-->
-
-            <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
-                    <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                    <h3 class="w3-text-white ulanimate">Distibution Paramters</h3>
-                  </header>
-                  <div class="w3-container">
-                    <canvas id="myChart-donut"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-<!-- end of cell Distribution parameters - donust chart-->
       </div>
     </div>
-  </div>
+
 <!-- Start of Cell Visualization chart with Categories-->
             <div class="" >
             <div class="w3-container" style="margin-top:20px;">
@@ -729,8 +730,7 @@
 
 
               </div>
-            </div>
-            </div>
+
 
 
 <!-- end of cell-->
