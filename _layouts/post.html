@@ -81,6 +81,17 @@ layout: default
 
 }
 
+.tab-zoom{
+  transition: transform .2s;
+}
+.tab-zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  background-color: #ccf2ff;
+
+}
+
 
 }
 </style>
@@ -112,7 +123,8 @@ layout: default
         </div>
           <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for karate network.
           </p>
-          <a class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> Dataset files</a>
+            <a class="btn btn-outline-white btn-md" href="{{site.url}}">
+              <i class="fas fa-clone left"></i> Dataset files</a>
         </div>
       </div>
     </div>
@@ -146,13 +158,13 @@ layout: default
           <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
         </header>
         <div class="w3-container">
-          <table class="table table-striped">
-            <tr class="zoom"><td>Categories: </td><td>{{ page.categories}}</td></tr>
-            <tr class="zoom"><td>Size: </td><td>{{ page.size}}</td></tr>
-            <tr class="zoom"><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-            <tr class="zoom"><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-            <tr class="zoom"><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-            <tr class="zoom"><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+          <table class="table">
+            <tr class="tab-zoom"><td>Categories: </td><td>{{ page.categories}}</td></tr>
+            <tr class="tab-zoom"><td>Size: </td><td>{{ page.size}}</td></tr>
+            <tr class="tab-zoom"><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+            <tr class="tab-zoom"><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+            <tr class="tab-zoom"><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+            <tr class="tab-zoom"><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
           </table>
         </div>
     </div>
@@ -180,12 +192,12 @@ layout: default
               <li class="list-group-item">items</li>
               </ul>
             </div> -->
-            <table class="table table-striped table-hover">
-                <tr class="zoom"><td class="">|V|: </td><td>{{ page.v}}</td></tr>
-                <tr class="zoom"><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
-                <tr class="zoom"><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                <tr class="zoom"><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                <tr class="zoom"><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
+            <table class="table">
+                <tr class="tab-zoom"><td class="">|V|: </td><td>{{ page.v}}</td></tr>
+                <tr class="tab-zoom"><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
+                <tr class="tab-zoom"><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                <tr class="tab-zoom"><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                <tr class="tab-zoom"><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
               </table>
           </div>
       </div>
@@ -449,7 +461,7 @@ layout: default
     }]
   ];
 
-  {% assign data_file = {{ page.data-name }} %}
+  {% assign data_file =  page.data-name  %}
 
 var data = {
   labels: {{ site.data[data_file].labels | jsonify}},
@@ -578,7 +590,7 @@ new Chartist.Bar('.ct-chart-bar', data, options, responsiveOptions);
 
 <!-- ChartsJS Script -->
 
-{% assign data_file_chartjs = {{page.data-name}} %}
+{% assign data_file_chartjs =  page.data-name  %}
 
 <script type="text/javascript">
 var data = '';

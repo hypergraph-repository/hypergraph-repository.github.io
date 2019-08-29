@@ -256,7 +256,7 @@
         <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
       </li>
     </ul>
-    <form class="form-inline my-lg-0">
+    <!-- <form class="form-inline my-lg-0">
       <div class="container h-50">
             <div class="d-flex justify-content-center h-100">
               <div class="searchbar">
@@ -268,7 +268,7 @@
               <ul id="results-container"></ul>
             </div>
           </div>
-    </form>
+    </form> -->
   </div>
 </nav>
 
@@ -353,6 +353,17 @@
 
 }
 
+.tab-zoom{
+  transition: transform .2s;
+}
+.tab-zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  background-color: #ccf2ff;
+
+}
+
 
 }
 </style>
@@ -400,7 +411,8 @@
         </div>
           <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for karate network.
           </p>
-          <a class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> Dataset files</a>
+            <a class="btn btn-outline-white btn-md" href="http://localhost:4000">
+              <i class="fas fa-clone left"></i> Dataset files</a>
         </div>
       </div>
     </div>
@@ -434,13 +446,13 @@
           <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
         </header>
         <div class="w3-container">
-          <table class="table table-striped">
-            <tr class="zoom"><td>Categories: </td><td>Scientific</td></tr>
-            <tr class="zoom"><td>Size: </td><td>5 MB</td></tr>
-            <tr class="zoom"><td>Vertex Type: </td><td>person</td></tr>
-            <tr class="zoom"><td>Edge Type: </td><td>school</td></tr>
-            <tr class="zoom"><td>Vertex Meta: </td><td>personal information</td></tr>
-            <tr class="zoom"><td>Edge Meta: </td><td>school information</td></tr>
+          <table class="table">
+            <tr class="tab-zoom"><td>Categories: </td><td>Scientific</td></tr>
+            <tr class="tab-zoom"><td>Size: </td><td>5 MB</td></tr>
+            <tr class="tab-zoom"><td>Vertex Type: </td><td>person</td></tr>
+            <tr class="tab-zoom"><td>Edge Type: </td><td>school</td></tr>
+            <tr class="tab-zoom"><td>Vertex Meta: </td><td>personal information</td></tr>
+            <tr class="tab-zoom"><td>Edge Meta: </td><td>school information</td></tr>
           </table>
         </div>
     </div>
@@ -468,12 +480,12 @@
               <li class="list-group-item">items</li>
               </ul>
             </div> -->
-            <table class="table table-striped table-hover">
-                <tr class="zoom"><td class="">|V|: </td><td>32</td></tr>
-                <tr class="zoom"><td class="">|E|:  </td><td>10</td></tr>
-                <tr class="zoom"><td class="">Max Degree: </td><td>4</td></tr>
-                <tr class="zoom"><td class="">Max Edge Size: </td><td>4</td></tr>
-                <tr class="zoom"><td class="">Modularity: </td><td>0.4</td></tr>
+            <table class="table">
+                <tr class="tab-zoom"><td class="">|V|: </td><td>32</td></tr>
+                <tr class="tab-zoom"><td class="">|E|:  </td><td>10</td></tr>
+                <tr class="tab-zoom"><td class="">Max Degree: </td><td>4</td></tr>
+                <tr class="tab-zoom"><td class="">Max Edge Size: </td><td>4</td></tr>
+                <tr class="tab-zoom"><td class="">Modularity: </td><td>0.4</td></tr>
               </table>
           </div>
       </div>
@@ -740,8 +752,8 @@
   
 
 var data = {
-  labels: null,
-  series: null
+  labels: [10,20,30,40,50,60,70,80],
+  series: [5,9,7,8,5,3,5,4]
 }
 
 new Chartist.Line('#line-chart', data ,options, responsiveOptions, {
@@ -755,7 +767,7 @@ showArea: true
   });
 
 var data_pie = {
-  series: null
+  series: [5,9,7,8,5,3,5,4]
 };
 
 var sum = function(a, b) { return a + b };
@@ -824,8 +836,8 @@ window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
 });
 
 var data_line = new Chartist.Line('.ct-chart-line', {
-  labels: null,
-  series: null
+  labels: [10,20,30,40,50,60,70,80],
+  series: [5,9,7,8,5,3,5,4]
 });
 
 // Listening for draw events that get emitted by the Chartist chart

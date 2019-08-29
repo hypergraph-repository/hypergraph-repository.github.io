@@ -1,11 +1,11 @@
-<div class="">
+<div class="card-deck">
   {% if site.posts.size == 0 %}
   <h2>No post found</h2>
   {% else %}
 
   {% for post in site.posts %}
   {% if forloop.rindex <= 4 %}
-  <a href="{{ site.baseurl }}{{ post.url }}" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
+   <!-- <a href="{{ site.baseurl }}{{ post.url }}" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
 
 <!-- Tanveer layout code -->
   <!--    <div class="container-fluid">
@@ -28,8 +28,27 @@
       </div>
   </div> -->
 
+<!--Card Deck Layout for latest hypergraphs -->
+
+  <!-- Card -->
+  <div class="card mb-4" data-aos="fade-left">
+<!--Card content-->
+    <div class="card-body" data-aod="fade-left">
+      <!--Title-->
+      <a href="{{site.baseurl}}{{post.url}}">
+      <h4 class="card-title" data-aos="fade-left" data-aos-delay="100">{{ post.title}}</h4>
+      <!--Text-->
+      <p class="card-text" data-aos="fade-left" data-aos-delay="300">{{ post.description | truncatewords: 50 }}</p>
+      <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+      </a>
+    </div>
+  </div>
+  <!-- Card -->
+
+<!--Card Deck Layout for latest hypergraphs -->
+
   <!-- Carmine Layout-->
-<div class="jumbotron pt-3" data-aos="fade-up">
+<!-- <div class="jumbotron pt-3" data-aos="fade-up">
   <div class="flex-grow-1">
      <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
        <h2 class="list-post-title">
@@ -47,8 +66,13 @@
    </div>
   </div>
 
-  </a>
-  {% endif %}
-  {% endfor %} {% endif %}
-</div>
+  </a> -->
+
 <!-- Carmine Layout-->
+
+
+
+      {% endif %}
+    {% endfor %}
+   {% endif %}
+</div>
