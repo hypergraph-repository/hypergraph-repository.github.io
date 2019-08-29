@@ -118,7 +118,7 @@ img {
       margin-top: 20px;
       border-radius: 4px;
       overflow: hidden;
-      width: 100%;
+      width: 90%;
       opacity: 0.5;
       transition: 0.3s; }
       .header .header--block .header--block--input:focus-within {
@@ -136,7 +136,7 @@ img {
         .header .header--block .header--block--input .header--block--input--icon span {
           color: black; }
       .header .header--block .header--block--input .input-search {
-        width: 100%;
+        width: 90%;
         height: 60px;
         border: none;
         box-sizing: border-box;
@@ -148,11 +148,12 @@ img {
   position: relative; }
 
 .header--block--result {
-  width: 100%;
+  width: 96%;
+  margin-left: 2%;
   background: #fff;
   z-index: 9;
   position: absolute;
-  top: 80px;
+  top: 60px;
   left: 0;
   border-radius: 4px; }
   .header--block--result ul {

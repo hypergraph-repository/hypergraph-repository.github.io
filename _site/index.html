@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
 
+
+  <link rel="stylesheet" href="/hypergraph-repository.github.io/css/main.css">
 <!--MDB Packges-->
 
 <!-- Font Awesome -->
@@ -40,6 +42,7 @@
 
 <link rel="shortcut icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
 <link rel="icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
+
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -175,6 +178,8 @@
       
       
       
+      
+      
     </nav>
   </div>
 </div>
@@ -229,7 +234,7 @@
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-light ">
-  <a class="navbar-brand" href="http://localhost:4000/hypergraph-repository.github.io/">Hypergraph Repository</a>
+  <a class="navbar-brand" href="http://hypergraph-repository.github.io">Hypergraph Repository</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -237,18 +242,18 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="https://hypergraph-repository.github.io/explore">Explore</a>
+        <a class="nav-link" href="http://hypergraph-repository.github.io/explore">Explore</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="  https://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
+        <a class="nav-link" href="http://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
       </li>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0">
+    <!--<form class="form-inline my-2 my-lg-0">
       <div class="container h-50">
             <div class="d-flex justify-content-center h-100">
               <div class="searchbar">
@@ -260,7 +265,7 @@
               <ul id="results-container"></ul>
             </div>
           </div>
-    </form>
+    </form>-->
   </div>
 </nav>
 
@@ -292,11 +297,11 @@
 
 <header>
 
-  <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+  <div class="container-fluid jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
     <div class="text-white text-center py-5 px-4">
       <div data-aos="fade-left">
-        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Welcome to Hypergraph Repository!</strong></h2>
-        <p class="mx-5 mb-5">A simple hypergraphs package for the Julia programming language.</p>
+        <h2 style="color:white;" class="card-title h1-responsive pt-3 mb-5 font-bold"><strong>Welcome to Hypergraph Repository!</strong></h2>
+        <p class="mx-5 mb-5">A collection of Hypergraphs networks. </p>
         
             <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button>
         
@@ -309,115 +314,128 @@
 
 </div>
 
-<!-- Catergories Panel -->
-  <div class="jumbotron" data-aos="fade-up" style="padding-top:20px;">
-    <h3 class="w3-text-dark ulanimate" stle>Categories</h3>
-            <div class="row">
-              <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
-                <table class="table table-hover">
-                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-                  </table>
-                <!--Starting list group here -->
-
-        </div>
-      <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
-        <table class="table table-hover">
-          <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-          <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-          <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-          <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-          </table>
-        <!--Starting list group here -->
-
-      </div>
-<div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
-  <!--Starting list group here -->
-  <table class="table table-hover">
-    <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-    <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-    <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-    <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-      </table>
-    </div>
-  </div>
-</div>
-
 
  <!-- Catergories Panel -->
  <style media="screen">
-   .active-pink-4 input[type=text]:focus:not([readonly]) {
-border: 1px solid #f48fb1;
-box-shadow: 0 0 0 1px #f48fb1;
-}
-.active-pink-3 input[type=text] {
-border: 1px solid #f48fb1;
-box-shadow: 0 0 0 1px #f48fb1;
-}
-.active-purple-4 input[type=text]:focus:not([readonly]) {
-border: 1px solid #ce93d8;
-box-shadow: 0 0 0 1px #ce93d8;
-}
-.active-purple-3 input[type=text] {
-border: 1px solid #ce93d8;
-box-shadow: 0 0 0 1px #ce93d8;
-}
-.active-cyan-4 input[type=text]:focus:not([readonly]) {
-border: 1px solid #4dd0e1;
-box-shadow: 0 0 0 1px #4dd0e1;
-}
-.active-cyan-3 input[type=text] {
-border: 1px solid #4dd0e1;
-box-shadow: 0 0 0 1px #4dd0e1;
-}
- </style>
-
- <div class="container column position-search">
-         <div class="header--block--input" data-aos="fade-up" data-aos-delay="" data-aos-offset="0" id="search-container">
-           <div class="header--block--input--icon">
-             <!-- <img src="/hypergraph-repository.github.io/assets/img/icons/search-input.svg" width="30" alt=""> -->
-             <span class="feather-icon icon-search"></span>
-           </div>
-           <div class="active-cyan-3 active-cyan-4 mb-4">
-           <input class="form-control input-search" type="text" name="" value="" placeholder="Search for latest hypergraphs here..." id="search-input">
-          </div>
-         </div>
-         <div class="header--block--result">
-           <ul id="results-container"></ul>
-         </div>
-       </div>
-
- <!-- Latest graphs Panel -->
+    .active-pink-4 input[type=text]:focus:not([readonly]) {
+ border: 1px solid #f48fb1;
+ box-shadow: 0 0 0 1px #f48fb1;
+ }
+ .active-pink-3 input[type=text] {
+ border: 1px solid #f48fb1;
+ box-shadow: 0 0 0 1px #f48fb1;
+ }
+ .active-purple-4 input[type=text]:focus:not([readonly]) {
+ border: 1px solid #ce93d8;
+ box-shadow: 0 0 0 1px #ce93d8;
+ }
+ .active-purple-3 input[type=text] {
+ border: 1px solid #ce93d8;
+ box-shadow: 0 0 0 1px #ce93d8;
+ }
+ .active-cyan-4 input[type=text]:focus:not([readonly]) {
+ border: 1px solid #4dd0e1;
+ box-shadow: 0 0 0 1px #4dd0e1;
+ }
+ .active-cyan-3 input[type=text] {
+ border: 1px solid #4dd0e1;
+ box-shadow: 0 0 0 1px #4dd0e1;
+ }
+  </style>
 
 
-        <!-- <div style=" margin: auto; width: 100px;"><button type="button" class="button"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button></div>-->
-        <h4 class="list-post-title">
-            <center>
-              Latest Hypergraphs
-              </center>
-        </h4>
-<div class="">
-  <div class="">
 
-    <div class="">
+<div class="container-fluid jumbotron" data-aos="fade-up">
+   
+    <div class="container-fluid">
+      <div class="row ">
+         
+        <div class="col-3">
+            <h3 class="w3-text-dark ulanimate" >Categories</h3>
+            
+            
+              
+              <div class="col-md-12">
+                <a href="#social-network">
+                  Social-Network</a>
+                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;"> 
+                    5
+                  </span>
+                </div>
+               
+              
+              <div class="col-md-12">
+                <a href="#prova3">
+                  Prova3</a>
+                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;"> 
+                    1
+                  </span>
+                </div>
+               
+              
+              <div class="col-md-12">
+                <a href="#prova4">
+                  Prova4</a>
+                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;"> 
+                    1
+                  </span>
+                </div>
+               
+              
+              <div class="col-md-12">
+                <a href="#scientific">
+                  Scientific</a>
+                  <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;"> 
+                    1
+                  </span>
+                </div>
+               
+              
+            
+          
+        
+        </div>
+        <div class="col-9">
+            <div class="header--block--input" style="padding-top:20px;" data-aos="fade-up" data-aos-delay="" data-aos-offset="0" id="search-container">
+          
+                     <input class="form-control input-search" type="text" name="" value="" placeholder="Search for latest hypergraphs here..." id="search-input">
+           
+              </div>
+              <div class="header--block--result" >
+               <ul id="results-container"></ul>
+             </div>
+
+             
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container " data-aos="fade-up">
+      <div class="container-fluid">
+        <div class="row ">
+            <h3 class="w3-text-dark ulanimate" >Latest Hypergraphs</h3>
+            <div class="">
   
 
   
   
-  <a href="/hypergraph-repository.github.io/quantum-computing/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
+  
+  
+  
+  
+  <a href="/hypergraph-repository.github.io/karate-network4/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
 
 <!-- My layout code -->
   <!--    <div class="container-fluid">
         <div class="row">
           <div class="col-lg-3">
-            <h3>Quantum Computing</h3>
+            <h3>Karate Network</h3>
 
           </div>
           <div class="col-lg-9">
             <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-              <span class="list-post-description">Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically.</span>
+              <span class="list-post-description">The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During...</span>
             </div>
 
             <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
@@ -430,16 +448,108 @@ box-shadow: 0 0 0 1px #4dd0e1;
   </div> -->
 
   <!-- Carmine Layout-->
-<div class="jumbotron pt-3" data-aos="fade-up">
+<div class="container-fluid pt-3" data-aos="fade-up">
   <div class="flex-grow-1">
      <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
        <h2 class="list-post-title">
-       Quantum Computing
+       Karate Network
        </h2>
      </div>
 
      <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-       <span class="list-post-description">Quantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically.</span>
+       <span class="list-post-description">The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During...</span>
+     </div>
+
+     <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+       <small><time>12 Nov 2017</time></small>
+     </div>
+   </div>
+  </div>
+
+  </a>
+  
+  
+  
+  <a href="/hypergraph-repository.github.io/karate-network3/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
+
+<!-- My layout code -->
+  <!--    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3">
+            <h3>Karate Network</h3>
+
+          </div>
+          <div class="col-lg-9">
+            <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+              <span class="list-post-description">The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During...</span>
+            </div>
+
+            <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+              <small><time>12 Nov 2017</time></small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div> -->
+
+  <!-- Carmine Layout-->
+<div class="container-fluid pt-3" data-aos="fade-up">
+  <div class="flex-grow-1">
+     <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
+       <h2 class="list-post-title">
+       Karate Network
+       </h2>
+     </div>
+
+     <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+       <span class="list-post-description">The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During...</span>
+     </div>
+
+     <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+       <small><time>12 Nov 2017</time></small>
+     </div>
+   </div>
+  </div>
+
+  </a>
+  
+  
+  
+  <a href="/hypergraph-repository.github.io/karate-network2/" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
+
+<!-- My layout code -->
+  <!--    <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-3">
+            <h3>Karate Network</h3>
+
+          </div>
+          <div class="col-lg-9">
+            <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+              <span class="list-post-description">The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During...</span>
+            </div>
+
+            <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+              <small><time>12 Nov 2017</time></small>
+            </div>
+          </div>
+        </div>
+
+      </div>
+  </div> -->
+
+  <!-- Carmine Layout-->
+<div class="container-fluid pt-3" data-aos="fade-up">
+  <div class="flex-grow-1">
+     <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
+       <h2 class="list-post-title">
+       Karate Network
+       </h2>
+     </div>
+
+     <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+       <span class="list-post-description">The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During...</span>
      </div>
 
      <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
@@ -476,7 +586,7 @@ box-shadow: 0 0 0 1px #4dd0e1;
   </div> -->
 
   <!-- Carmine Layout-->
-<div class="jumbotron pt-3" data-aos="fade-up">
+<div class="container-fluid pt-3" data-aos="fade-up">
   <div class="flex-grow-1">
      <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
        <h2 class="list-post-title">
@@ -500,6 +610,8 @@ box-shadow: 0 0 0 1px #4dd0e1;
 </div>
 <!-- Carmine Layout-->
 
+        </div>
+      </div>
   </div>
 
 </div>
@@ -509,7 +621,7 @@ box-shadow: 0 0 0 1px #4dd0e1;
 
 
     <footer>
-  <div class="footer container column align-items-center justify-content-center">
+  <div class="footer container column align-items-center justify-content-center bg-white">
     <div class="footer--block text-align-center">
       <div class="" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
         <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
@@ -523,7 +635,7 @@ box-shadow: 0 0 0 1px #4dd0e1;
 
   </div>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-<script type="text/javascript" src="https://github.com/hypergraph-repository/hypergraph-repository.github.io/blob/dev/assets/js/simple-jekyll-search.min.js">
+<script type="text/javascript" src="https://hypergraph-repository.github.io/assets/js/simple-jekyll-search.min.js">
 
 </script>
 
