@@ -66,17 +66,26 @@ box-shadow: 0 0 0 1px #4dd0e1;
 border: 1px solid #4dd0e1;
 box-shadow: 0 0 0 1px #4dd0e1;
 }
+
+.my-custom-scrollbar {
+position: relative;
+height: 100px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
  </style>
  <div class="container-fluid">
    <div class="row">
      <div class="col-3">
-       <div class="">
-         <div class="row" data-aos="fade-left" data-aos-delay="300">
+       <div class="" data-aos="fade-left" data-aos-delay="300" data-spy="scroll" data-target=".table">
+         <div class="row">
 
              {% assign categories_list = site.categories %}
              {% if categories_list.first[0] == null %}
              <table class="table table-hover">
-
+               <button type="button" class="btn btn-danger">Categories</button>
                {% for category in categories_list %}
                <div class="col-12">
 
@@ -100,8 +109,10 @@ box-shadow: 0 0 0 1px #4dd0e1;
                   x=0;
                 </script>
                   <div class="col-12">
+                    <button type="button" class="btn btn-danger">Categories</button>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
                     <table class="table table-hover">
-                      <button type="button" class="btn btn-danger">Categories</button>
+
                       {% for category in categories_list %}
                       <script type="text/javascript">
                         x+=1;
@@ -124,6 +135,7 @@ box-shadow: 0 0 0 1px #4dd0e1;
                       {% endif %}
                     {% assign categories_list = nil %}
                       </table>
+                      </div>
                   </div>
 
 
