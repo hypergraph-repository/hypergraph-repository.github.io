@@ -69,11 +69,14 @@ box-shadow: 0 0 0 1px #4dd0e1;
 
 .my-custom-scrollbar {
 position: relative;
-height: 300px;
+height: -webkit-fill-available;
 overflow: auto;
 }
 .table-wrapper-scroll-y {
 display: block;
+}
+.badge{
+  padding: 10px;
 }
  </style>
  <div class="container-fluid">
@@ -88,7 +91,6 @@ display: block;
                <button type="button" class="btn btn-danger">Categories</button>
                {% for category in categories_list %}
                <div class="col-12">
-
                    <a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
                      {{ category | camelcase }}</a>
                    <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
@@ -97,7 +99,7 @@ display: block;
 
                  <a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
                    {{ category | camelcase }}</a>
-                 <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                 <span class="badge badge-primary badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
                    {{ site.tags[category].size }}
                  </span>
                </div>
@@ -105,28 +107,21 @@ display: block;
            </table>
 
                   {% else %}
-                <script type="text/javascript">
-                  x=0;
-                </script>
                   <div class="col-12">
                     <button type="button" class="btn blue">Categories</button>
-                    <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar" data-aos="fade-left" data-aos-delay="100">
                     <table class="table table-hover">
 
                       {% for category in categories_list %}
-                      <script type="text/javascript">
-                        x+=1;
-                        console.log(x);
-                      </script>
                       {{category[0].index}}
-                      <tr>
+                      <tr >
                         <td>
                           <a href="/hypergraph-repository.github.io/explore#filter={{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
                       {{ category[0] | camelcase }}
                           </a>
                         </td>
                         <td>
-                          <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                          <span class="badge blue-gradient pull-right" style="!important; font-weight:300;margin-left:5px;">
                               {{ category[1].size }}
                             </span>
                           </td>
@@ -156,10 +151,10 @@ display: block;
            <ul id="results-container"></ul>
          </div>
        </div>
-      <br>
+
       <!-- Latest graphs Panel -->
       <!-- <div style=" margin: auto; width: 100px;"><button type="button" class="button"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button></div>-->
-            <h4 class="list-post-title">
+            <h4 class="list-post-title" style="padding:10px;">
                 <center>
                   Latest Hypergraphs
                 </center>
