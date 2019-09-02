@@ -413,7 +413,7 @@ var data = '';
 var ctx = document.getElementById('myChart-edgeDist').getContext('2d');
 var myDoughnutChart = new Chart(ctx, {
 
-    type: 'doughnut',
+    type: 'bar',
     data: {
         labels: _edDist_[0],
         datasets: [{
@@ -446,7 +446,7 @@ var myDoughnutChart = new Chart(ctx, {
 var ctx = document.getElementById('myChart-twoDeg').getContext('2d');
 
 var myLineChart = new Chart(ctx, {
-    type: 'polarArea',
+    type: 'bar',
     data: {
         labels: _tdegDist_[0],
         datasets: [{
