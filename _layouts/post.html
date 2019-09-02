@@ -118,7 +118,7 @@ layout: default
 -->
 <div class="container-fluid" style="padding-top:0em;">
     <div class="row" data-aos="zoom-in" style="margin-top:20px;">
-      <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%">
+      <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%;background-size:cover;">
       <div class="text-white text-center py-5 px-4">
       <div>
         <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>{{page.title}}</strong></h2>
@@ -159,8 +159,8 @@ layout: default
   <div class="w3-container" style="width:100%;">
     <div class="w3-card-4" style="">
       <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;display:flex;">
-        <i class="far fa-question-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-        <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
+        <i class="far fa-question-circle mt-3 " aria-hidden="true" style="flex:0 0 10%"></i>
+        <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graph Metrics</h3>
       </header>
       <div class="w3-container">
             <table class="">
@@ -251,7 +251,7 @@ layout: default
         <div class="w3-card-4" style="">
           <div class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
             <i class="fas fa-chart-line mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-            <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graphs</h3>
+            <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Metrics</h3>
           </div>
           <div class="container">
           <!--  <div class="card">
@@ -261,12 +261,12 @@ layout: default
               <li class="list-group-item">items</li>
               </ul>
             </div> -->
-            <table class="table">
-                <tr class="tab-zoom"><td class="">|V|: </td><td>{{ page.v}}</td></tr>
-                <tr class="tab-zoom"><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
-                <tr class="tab-zoom"><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                <tr class="tab-zoom"><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                <tr class="tab-zoom"><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
+            <table class="">
+                <tr class="zoom"><td class="tag">|V|: </td><td>{{ page.v}}</td></tr>
+                <tr class="zoom"><td class="tag">|E|:  </td><td>{{ page.e}}</td></tr>
+                <tr class="zoom"><td class="tag">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                <tr class="zoom"><td class="tag">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                <tr class="zoom"><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
               </table>
           </div>
       </div>
@@ -283,13 +283,13 @@ layout: default
                   <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
                 </header>
                 <div class="w3-container">
-                  <table class="table">
-                    <tr class="tab-zoom"><td>Categories: </td><td>{{ page.categories}}</td></tr>
-                    <tr class="tab-zoom"><td>Size: </td><td>{{ page.size}}</td></tr>
-                    <tr class="tab-zoom"><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-                    <tr class="tab-zoom"><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-                    <tr class="tab-zoom"><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-                    <tr class="tab-zoom"><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+                  <table class="">
+                    <tr class="zoom"><td class="tag">Categories: </td><td>{{ page.categories}}</td></tr>
+                    <tr class="zoom"><td class="tag">Size: </td><td>{{ page.size}}</td></tr>
+                    <tr class="zoom"><td class="tag">Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+                    <tr class="zoom"><td class="tag">Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+                    <tr class="zoom"><td class="tag">Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+                    <tr class="zoom"><td class="tag">Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
                   </table>
                 </div>
             </div>
