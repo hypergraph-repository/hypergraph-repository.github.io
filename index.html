@@ -116,7 +116,7 @@ display: block;
                       {{category[0].index}}
                       <tr >
                         <td>
-                          <a href="/hypergraph-repository.github.io/explore#filter={{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+                          <a href="{{ site.url}}/hypergraph-repository.github.io/explore#filter={{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
                       {{ category[0] | camelcase }}
                           </a>
                         </td>
@@ -256,4 +256,8 @@ display: block;
 
    </div>
 
+ </div>
+
+ <div name="social-fixed" style="position:fixed;bottom:64em;left:0em;">
+   <a href="https://github.com/tjan90/hypergraph-repository.github.io"><i class="fab fa-github-square fa-3x"></i></a>
  </div>

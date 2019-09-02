@@ -292,9 +292,19 @@ layout: default
                   <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Data Preview</h3>
                 </header>
                 <div class="w3-container">
+
+                <table class="table table-striped table-border">
                   {% for data in site.data.file%}
-                  {{ data | jsonify }}
-                  {% endfor %}
+                  <tr>
+                    <td>{{ data[0] | jsonify }}:</td>
+                    <td>  {{ data[1] | jsonify }}</td>
+                  </tr>
+                    {% endfor %}
+                </table>
+
+
+
+
 
                 </div>
             </div>
