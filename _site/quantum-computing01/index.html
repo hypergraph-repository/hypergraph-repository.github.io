@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quantum Computing</title>
+  <link rel="stylesheet" href="/hypergraph-repository.github.io/css/main.css">
+<!--MDB Packges-->
+
+<!-- Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+<!-- Bootstrap core CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<!-- Material Design Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/css/mdb.min.css" rel="stylesheet">
+
+<!-- JQuery -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.5/js/mdb.min.js"></script>
+<!--MDB Packges-->
+
+<!--CHartsJS Packges-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css" integrity="sha256-aa0xaJgmK/X74WM224KMQeNQC2xYKwlAt08oZqjeF0E=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" integrity="sha256-Uv9BNBucvCPipKQ2NS9wYpJmi8DTOEfTA/nH2aoJALw=" crossorigin="anonymous"></script>
+
+<!--CHartsJS Packges-->
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,600">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/the-grid-flexbox@2.0.1/css/the-grid.min.css">
+
+<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+
+<link rel="shortcut icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
+<link rel="icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
+
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/responsive/2.2.3/css/responsive.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/responsive/2.2.3/js/dataTables.responsive.js"></script>
+
+
+
+  <!-- facebook -->
+  <meta property="og:title" content="Hypergraph Repository" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://localhost:4000" />
+  <meta property="og:description" content="Simple and flexible Jekyll theme for help center." />
+  <meta property="og:site_name" content="Hypergraph Repository" />
+  <meta property="og:image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png" />
+  <meta property="fb:app_id" content="1154262757941899" />
+  <meta property="fb:admins" content="100002787447461" />
+  <!-- facebook -->
+
+  <!-- twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Hypergraph Repository">
+  <meta name="twitter:description" content="Simple and flexible Jekyll theme for help center.">
+  <meta name="twitter:creator" content="">
+  <meta name="twitter:image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
+  <meta itemprop="name" content="Hypergraph Repository">
+  <meta itemprop="description" content="Simple and flexible Jekyll theme for help center.">
+  <meta itemprop="image" content="http://localhost:4000/hypergraph-repository.github.io/assets/img/image.png">
+  <!-- twitter -->
+
+<!-- ChartistJS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
+  <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
+<!-- ChartistJS-->
+
+<!-- Swiper-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<!-- Swiper-->
+
+<script type="text/javascript" src="http://localhost:4000/hypergraph-repository.github.io/assets/js/simple-jekyll-search.js">
+<script type="text/javascript" src="http://localhost:4000/hypergraph-repository.github.io/assets/js/simple-jekyll-search.min.js">  
+</script>
+
+</head>
+
+
+<body>
+  <div class="">
+    <!-- <div class="navbar navbar-expand-lg navbar-light ">
+  <div class="size margin menu--content container align-items-center justify-content-between">
+
+    <div class="" data-aos="fade-right" data-aos-delay="" data-aos-offset="0">
+      <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
+    </div>
+
+    <a href="https://hypergraph-repository.github.io/explore" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-folder"></span>
+        </div>
+        <div class="back-to-site-text">
+          Explore
+        </div>
+      </div>
+    </a>
+
+    <a href="https://hypergraph-repository.github.io/hypergraphs" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-globe"></span>
+        </div>
+        <div class="back-to-site-text">
+          What is an Hypergraph?
+        </div>
+      </div>
+    </a>
+
+    <a href="https://hypergraph-repository.github.io/about" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-info"></span>
+        </div>
+        <div class="back-to-site-text">
+          About
+        </div>
+      </div>
+    </a>
+
+
+<!--
+    <a href="https://github.com/pszufe/SimpleHypergraphs.jl" data-aos="fade-left" data-aos-delay="" data-aos-offset="0">
+      <div class="container align-items-baseline back-to-site">
+        <div class="">
+          <span class="feather-icon icon-external-link"></span>
+        </div>
+        <div class="back-to-site-text">
+            SimpleHypergraphs.jl
+        </div>
+      </div>
+    </a>
+<!--
+
+<form class="form-inline md-form form-sm mt-0">
+  <i class="fas fa-search" aria-hidden="true"></i>
+  <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
+    aria-label="Search">
+</form>
+-->
+    <!-- <nav class="masthead-nav">
+      
+      
+      <a href="/hypergraph-repository.github.io/about/">
+        about
+      </a>
+      
+      
+      
+      <a href="/hypergraph-repository.github.io/explore/">
+        Explore
+      </a>
+      
+      
+      
+      
+      
+      <a href="/hypergraph-repository.github.io/hypergraphs/">
+        Hypergraphs
+      </a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+
+-->
+
+<style media="screen">
+
+    .searchbar{
+     margin-bottom: auto;
+     margin-top: auto;
+     height: 60px;
+     background-color: rgb(32,150,243);
+     border-radius: 30px;
+     padding: 10px;
+     }
+
+     .search_input{
+     color: white;
+     border: 0;
+     outline: 0;
+     background: none;
+     width: 0;
+     line-height: 40px;
+     transition: width 0.4s linear;
+     }
+
+     .searchbar:hover > .search_input{
+     padding: 0 10px;
+     width: 250px;
+     caret-color: white;
+     transition: width 0.4s linear;
+     color: white;
+     }
+
+     .searchbar:hover > .search_icon{
+     background: white;
+     color: black;
+     }
+
+     .search_icon{
+     height: 40px;
+     width: 40px;
+     float: right;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     border-radius: 50%;
+     color:white;
+     }
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:white;">
+  <a class="navbar-brand" href="http://localhost:4000/hypergraph-repository.github.io/">Hypergraph Repository</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="https://hypergraph-repository.github.io/explore">Explore</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="  https://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
+      </li>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
+      </li>
+    </ul>
+    <!-- <form class="form-inline my-lg-0">
+      <div class="container h-50">
+            <div class="d-flex justify-content-center h-100">
+              <div class="searchbar">
+                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here..." style="color:white;">
+                <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+              </div>
+            </div>
+            <div class="header--block--result">
+              <ul id="results-container"></ul>
+            </div>
+          </div>
+    </form> -->
+  </div>
+</nav>
+
+    
+    <style media="screen">
+
+  .w3-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* TAGS for Graph and iid data */
+.tags {
+  font: 12px/1.5 "ProximaNova", serif, sans-serif;
+  letter-spacing: 1px;
+  /*'PT Sans', serif,*/
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tags li {
+  float: left;
+}
+
+.tag {
+  background: #205469;
+  border-radius: 3px 0 0 3px;
+  /*color: #999;*/
+  color: #FFF;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #205469;
+  /*border-lefT: 10px solid #FF6600;*/
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: crimson;
+}
+
+.zoom{
+  transition: transform .2s;
+
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+
+}
+
+.tab-zoom{
+  transition: transform .2s;
+}
+.tab-zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  background-color: #ccf2ff;
+
+}
+.w3-card-4 {
+  border-radius : 10px 10px 10px 10px;
+}
+
+
+}
+</style>
+<br>
+<!--breadcrumbs-->
+<div class="" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
+  
+
+
+
+
+
+<div class="container-fluid wrap breadcrumbs">
+  <a href="http://localhost:4000/hypergraph-repository.github.io/">Home</a>
+  
+  <span class="prompt margin-left-10 margin-right-10">></span>
+  
+  
+  Quantum Computing
+  
+  
+</div>
+
+</div>
+<!--breadcrumbs-->
+
+
+  <article>
+    <!-- titles -->
+    <!--<h1 class="post-title" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">Quantum Computing</h1>
+    <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+      <time>01 Sep 2019</time>
+
+    </div>
+-->
+<div class="container-fluid" style="padding-top:0em;">
+    <div class="row" data-aos="zoom-in" style="margin-top:20px;">
+      <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%">
+      <div class="text-white text-center py-5 px-4">
+      <div>
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>Quantum Computing</strong></h2>
+        <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+        <time>01 Sep 2019</time>
+        </div>
+          <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for karate network.
+          </p>
+            <a class="btn btn-outline-white btn-md" href="http://localhost:4000">
+              <i class="fas fa-clone left"></i> Dataset files</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Start of Cell -- Description-->
+    <div class="col-xs-12
+          col-sm-12
+          col-md-4
+          col-lg-4">
+        <div class="box zoom" >
+        <div class="w3-container" style="width:100%; ">
+            <div class="w3-card-4" style="">
+              <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+                <i class="fa fa-table mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                <h3 class="w3-text-white ulanimate trans" style="flex:1;margin-left:10px;">Description</h3>
+              </header>
+              <div class="w3-container">
+                <p>The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During the study a conflict arose between the administrator John A and instructor Mr. Hi (pseudonyms), which led to the split of the club into two. Half of the members formed a new club around Mr. Hi; members from the other part found a new instructor or gave up karate. Based on collected data Zachary correctly assigned all but one member of the club to the groups they actually joined after the split.</p>
+              </div>
+          </div>
+        </div>
+        </div>
+
+
+<!-- end of cell description-->
+<!-- Start of Cell columns 2-Meta data-->
+<div class="box .row.row-eq-height zoom" >
+  <div class="w3-container" style="width:100%;">
+    <div class="w3-card-4" style="">
+      <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;display:flex;">
+        <i class="far fa-question-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+        <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
+      </header>
+      <div class="w3-container">
+            <table class="">
+              <tr class="zoom"><td class="tag">|E|: </td><td>40</td></tr>
+              <tr class="zoom"><td class="tag">LCC: </td><td>10</td></tr>
+              <tr class="zoom"><td class="tag">Density: </td><td>0.4</td></tr>
+              <tr class="zoom"><td class="tag">Number of triangles: </td><td>20</td></tr>
+              <tr class="zoom"><td class="tag">Min degree: </td><td>3</td></tr>
+              <tr class="zoom"><td class="tag">Max degree: </td><td>10</td></tr>
+              <tr class="zoom"><td class="tag">Avg degree: </td><td>4</td></tr>
+              <tr class="zoom"><td class="tag">Power law exp.:  </td><td>2</td></tr>
+              <tr class="zoom"><td class="tag">Diameter: </td><td>4</td></tr>
+              <tr class="zoom"><td class="tag">CC: </td><td>0.6</td></tr>
+              <tr class="zoom"><td class="tag">Modularity: </td><td>0.4</td></tr>
+            </table>
+          </div>
+
+      </div>
+    </div>
+    </div>
+  </div>
+
+<!-- end of cell- Column 2 - Meta data-->
+
+<!-- Start of Cell Hyper degree dist- Bar Chart-->
+        <div class="col-xs-12
+              col-sm-12
+              col-md-4
+              col-lg-4">
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%;">
+              <div class="w3-card-4">
+                <header class="w3-container text-white w3-blue w3-padding-small" style="display:flex;">
+                  <i class="fas fa-chart-bar mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="ulanimate text-white">Degree Distribution</h3>
+                </header>
+                  <div class="w3-container">
+                    <canvas id="myChart-degDist"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+<!-- end of cell Hyper degree dist- Bar Chart-->
+
+<!-- Start of Cell Distribution parameters - donust chart-->
+
+            <div class="box .row.row-eq-height zoom" >
+            <div class="w3-container" style="width:100%;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                    <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                    <h3 class="w3-text-white ulanimate">Edge Distribution</h3>
+                  </header>
+                  <div class="w3-container">
+                    <canvas id="myChart-edgeDist"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box .row.row-eq-height zoom" >
+              <div class="w3-container" style="width:100%;">
+                  <div class="w3-card-4">
+                    <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                      <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                      <h3 class="w3-text-white ulanimate">Two Degree Distribution</h3>
+                    </header>
+                    <div class="w3-container">
+                      <canvas id="myChart-twoDeg"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+<!-- end of cell Distribution parameters - donust chart-->
+
+
+<!-- Start of Cell 2-section graphs-->
+<div class="col-xs-12
+      col-sm-12
+      col-md-4
+      col-lg-4">
+  <div class="box .row.row-eq-height zoom" >
+    <div class="w3-container" style="width:100%; ">
+        <div class="w3-card-4" style="">
+          <div class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+            <i class="fas fa-chart-line mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+            <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graphs</h3>
+          </div>
+          <div class="container">
+          <!--  <div class="card">
+              <ul class="list-group list-group-flush">
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              </ul>
+            </div> -->
+            <table class="table">
+                <tr class="tab-zoom"><td class="">|V|: </td><td>32</td></tr>
+                <tr class="tab-zoom"><td class="">|E|:  </td><td>10</td></tr>
+                <tr class="tab-zoom"><td class="">Max Degree: </td><td>4</td></tr>
+                <tr class="tab-zoom"><td class="">Max Edge Size: </td><td>4</td></tr>
+                <tr class="tab-zoom"><td class="">Modularity: </td><td>0.4</td></tr>
+              </table>
+          </div>
+      </div>
+    </div>
+    </div>
+        <!-- end of cell 2-section graphs-->
+        <!-- Start of Cell hyper details-->
+
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%; ">
+              <div class="w3-card-4" style="">
+                <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+                  <i class="fas fa-info-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+                </header>
+                <div class="w3-container">
+                  <table class="table">
+                    <tr class="tab-zoom"><td>Categories: </td><td>quantum-computing</td></tr>
+                    <tr class="tab-zoom"><td>Size: </td><td>5 MB</td></tr>
+                    <tr class="tab-zoom"><td>Vertex Type: </td><td>person</td></tr>
+                    <tr class="tab-zoom"><td>Edge Type: </td><td>school</td></tr>
+                    <tr class="tab-zoom"><td>Vertex Meta: </td><td>personal information</td></tr>
+                    <tr class="tab-zoom"><td>Edge Meta: </td><td>school information</td></tr>
+                  </table>
+                </div>
+            </div>
+          </div>
+          </div>
+
+        <!-- end of cell hyper details-->
+
+      </div>
+    </div>
+
+<!-- Start of Cell Visualization chart with Categories-->
+
+<!-- end of cell-->
+    <!-- content -->
+  </article>
+
+
+<!-- ChartsJS Script -->
+<script type="text/javascript">
+  //Data Prepration for ChartJS
+
+function _dataIntoLabelsAndSeries(data){
+  var label = [];
+  var series = [];
+  var datalist = data;
+  let dataArray = datalist.split(',');
+  for(var i=0;i<=dataArray.length-1;i++){
+
+    var list = dataArray[i].split(':');
+
+    label.push(list[0]);
+    series.push(list[1]);
+  }
+
+  var arr = [ label, series]
+  return arr
+}
+
+var dd = "2:10,3:20,4:25,5:40"
+var _degDist_ = _dataIntoLabelsAndSeries(dd)
+
+var ed = "2:10,5:20"
+var _edDist_ = _dataIntoLabelsAndSeries(ed)
+
+var tdd = "2:10,5:12"
+var _tdegDist_ = _dataIntoLabelsAndSeries(tdd)
+//  var json = {};
+//  for (var i = 0 ; i < label.length; i++) {
+//    json[label[i] = series[i]];
+//  }
+//  console.log(json);
+
+console.log(_degDist_);
+console.log(_edDist_);
+console.log(_tdegDist_);
+
+//Mobile Browsers detection
+function detectmob() {
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+
+
+
+
+var data = '';
+  var ctx = document.getElementById('myChart-degDist').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: _degDist_[0],
+          datasets: [{
+              label: '# of Votes',
+              data: _degDist_[1],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          legend: {display: !detectmob()},
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+  });
+
+//DonutChart-Script
+
+//console.log(!detectmob());
+var ctx = document.getElementById('myChart-edgeDist').getContext('2d');
+var myDoughnutChart = new Chart(ctx, {
+
+    type: 'bar',
+    data: {
+        labels: _edDist_[0],
+        datasets: [{
+            label: '# of Votes',
+            data: _edDist_[1],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        legend: {display: !detectmob()},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+//Bar-chart-Script//////}
+var ctx = document.getElementById('myChart-twoDeg').getContext('2d');
+
+var myLineChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: _tdegDist_[0],
+        datasets: [{
+            label: '# of Votes',
+            data: _tdegDist_[1],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ]
+        }]
+    },
+    options: {
+        legend: {display: !detectmob()},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+//Polar-chart-Script////
+var ctx = document.getElementById('myChart-polar').getContext('2d');
+
+var myLineChart = new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+        labels: null,
+        datasets: [{
+            label: '# of Votes',
+            data: [5,9,7,8,5,3,5,4,4],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        legend: {display: !detectmob()},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+
+
+
+</script>
+
+
+
+
+
+
+    <footer>
+  <div class="footer container column align-items-center justify-content-center bg-white">
+    <div class="footer--block text-align-center">
+      <div class="" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+        <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
+      </div>
+     <!-- <div class="by" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">
+        <a href="https://github.com/gustavoquinalha/jekyll-help-center-theme" target="_blank">Created with jekyll</a>
+      </div>-->
+    </div>
+  </div>
+</footer>
+
+  </div>
+  <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+<script type="text/javascript" src="https://github.com/hypergraph-repository/hypergraph-repository.github.io/blob/dev/assets/js/simple-jekyll-search.min.js">
+
+</script>
+
+  <script>
+    AOS.init({
+      once: true
+    });
+
+    SimpleJekyllSearch({
+      searchInput: document.getElementById('search-input'),
+      resultsContainer: document.getElementById('results-container'),
+      json: '/hypergraph-repository.github.io/search.json'
+    })
+  </script>
+</body>
+
+</html>

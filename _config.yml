@@ -9,8 +9,8 @@
 title: "Hypergraph Repository"
 email: spagnuolocarmine@gmail.com
 description: "Simple and flexible Jekyll theme for help center."
-baseurl: "/"
-url: "https://hypergraph-repository.github.io/"
+baseurl: "/hypergraph-repository.github.io"
+url: ""
 color_theme:  "#0081ff"
 color_text:  "#fff"
 language:  "en"
@@ -24,3 +24,9 @@ paginate: 5
 # Plugins
 plugins_dir:
   - jekyll-admin
+
+assets:
+ source:
+   - assets/js
+   - assets/fontawesome
+   - assets/img

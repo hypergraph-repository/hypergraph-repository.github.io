@@ -2,143 +2,516 @@
 layout: default
 ---
 
-<!-- breadcrumbs -->
-<div class="size margin" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
+<style media="screen">
+
+  .w3-container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* TAGS for Graph and iid data */
+.tags {
+  font: 12px/1.5 "ProximaNova", serif, sans-serif;
+  letter-spacing: 1px;
+  /*'PT Sans', serif,*/
+  list-style: none;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.tags li {
+  float: left;
+}
+
+.tag {
+  background: #205469;
+  border-radius: 3px 0 0 3px;
+  /*color: #999;*/
+  color: #FFF;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 20px 0 23px;
+  position: relative;
+  margin: 0 10px 10px 0;
+  text-decoration: none;
+}
+
+.tag::before {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 1px rgba(0, 0, 0, 0.25);
+  content: '';
+  height: 6px;
+  left: 10px;
+  position: absolute;
+  width: 6px;
+  top: 10px;
+}
+
+.tag::after {
+  background: #fff;
+  border-bottom: 13px solid transparent;
+  border-left: 10px solid #205469;
+  /*border-lefT: 10px solid #FF6600;*/
+  border-top: 13px solid transparent;
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.tag:hover {
+  background-color: crimson;
+  color: white;
+}
+
+.tag:hover::after {
+   border-left-color: crimson;
+}
+
+.zoom{
+  transition: transform .2s;
+
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+
+}
+
+.tab-zoom{
+  transition: transform .2s;
+}
+.tab-zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  background-color: #ccf2ff;
+
+}
+.w3-card-4 {
+  border-radius : 10px 10px 10px 10px;
+}
+
+
+}
+</style>
+<br>
+<!--breadcrumbs-->
+<div class="" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
   {% include breadcrumbs.html path=page.path title=page.title %}
 </div>
-<!-- breadcrumbs -->
+<!--breadcrumbs-->
 
-<div class="size margin min-height">
+
   <article>
     <!-- titles -->
-    <h1 class="post-title" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">{{ page.title }}</h1>
+    <!--<h1 class="post-title" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">{{ page.title }}</h1>
     <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
       <time>{{ page.date | date_to_string }}</time>
 
     </div>
-
+-->
+<div class="container-fluid" style="padding-top:0em;">
     <div class="row" data-aos="zoom-in" style="margin-top:20px;">
-      <div class="col-xs-12
-                  col-sm-8
-                  col-md-6
-                  col-lg-6">
-          <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white">Description</h1>
-                  </header>
-                  <div class="w3-container">
-                    <p>    {{ page.description }}</p>
-                  </div>
-                  <footer class="w3-container w3-blue w3-padding-small">
-                    
-                      <h6> <span class="feather-icon icon-link w3-text-white"></span> <a class="w3-text-white" href="{{ page.link }}">{{ page.link }}</a></h5>
-                  </footer>
-              </div>
-            </div>
-          
-          </div>
+      <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%">
+      <div class="text-white text-center py-5 px-4">
+      <div>
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>{{page.title}}</strong></h2>
+        <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+        <time>{{ page.date | date_to_string }}</time>
+        </div>
+          <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for karate network.
+          </p>
+            <a class="btn btn-outline-white btn-md" href="{{site.url}}">
+              <i class="fas fa-clone left"></i> Dataset files</a>
+        </div>
       </div>
-      <div class="col-xs-12
-            col-sm-8
-            col-md-6
-            col-lg-6">
-          <div class="box" >
-          <div class="w3-container" style="width:100%; margin-top:20px;">
-              <div class="w3-card-4">
-                <header class="w3-container w3-blue w3-padding-small ">
-                  <h3 class="w3-text-white">Hypergraph details</h1>
-                </header>
-                <div class="w3-container">
-                  <table>
-                    <tr><td>Categories: </td><td>{{ page.categories}}</td></tr>
-                    <tr><td>Size: </td><td>{{ page.size}}</td></tr>
-                    <tr><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-                    <tr><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-                    <tr><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-                    <tr><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
-                    <tr><td>|V|: </td><td>{{ page.v}}</td></tr>
-                    <tr><td>|E|:  </td><td>{{ page.e}}</td></tr>
-                    <tr><td>Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                    <tr><td>Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                    <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
-                  </table>
-                </div>
-              
-            </div>
-          </div>
+    </div>
+
+    <!-- Start of Cell -- Description-->
+    <div class="col-xs-12
+          col-sm-12
+          col-md-4
+          col-lg-4">
+        <div class="box zoom" >
+        <div class="w3-container" style="width:100%; ">
+            <div class="w3-card-4" style="">
+              <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+                <i class="fa fa-table mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                <h3 class="w3-text-white ulanimate trans" style="flex:1;margin-left:10px;">Description</h3>
+              </header>
+              <div class="w3-container">
+                <p>{{ page.description}}</p>
+              </div>
           </div>
         </div>
+        </div>
 
-        <div class="col-xs-12
-              col-sm-8
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white">2-Section Graph details</h1>
-                  </header>
-                  <div class="w3-container">
-                    <table>
-                      <tr><td>|E|: </td><td>{{ page.two-e}}</td></tr>
-                      <tr><td>LCC: </td><td>{{ page.two-lcc}}</td></tr>
-                      <tr><td>Density: </td><td>{{ page.two-density}}</td></tr>
-                      <tr><td>Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
-                      <tr><td>Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
-                      <tr><td>Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
-                      <tr><td>Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
-                      <tr><td>Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
-                      <tr><td>Diameter: </td><td>{{ page.two-diameter}}</td></tr>
-                      <tr><td>CC: </td><td>{{ page.two-cc}}</td></tr>
-                      <tr><td>Modularity: </td><td>{{ page.modularity}}</td></tr>
-                    </table>
-                  </div>
-                
-              </div>
-            </div>
-            </div>
+
+<!-- end of cell description-->
+<!-- Start of Cell columns 2-Meta data-->
+<div class="box .row.row-eq-height zoom" >
+  <div class="w3-container" style="width:100%;">
+    <div class="w3-card-4" style="">
+      <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;display:flex;">
+        <i class="far fa-question-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+        <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
+      </header>
+      <div class="w3-container">
+            <table class="">
+              <tr class="zoom"><td class="tag">|E|: </td><td>{{ page.two-e}}</td></tr>
+              <tr class="zoom"><td class="tag">LCC: </td><td>{{ page.two-lcc}}</td></tr>
+              <tr class="zoom"><td class="tag">Density: </td><td>{{ page.two-density}}</td></tr>
+              <tr class="zoom"><td class="tag">Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
+              <tr class="zoom"><td class="tag">Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
+              <tr class="zoom"><td class="tag">Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
+              <tr class="zoom"><td class="tag">Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
+              <tr class="zoom"><td class="tag">Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
+              <tr class="zoom"><td class="tag">Diameter: </td><td>{{ page.two-diameter}}</td></tr>
+              <tr class="zoom"><td class="tag">CC: </td><td>{{ page.two-cc}}</td></tr>
+              <tr class="zoom"><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+            </table>
           </div>
 
-          <div class="col-xs-12
-              col-sm-8
-              col-md-6
-              col-lg-6">
-            <div class="box" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white">Hypergraph Degree Distribution</h1>
-                  </header>
-                  <div class="w3-container">
-                    <div class="ct-chart" id="chart_degree_distribution" style=" width: 100%; height:300px;"></div>
-                  </div>
-                
-              </div>
-            </div>
-            </div>
-          </div>
+      </div>
+    </div>
+    </div>
   </div>
 
+<!-- end of cell- Column 2 - Meta data-->
+
+<!-- Start of Cell Hyper degree dist- Bar Chart-->
+        <div class="col-xs-12
+              col-sm-12
+              col-md-4
+              col-lg-4">
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%;">
+              <div class="w3-card-4">
+                <header class="w3-container text-white w3-blue w3-padding-small" style="display:flex;">
+                  <i class="fas fa-chart-bar mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="ulanimate text-white">Degree Distribution</h3>
+                </header>
+                  <div class="w3-container">
+                    <canvas id="myChart-degDist"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
 
 
-    {{ content }}
 
-    <script>
-        
-      new Chartist.Line('#chart_degree_distribution', {
-        labels: [1, 2, 3, 4, 5, 6, 7, 8],
-        series: [
-          [5, 9, 7, 8, 5, 3, 5, 4]
-        ]
-      }, {
-        low: 0,
-        showArea: true
-      });
-      </script>
+<!-- end of cell Hyper degree dist- Bar Chart-->
 
+<!-- Start of Cell Distribution parameters - donust chart-->
+
+            <div class="box .row.row-eq-height zoom" >
+            <div class="w3-container" style="width:100%;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                    <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                    <h3 class="w3-text-white ulanimate">Edge Distribution</h3>
+                  </header>
+                  <div class="w3-container">
+                    <canvas id="myChart-edgeDist"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box .row.row-eq-height zoom" >
+              <div class="w3-container" style="width:100%;">
+                  <div class="w3-card-4">
+                    <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                      <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                      <h3 class="w3-text-white ulanimate">Two Degree Distribution</h3>
+                    </header>
+                    <div class="w3-container">
+                      <canvas id="myChart-twoDeg"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+<!-- end of cell Distribution parameters - donust chart-->
+
+
+<!-- Start of Cell 2-section graphs-->
+<div class="col-xs-12
+      col-sm-12
+      col-md-4
+      col-lg-4">
+  <div class="box .row.row-eq-height zoom" >
+    <div class="w3-container" style="width:100%; ">
+        <div class="w3-card-4" style="">
+          <div class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+            <i class="fas fa-chart-line mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+            <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graphs</h3>
+          </div>
+          <div class="container">
+          <!--  <div class="card">
+              <ul class="list-group list-group-flush">
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              </ul>
+            </div> -->
+            <table class="table">
+                <tr class="tab-zoom"><td class="">|V|: </td><td>{{ page.v}}</td></tr>
+                <tr class="tab-zoom"><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
+                <tr class="tab-zoom"><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                <tr class="tab-zoom"><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                <tr class="tab-zoom"><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
+              </table>
+          </div>
+      </div>
+    </div>
+    </div>
+        <!-- end of cell 2-section graphs-->
+        <!-- Start of Cell hyper details-->
+
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%; ">
+              <div class="w3-card-4" style="">
+                <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+                  <i class="fas fa-info-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+                </header>
+                <div class="w3-container">
+                  <table class="table">
+                    <tr class="tab-zoom"><td>Categories: </td><td>{{ page.categories}}</td></tr>
+                    <tr class="tab-zoom"><td>Size: </td><td>{{ page.size}}</td></tr>
+                    <tr class="tab-zoom"><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+                    <tr class="tab-zoom"><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+                    <tr class="tab-zoom"><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+                    <tr class="tab-zoom"><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+                  </table>
+                </div>
+            </div>
+          </div>
+          </div>
+
+        <!-- end of cell hyper details-->
+
+      </div>
+    </div>
+
+<!-- Start of Cell Visualization chart with Categories-->
+
+<!-- end of cell-->
     <!-- content -->
   </article>
-</div>
+
+
+<!-- ChartsJS Script -->
+<script type="text/javascript">
+  //Data Prepration for ChartJS
+
+function _dataIntoLabelsAndSeries(data){
+  var label = [];
+  var series = [];
+  var datalist = data;
+  let dataArray = datalist.split(',');
+  for(var i=0;i<=dataArray.length-1;i++){
+
+    var list = dataArray[i].split(':');
+
+    label.push(list[0]);
+    series.push(list[1]);
+  }
+
+  var arr = [ label, series]
+  return arr
+}
+
+var dd = {{ page.degree-distribution | jsonify }}
+var _degDist_ = _dataIntoLabelsAndSeries(dd)
+
+var ed = {{ page.edges-distribution | jsonify }}
+var _edDist_ = _dataIntoLabelsAndSeries(ed)
+
+var tdd = {{ page.two-degree-distribution | jsonify }}
+var _tdegDist_ = _dataIntoLabelsAndSeries(tdd)
+//  var json = {};
+//  for (var i = 0 ; i < label.length; i++) {
+//    json[label[i] = series[i]];
+//  }
+//  console.log(json);
+
+console.log(_degDist_);
+console.log(_edDist_);
+console.log(_tdegDist_);
+
+//Mobile Browsers detection
+function detectmob() {
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+
+{% assign data_file_chartjs =  page.data-name  %}
+
+
+var data = '';
+  var ctx = document.getElementById('myChart-degDist').getContext('2d');
+  var myChart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+          labels: _degDist_[0],
+          datasets: [{
+              label: '# of Votes',
+              data: _degDist_[1],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ],
+              borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                  'rgba(153, 102, 255, 1)',
+                  'rgba(255, 159, 64, 1)'
+              ],
+              borderWidth: 1
+          }]
+      },
+      options: {
+          legend: {display: !detectmob()},
+          scales: {
+              yAxes: [{
+                  ticks: {
+                      beginAtZero: true
+                  }
+              }]
+          }
+      }
+  });
+
+//DonutChart-Script
+
+//console.log(!detectmob());
+var ctx = document.getElementById('myChart-edgeDist').getContext('2d');
+var myDoughnutChart = new Chart(ctx, {
+
+    type: 'bar',
+    data: {
+        labels: _edDist_[0],
+        datasets: [{
+            label: '# of Votes',
+            data: _edDist_[1],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        legend: {display: !detectmob()},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+//Bar-chart-Script//////}
+var ctx = document.getElementById('myChart-twoDeg').getContext('2d');
+
+var myLineChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: _tdegDist_[0],
+        datasets: [{
+            label: '# of Votes',
+            data: _tdegDist_[1],
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ]
+        }]
+    },
+    options: {
+        legend: {display: !detectmob()},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+//Polar-chart-Script////
+var ctx = document.getElementById('myChart-polar').getContext('2d');
+
+var myLineChart = new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+        labels: {{ site.data[data_file].series | jsonify }},
+        datasets: [{
+            label: '# of Votes',
+            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            backgroundColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        legend: {display: !detectmob()},
+        scales: {
+            yAxes: [{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+});
+
+
+
+
+</script>
+{{page.somekind}}
+{{page.somekind}}
+{{page.somekind}}
+{{page.somekind}}

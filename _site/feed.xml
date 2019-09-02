@@ -3,19 +3,45 @@
   <channel>
     <title>Hypergraph Repository</title>
     <description>Simple and flexible Jekyll theme for help center.</description>
-    <link>http://localhost:4000//</link>
-    <atom:link href="http://localhost:4000//feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 18 Jul 2019 11:26:35 +0200</pubDate>
-    <lastBuildDate>Thu, 18 Jul 2019 11:26:35 +0200</lastBuildDate>
+    <link>http://localhost:4000/hypergraph-repository.github.io/</link>
+    <atom:link href="http://localhost:4000/hypergraph-repository.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 02 Sep 2019 18:44:41 +0200</pubDate>
+    <lastBuildDate>Mon, 02 Sep 2019 18:44:41 +0200</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>New Post </title>
+        <description>
+</description>
+        <pubDate>Sun, 01 Sep 2019 22:46:41 +0200</pubDate>
+        <link>http://localhost:4000/hypergraph-repository.github.io/newpost/</link>
+        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/newpost/</guid>
+        
+        
+        <category>Social-Network</category>
+        
+      </item>
+    
+      <item>
+        <title>Quantum Computing</title>
+        <description>
+</description>
+        <pubDate>Sun, 01 Sep 2019 22:46:41 +0200</pubDate>
+        <link>http://localhost:4000/hypergraph-repository.github.io/quantum-computing01/</link>
+        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/quantum-computing01/</guid>
+        
+        
+        <category>quantum-computing</category>
+        
+      </item>
     
       <item>
         <title>Karate Network</title>
         <description>
 </description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
-        <link>http://localhost:4000//karate-network/</link>
-        <guid isPermaLink="true">http://localhost:4000//karate-network/</guid>
+        <pubDate>Sun, 01 Sep 2019 22:46:41 +0200</pubDate>
+        <link>http://localhost:4000/hypergraph-repository.github.io/karate-network2/</link>
+        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/karate-network2/</guid>
         
         
         <category>Social-Network</category>

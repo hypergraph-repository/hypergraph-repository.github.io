@@ -1,21 +1,263 @@
 ---
 layout: default
 ---
-<div class="bg-header">
+<div class="" style="">
   {% include header.html %}
 </div>
 
-<div class="content-post">
- 
-    <div class="size margin" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
+<!-- Catergories Panel -->
+<!--
+  <div class="jumbotron" data-aos="fade-up" style="padding-top:20px;">
+    <h3 class="w3-text-dark ulanimate" stle>Categories</h3>
+            <div class="row">
+              <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
+                <table class="table table-hover">
+                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
+                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
+                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
+                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
+                  </table>
 
-        <div style=" margin: auto; width: 100px;"><button type="button" class="button"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button></div>
-        <h4 class="list-post-title">
-            Latest Hypergraphs
-        </h4>
-        {% include posts.html %}
-   
+        </div>
+      <div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
+        <table class="table table-hover">
+          <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
+          <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
+          <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
+          <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
+          </table>
 
+      </div>
+<div class="col-sm-4 col-md-6 col-xs-12 col-lg-4">
+  <table class="table table-hover">
+    <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
+    <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
+    <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
+    <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
+      </table>
+    </div>
   </div>
+</div> -->
 
-</div>
+
+ <!-- Catergories Panel -->
+ <style media="screen">
+   .active-pink-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #f48fb1;
+box-shadow: 0 0 0 1px #f48fb1;
+}
+.active-pink-3 input[type=text] {
+border: 1px solid #f48fb1;
+box-shadow: 0 0 0 1px #f48fb1;
+}
+.active-purple-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #ce93d8;
+box-shadow: 0 0 0 1px #ce93d8;
+}
+.active-purple-3 input[type=text] {
+border: 1px solid #ce93d8;
+box-shadow: 0 0 0 1px #ce93d8;
+}
+.active-cyan-4 input[type=text]:focus:not([readonly]) {
+border: 1px solid #4dd0e1;
+box-shadow: 0 0 0 1px #4dd0e1;
+}
+.active-cyan-3 input[type=text] {
+border: 1px solid #4dd0e1;
+box-shadow: 0 0 0 1px #4dd0e1;
+}
+
+.my-custom-scrollbar {
+position: relative;
+height: -webkit-fill-available;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+.badge{
+  padding: 10px;
+}
+ </style>
+ <div class="container-fluid">
+   <div class="row">
+     <div class="col-3 d-none d-sm-block">
+       <div class="" data-aos="fade-left" data-aos-delay="300" data-spy="scroll" data-target=".table">
+         <div class="row">
+
+             {% assign categories_list = site.categories %}
+             {% if categories_list.first[0] == null %}
+             <table class="table table-hover">
+               <button type="button" class="btn btn-danger">Categories</button>
+               {% for category in categories_list %}
+               <div class="col-12">
+                   <a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
+                     {{ category | camelcase }}</a>
+                   <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                     {{ site.tags[category].size }}
+                   </span>
+
+                 <a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
+                   {{ category | camelcase }}</a>
+                 <span class="badge badge-primary badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                   {{ site.tags[category].size }}
+                 </span>
+               </div>
+               {% endfor %}
+           </table>
+
+                  {% else %}
+                  <div class="col-12">
+                    <button type="button" class="btn blue">Categories</button>
+                    <div class="table-wrapper-scroll-y my-custom-scrollbar" data-aos="fade-left" data-aos-delay="100">
+                    <table class="table table-hover">
+
+                      {% for category in categories_list %}
+                      {{category[0].index}}
+                      <tr >
+                        <td>
+                          <a href="{{ site.url}}/hypergraph-repository.github.io/explore#filter={{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+                      {{ category[0] | camelcase }}
+                          </a>
+                        </td>
+                        <td>
+                          <span class="badge blue-gradient pull-right" style="!important; font-weight:300;margin-left:5px;">
+                              {{ category[1].size }}
+                            </span>
+                          </td>
+                        </tr>
+                        {% endfor %}
+                      {% endif %}
+                    {% assign categories_list = nil %}
+                      </table>
+                      </div>
+                  </div>
+
+
+         </div>
+
+       </div>
+     </div>
+     <div class="col-9">
+       <div class="container-fluid position-search">
+         <div class="input-group md-form form-sm form-1 pl-0" data-aos="fade-up" data-aos-delay="" data-aos-offset="0" id="search-container">
+           <div class="input-group-prepend">
+             <span class="input-group-text cyan lighten-2" id="basic-text1"><i class="fas fa-search text-white"
+                 aria-hidden="true"></i></span>
+           </div>
+           <input class="form-control my-0 py-1" type="text" placeholder="Search Latest Hypergraphs Here" aria-label="Search" id="search-input">
+         </div>
+         <div class="header--block--result">
+           <ul id="results-container"></ul>
+         </div>
+       </div>
+
+      <!-- Latest graphs Panel -->
+      <!-- <div style=" margin: auto; width: 100px;"><button type="button" class="button"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button></div>-->
+            <h4 class="list-post-title" style="padding:5px;">
+                <center>
+                  Latest Hypergraphs
+                </center>
+              </h4>
+      <div class="container-fluid">
+        {% include posts.html %}
+      </div>
+
+       <!-- Latest graphs Panel -->
+
+      <!-- some stuff to try
+        <div class="maincontainer">
+          <div class="one">
+            <div class="card">
+              <h1>css</h1>
+              <h2>some sort of text</h2>
+            </div>
+
+          </div>
+          <div class="two">
+            <div class="card">
+          <h1>flexbox</h1>
+          <h2>some sort of text</h2>
+          </div>
+
+          </div>
+          <div class="three">
+            <div class="card">
+              <h1>is cool</h1>
+              <h2>some sort of text</h2>
+            </div>
+
+          </div>
+
+        </div>
+
+
+       <style media="screen">
+         .maincontainer{
+           display: flex;
+           width: 80vm;
+           margin-top: 20vh;
+           justify-content: space-evenly;
+         }
+
+         .maincontainer > div {
+           width: calc(50vm/3);
+           height: 60vh;
+           display: flex;
+           flex-grow: 1;
+           justify-content: center;
+           align-items: center;
+           transition: all 300ms ease-in-out;
+         }
+         .one{
+           background: orange;
+         }
+
+         .two{
+           background: cyan;
+         }
+         .three{
+           background:blue;
+         }
+
+         .maincontainer > div > div > h1 {
+           transform: rotate(-90deg);
+           transition: all 300ms ease-in-out;
+         }
+
+         .maincontainer > div > div > h2 {
+           visibility: hidden;
+           transform: rotate(-90deg);
+           transition: all 300ms ease-in-out;
+         }
+
+         .maincontainer > div:hover {
+           flex-grow: 4;
+
+         }
+
+         .maincontainer > div:hover > div h1{
+           transform: rotate(0deg);
+           transform: scale(1.5);
+           color: black;
+         }
+
+         .maincontainer > div:hover > div h2{
+           transform: rotate(0deg);
+           transform: scale(1.5);
+           transition: opacity 2s linear;
+           visibility: visible;
+         }
+       </style>
+
+       -->
+
+     </div>
+
+   </div>
+
+ </div>
+
+ <div name="social-fixed" style="position:fixed;bottom:64em;left:0em;">
+   <a href="https://github.com/tjan90/hypergraph-repository.github.io"><i class="fab fa-github-square fa-3x"></i></a>
+ </div>
