@@ -5,59 +5,33 @@
     <description>Simple and flexible Jekyll theme for help center.</description>
     <link>http://localhost:4000/hypergraph-repository.github.io/</link>
     <atom:link href="http://localhost:4000/hypergraph-repository.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 02 Sep 2019 14:49:22 +0200</pubDate>
-    <lastBuildDate>Mon, 02 Sep 2019 14:49:22 +0200</lastBuildDate>
+    <pubDate>Mon, 02 Sep 2019 18:36:09 +0200</pubDate>
+    <lastBuildDate>Mon, 02 Sep 2019 18:36:09 +0200</lastBuildDate>
     <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>New Post </title>
+        <description>
+</description>
+        <pubDate>Sun, 01 Sep 2019 22:46:41 +0200</pubDate>
+        <link>http://localhost:4000/hypergraph-repository.github.io/newpost/</link>
+        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/newpost/</guid>
+        
+        
+        <category>Social-Network</category>
+        
+      </item>
     
       <item>
         <title>Quantum Computing</title>
         <description>
 </description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
+        <pubDate>Sun, 01 Sep 2019 22:46:41 +0200</pubDate>
         <link>http://localhost:4000/hypergraph-repository.github.io/quantum-computing01/</link>
         <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/quantum-computing01/</guid>
         
         
-        <category>Humanitarian</category>
-        
-      </item>
-    
-      <item>
-        <title>Quantum Computing</title>
-        <description>
-</description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/quantum-computing00/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/quantum-computing00/</guid>
-        
-        
-        <category>Chemical</category>
-        
-      </item>
-    
-      <item>
-        <title>Quantum Computing</title>
-        <description>
-</description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/quantum-computing0/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/quantum-computing0/</guid>
-        
-        
-        <category>Scientific</category>
-        
-      </item>
-    
-      <item>
-        <title>Quantum Computing</title>
-        <description>
-</description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/quantum-computing/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/quantum-computing/</guid>
-        
-        
-        <category>Scientific</category>
+        <category>quantum-computing</category>
         
       </item>
     
@@ -65,61 +39,9 @@
         <title>Karate Network</title>
         <description>
 </description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
+        <pubDate>Sun, 01 Sep 2019 22:46:41 +0200</pubDate>
         <link>http://localhost:4000/hypergraph-repository.github.io/karate-network2/</link>
         <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/karate-network2/</guid>
-        
-        
-        <category>Transpotation</category>
-        
-      </item>
-    
-      <item>
-        <title>Karate Network</title>
-        <description>
-</description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/karate-network1/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/karate-network1/</guid>
-        
-        
-        <category>Computation</category>
-        
-      </item>
-    
-      <item>
-        <title>Karate Network</title>
-        <description>
-</description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/karate-network00/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/karate-network00/</guid>
-        
-        
-        <category>Neural-Network</category>
-        
-      </item>
-    
-      <item>
-        <title>Karate Network</title>
-        <description>
-</description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/karate-network0/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/karate-network0/</guid>
-        
-        
-        <category>Ecological</category>
-        
-      </item>
-    
-      <item>
-        <title>Karate Network</title>
-        <description>
-</description>
-        <pubDate>Sun, 12 Nov 2017 21:46:41 +0100</pubDate>
-        <link>http://localhost:4000/hypergraph-repository.github.io/karate-network/</link>
-        <guid isPermaLink="true">http://localhost:4000/hypergraph-repository.github.io/karate-network/</guid>
         
         
         <category>Social-Network</category>
