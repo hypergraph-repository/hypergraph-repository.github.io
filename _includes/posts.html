@@ -1,54 +1,75 @@
-<div class="">
-  {% if site.posts.size == 0 %}
-  <h2>No post found</h2>
-  {% else %}
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="">
+        {% if site.posts.size == 0 %}
+        <h2>No post found</h2>
+        {% else %}
 
-  {% for post in site.posts %}
-  {% if forloop.rindex <= 4 %}
-  <a href="{{ site.baseurl }}{{ post.url }}" class="list-item container" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
+        {% for post in site.posts %}
+        {% if forloop.rindex <= 4 %}
+         <!-- <a href="{{ site.baseurl }}{{ post.url }}" data-aos="fade-up" data-aos-offset="0" data-aos-delay="100">
 
-<!-- My layout code -->
-  <!--    <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-3">
-            <h3>{{ post.title }}</h3>
+      <!-- Tanveer layout code -->
+        <!--    <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-3">
+                  <h3>{{ post.title }}</h3>
 
-          </div>
-          <div class="col-lg-9">
-            <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-              <span class="list-post-description">{{ post.description | truncatewords : 50 }}</span>
+                </div>
+                <div class="col-lg-9">
+                  <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+                    <span class="list-post-description">{{ post.description | truncatewords : 50 }}</span>
+                  </div>
+
+                  <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+                    <small><time>{{ post.date | date_to_string }}</time></small>
+                  </div>
+                </div>
+              </div>
+
             </div>
+        </div> -->
 
-            <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-              <small><time>{{ post.date | date_to_string }}</time></small>
-            </div>
+      <!--Card Deck Layout for latest hypergraphs -->
+        <div class="card mb-2" data-aos="fade-left">
+          <a href="{{site.baseurl}}{{post.url}}">
+          <div class="card-header aqua-gradient lighten-3 text-white">{{ post.title }}</div>
+          <div class="card-body" data-aos="fade-left">
+            <p class="card-text" data-aos="fade-left" data-aos-delay="300">{{ post.description | truncatewords: 50 }}</p>
+            </a>
           </div>
         </div>
 
+
+      <!--Card Deck Layout for latest hypergraphs -->
+
+        <!-- Carmine Layout-->
+      <!-- <div class="jumbotron pt-3" data-aos="fade-up">
+        <div class="flex-grow-1">
+           <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
+             <h2 class="list-post-title">
+             {{ post.title }}
+             </h2>
+           </div>
+
+           <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+             <span class="list-post-description">{{ post.description | truncatewords: 50 }}</span>
+           </div>
+
+           <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
+             <small><time>{{ post.date | date_to_string }}</time></small>
+           </div>
+         </div>
+        </div>
+
+        </a> -->
+
+      <!-- Carmine Layout-->
+
+
+
+            {% endif %}
+          {% endfor %}
+         {% endif %}
       </div>
-  </div> -->
-
-  <!-- Carmine Layout-->
-<div class="container-fluid pt-3" data-aos="fade-up">
-  <div class="flex-grow-1">
-     <div class="" data-aos="fade-up" data-aos-delay="600" data-aos-offset="0">
-       <h2 class="list-post-title">
-       {{ post.title }}
-       </h2>
-     </div>
-
-     <div class="" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-       <span class="list-post-description">{{ post.description | truncatewords: 50 }}</span>
-     </div>
-
-     <div class="list-post-written" data-aos="fade-up" data-aos-delay="700" data-aos-offset="0">
-       <small><time>{{ post.date | date_to_string }}</time></small>
-     </div>
-   </div>
-  </div>
-
-  </a>
-  {% endif %}
-  {% endfor %} {% endif %}
-</div>
-<!-- Carmine Layout-->
+    </div>

@@ -4,12 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Hypergraphs</title>
-
-
   <link rel="stylesheet" href="/hypergraph-repository.github.io/css/main.css">
 <!--MDB Packges-->
 
-<!-- Font Awesome -->
+<!-- Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
 <!-- Bootstrap core CSS -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
@@ -39,10 +37,8 @@
 
 <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
 
-
 <link rel="shortcut icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
 <link rel="icon" href="http://localhost:4000/hypergraph-repository.github.io/assets/img/favicon.png">
-
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -80,6 +76,18 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
   <script src="https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
 <!-- ChartistJS-->
+
+<!-- Swiper-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
+<!-- Swiper-->
+
+<script type="text/javascript" src="http://localhost:4000/hypergraph-repository.github.io/assets/js/simple-jekyll-search.js">
+<script type="text/javascript" src="http://localhost:4000/hypergraph-repository.github.io/assets/js/simple-jekyll-search.min.js">  
+</script>
 
 </head>
 
@@ -150,7 +158,7 @@
       
       
       <a href="/hypergraph-repository.github.io/about/">
-        About
+        about
       </a>
       
       
@@ -178,8 +186,6 @@
       
       
       
-      
-      
     </nav>
   </div>
 </div>
@@ -192,7 +198,7 @@
      margin-bottom: auto;
      margin-top: auto;
      height: 60px;
-     background-color: #13bcd6;
+     background-color: rgb(32,150,243);
      border-radius: 30px;
      padding: 10px;
      }
@@ -203,7 +209,6 @@
      outline: 0;
      background: none;
      width: 0;
-     caret-color:transparent;
      line-height: 40px;
      transition: width 0.4s linear;
      }
@@ -211,8 +216,9 @@
      .searchbar:hover > .search_input{
      padding: 0 10px;
      width: 250px;
-     caret-color:red;
+     caret-color: white;
      transition: width 0.4s linear;
+     color: white;
      }
 
      .searchbar:hover > .search_icon{
@@ -233,8 +239,8 @@
 
 </style>
 
-<nav class="navbar navbar-expand-lg navbar-light ">
-  <a class="navbar-brand" href="http://hypergraph-repository.github.io">Hypergraph Repository</a>
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color:white;">
+  <a class="navbar-brand" href="http://localhost:4000/hypergraph-repository.github.io/">Hypergraph Repository</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -242,22 +248,22 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="http://hypergraph-repository.github.io/explore">Explore</a>
+        <a class="nav-link" href="https://hypergraph-repository.github.io/explore">Explore</a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="http://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
+        <a class="nav-link" href="  https://hypergraph-repository.github.io/hypergraphs">What is Hypergraphs?</a>
       </li>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl">Simplegraphs.jl</a>
       </li>
     </ul>
-    <!--<form class="form-inline my-2 my-lg-0">
+    <!-- <form class="form-inline my-lg-0">
       <div class="container h-50">
             <div class="d-flex justify-content-center h-100">
               <div class="searchbar">
-                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here...">
+                <input class="search_input" type="text" name="" placeholder="Search for hypergraphs here..." style="color:white;">
                 <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
               </div>
             </div>
@@ -265,11 +271,11 @@
               <ul id="results-container"></ul>
             </div>
           </div>
-    </form>-->
+    </form> -->
   </div>
 </nav>
 
-
+    
     <header>
 
         <div class="header container align-items-center justify-content-center">
@@ -303,8 +309,20 @@
         <tbody>  
             
             <tr>
-                <td>2017-11-12 21:46:41 +0100</td>
-                <td>Scientific</td>
+                <td>2019-09-01 22:46:41 +0200</td>
+                <td>Social-Network</td>
+                <td>New Post </td>
+                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
+                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
+                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
+                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
+                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
+                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
+            </tr>
+            
+            <tr>
+                <td>2019-09-01 22:46:41 +0200</td>
+                <td>quantum-computing</td>
                 <td>Quantum Computing</td>
                 <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
                 <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
@@ -315,55 +333,7 @@
             </tr>
             
             <tr>
-                <td>2017-11-12 21:46:41 +0100</td>
-                <td>Social-NetworkProva3Prova4</td>
-                <td>Karate Network</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-            </tr>
-            
-            <tr>
-                <td>2017-11-12 21:46:41 +0100</td>
-                <td>Social-Network</td>
-                <td>Karate Network</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-            </tr>
-            
-            <tr>
-                <td>2017-11-12 21:46:41 +0100</td>
-                <td>Social-Network</td>
-                <td>Karate Network</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-            </tr>
-            
-            <tr>
-                <td>2017-11-12 21:46:41 +0100</td>
-                <td>Social-Network</td>
-                <td>Karate Network</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-                <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
-            </tr>
-            
-            <tr>
-                <td>2017-11-12 21:46:41 +0100</td>
+                <td>2019-09-01 22:46:41 +0200</td>
                 <td>Social-Network</td>
                 <td>Karate Network</td>
                 <td>https://en.wikipedia.org/wiki/Zachary%27s_karate_club</td>
@@ -407,7 +377,7 @@
 
   </div>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
-<script type="text/javascript" src="https://hypergraph-repository.github.io/assets/js/simple-jekyll-search.min.js">
+<script type="text/javascript" src="https://github.com/hypergraph-repository/hypergraph-repository.github.io/blob/dev/assets/js/simple-jekyll-search.min.js">
 
 </script>
 

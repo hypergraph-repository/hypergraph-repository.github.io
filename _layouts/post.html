@@ -1,7 +1,9 @@
 ---
 layout: default
 ---
+
 <style media="screen">
+
   .w3-container{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -78,17 +80,34 @@ layout: default
   -ms-transform: scale(1.1); /* IE 9 */
   -webkit-transform: scale(1.1); /* Safari 3-8 */
   transform: scale(1.1);
+
 }
 
+.tab-zoom{
+  transition: transform .2s;
+}
+.tab-zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1);
+  background-color: #ccf2ff;
+
+}
+.w3-card-4 {
+  border-radius : 10px 10px 10px 10px;
+}
+
+
+}
 </style>
 <br>
 <!--breadcrumbs-->
-<div class="container-fluid" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
+<div class="" data-aos="fade-right" data-aos-delay="100" data-aos-offset="0">
   {% include breadcrumbs.html path=page.path title=page.title %}
 </div>
 <!--breadcrumbs-->
 
-<div class="container-fluid  min-height">
+
   <article>
     <!-- titles -->
     <!--<h1 class="post-title" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">{{ page.title }}</h1>
@@ -97,491 +116,266 @@ layout: default
 
     </div>
 -->
-
-<div class="">
-    <div class=" row" data-aos="zoom-in" style="margin-top:20px;">
-      <div class=" jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%">
+<div class="container-fluid" style="padding-top:0em;">
+    <div class="row" data-aos="zoom-in" style="margin-top:20px;">
+      <div class="jumbotron card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);width:100%">
       <div class="text-white text-center py-5 px-4">
-        <div>
-          <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>{{page.title}}</strong></h2>
-          <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
-            <time>{{ page.date | date_to_string }}</time>
-
-          </div>
+      <div>
+        <h2 class="card-title h1-responsive pt-3 mb-5 font-bold ulanimate" style="color:white;" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0"><strong>{{page.title}}</strong></h2>
+        <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
+        <time>{{ page.date | date_to_string }}</time>
+        </div>
           <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for karate network.
           </p>
-          <a class="btn btn-outline-white btn-md"><i class="fas fa-clone left"></i> Dataset files</a>
+            <a class="btn btn-outline-white btn-md" href="{{site.url}}">
+              <i class="fas fa-clone left"></i> Dataset files</a>
         </div>
       </div>
     </div>
 
-
-    <!-- Start of Cell-->
+    <!-- Start of Cell -- Description-->
     <div class="col-xs-12
-          col-sm-6
-          col-md-6
-          col-lg-6">
+          col-sm-12
+          col-md-4
+          col-lg-4">
         <div class="box zoom" >
-        <div class="w3-container" style="width:100%;  margin-top:20px;">
-            <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-              <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                <h3 class="w3-text-white ulanimate trans" style="margin-left:10px;">Description</h3>
+        <div class="w3-container" style="width:100%; ">
+            <div class="w3-card-4" style="">
+              <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+                <i class="fa fa-table mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                <h3 class="w3-text-white ulanimate trans" style="flex:1;margin-left:10px;">Description</h3>
               </header>
               <div class="w3-container">
                 <p>{{ page.description}}</p>
               </div>
-
           </div>
         </div>
         </div>
 
-<!-- end of cell-->
-<!-- Start of Cell-->
+
+<!-- end of cell description-->
+<!-- Start of Cell columns 2-Meta data-->
 <div class="box .row.row-eq-height zoom" >
-<div class="w3-container" style="width:100%;  margin-top:20px;">
-    <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-      <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-        <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+  <div class="w3-container" style="width:100%;">
+    <div class="w3-card-4" style="">
+      <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;display:flex;">
+        <i class="far fa-question-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+        <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
       </header>
       <div class="w3-container">
-        <table class="table table-striped">
-          <tr><td>Categories: </td><td>{{ page.categories}}</td></tr>
-          <tr><td>Size: </td><td>{{ page.size}}</td></tr>
-          <tr><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-          <tr><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-          <tr><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-          <tr><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
-        </table>
+            <table class="">
+              <tr class="zoom"><td class="tag">|E|: </td><td>{{ page.two-e}}</td></tr>
+              <tr class="zoom"><td class="tag">LCC: </td><td>{{ page.two-lcc}}</td></tr>
+              <tr class="zoom"><td class="tag">Density: </td><td>{{ page.two-density}}</td></tr>
+              <tr class="zoom"><td class="tag">Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
+              <tr class="zoom"><td class="tag">Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
+              <tr class="zoom"><td class="tag">Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
+              <tr class="zoom"><td class="tag">Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
+              <tr class="zoom"><td class="tag">Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
+              <tr class="zoom"><td class="tag">Diameter: </td><td>{{ page.two-diameter}}</td></tr>
+              <tr class="zoom"><td class="tag">CC: </td><td>{{ page.two-cc}}</td></tr>
+              <tr class="zoom"><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+            </table>
+          </div>
+
       </div>
-
+    </div>
+    </div>
   </div>
-</div>
-</div>
-<!-- end of cell-->
 
-<!-- Start of Cell-->
-          <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graphs</h3>
-                  </header>
-                  <div class="w3-container">
-                    <table class="table table-striped">
-                        <tr><td class="">|V|: </td><td>{{ page.v}}</td></tr>
-                        <tr><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
-                        <tr><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                        <tr><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                        <tr><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
-                      </table>
-                  </div>
-              </div>
-            </div>
-            </div>
-</div>
-        <!-- end of cell-->
+<!-- end of cell- Column 2 - Meta data-->
 
-        <!-- Start of Cell-->
+<!-- Start of Cell Hyper degree dist- Bar Chart-->
         <div class="col-xs-12
-              col-sm-6
-              col-md-6
-              col-lg-6">
-            <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4" style="border-radius: 0px 0px 0px 0px;">
-                  <header class="w3-container w3-blue w3-padding-small ulanimate" style="border-radius: 0px 0px 0 0;">
-                    <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Meta Data</h3>
-                  </header>
+              col-sm-12
+              col-md-4
+              col-lg-4">
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%;">
+              <div class="w3-card-4">
+                <header class="w3-container text-white w3-blue w3-padding-small" style="display:flex;">
+                  <i class="fas fa-chart-bar mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="ulanimate text-white">Degree Distribution</h3>
+                </header>
                   <div class="w3-container">
-                    <table class="">
-                      <tr><td class="tag">|E|: </td><td>{{ page.two-e}}</td></tr>
-                      <tr><td class="tag">LCC: </td><td>{{ page.two-lcc}}</td></tr>
-                      <tr><td class="tag">Density: </td><td>{{ page.two-density}}</td></tr>
-                      <tr><td class="tag">Number of triangles: </td><td>{{ page.two-triangle}}</td></tr>
-                      <tr><td class="tag">Min degree: </td><td>{{ page.two-min-degree}}</td></tr>
-                      <tr><td class="tag">Max degree: </td><td>{{ page.two-max-degree}}</td></tr>
-                      <tr><td class="tag">Avg degree: </td><td>{{ page.two-avg-degree}}</td></tr>
-                      <tr><td class="tag">Power law exp.:  </td><td>{{ page.two-power-law-exp}}</td></tr>
-                      <tr><td class="tag">Diameter: </td><td>{{ page.two-diameter}}</td></tr>
-                      <tr><td class="tag">CC: </td><td>{{ page.two-cc}}</td></tr>
-                      <tr><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
-                    </table>
+                    <canvas id="myChart-degDist"></canvas>
                   </div>
-
+                </div>
               </div>
             </div>
-            </div>
 
-<!-- end of cell-->
-<!-- Start of Cell-->
 
-            <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Hypergraph Degree Distribution</h3>
-                  </header>
-                  <div class="w3-container">
-                    <canvas id="myChart"></canvas>
 
-                  </div>
+<!-- end of cell Hyper degree dist- Bar Chart-->
 
-              </div>
-            </div>
-            </div>
-
-<!-- end of cell-->
-<div class="">
-
-</div>
-
-<!-- Start of Cell-->
+<!-- Start of Cell Distribution parameters - donust chart-->
 
             <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;  margin-top:20px;">
+            <div class="w3-container" style="width:100%;">
                 <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white ulanimate">Pie Chart</h3>
+                  <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                    <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                    <h3 class="w3-text-white ulanimate">Edge Distribution</h3>
                   </header>
                   <div class="w3-container">
-                    <canvas id="myChart-donut"></canvas>
+                    <canvas id="myChart-edgeDist"></canvas>
                     </div>
                   </div>
-
+                </div>
               </div>
-            </div>
-            </div>
-
-<!-- end of cell-->
-
-</div>
-</div>
-</div>
-<!-- Start of Cell-->
-            <div class="" >
-            <div class="w3-container" style="margin-top:20px;">
-                <div class="w3-card-4" style="border-radius:10px 10px 0 0">
-                  <header class="w3-container w3-blue w3-padding-small ">
-                    <h3 class="w3-text-white">Visualization</h3>
-                  </header>
-                      <div class="container" style="">
-                        <div class="row">
-                          <div class="col-md-6 col-sm-6 col-xs-12">
-                          <!--panel # 1 -->
-                          <div class="">
-                              <div class="card zoom">
-                                <canvas id="myChart-line" class="" style=""></canvas>
-                            </div>
-                              </div>
-                              <!--panel # 1 end -->
-                            </div>
-                            <br>
-                          <div class="col-md-6 col-sm-6 col-xs-12">
-                        <!--panel # 2 start -->
-                        <div class="">
-                          <div class="card zoom">
-                            <canvas id="myChart-polar" style=""></canvas>
-                          </div>
-                        </div>
-                          <!--panel # 2  ends-->
-                          </div>
-
-                        </div>
+              <div class="box .row.row-eq-height zoom" >
+              <div class="w3-container" style="width:100%;">
+                  <div class="w3-card-4">
+                    <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                      <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                      <h3 class="w3-text-white ulanimate">Two Degree Distribution</h3>
+                    </header>
+                    <div class="w3-container">
+                      <canvas id="myChart-twoDeg"></canvas>
                       </div>
-                    <br>
-                    <!--Starting list group here -->
-            <!--      <div class="row">
-                      <div class="col">
-
-
-                        <div class="list-group">
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
-                          <span class="badge badge-primary badge-pill badge-secondary">55</span>
-                          </a>
-
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 2
-                          <span class="badge badge-primary badge-pill badge-danger">23</span>
-                          </a>
-
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 3
-                            <span class="badge badge-primary badge-pill badge-success">109</span>
-                          </a>
-
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 4
-                          <span class="badge badge-primary badge-pill badge-dark">10</span>
-                          </a>
-
-                          <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled">Dump 5
-                          <span class="badge badge-primary badge-pill badge-warning">0</span>
-                          </a>
-                        </div>
-                        </div>   -->
-                      <!--Ends here -->
-                      <!--Starting list group here -->
-                <!--      <div class="col">
-
-
-                          <div class="list-group">
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
-                            <span class="badge badge-primary badge-pill badge-secondary">55</span>
-                            </a>
-
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 2
-                            <span class="badge badge-primary badge-pill badge-danger">23</span>
-                            </a>
-
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 3
-                              <span class="badge badge-primary badge-pill badge-success">109</span>
-                            </a>
-
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 4
-                            <span class="badge badge-primary badge-pill badge-dark">10</span>
-                            </a>
-
-                            <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled">Dump 5
-                            <span class="badge badge-primary badge-pill badge-warning">0</span>
-                            </a>
-                          </div>
-                          </div> -->
-                        <!--Ends here -->
-                        <!--Starting list group here -->
-              <!--          <div class="col">
-
-
-                            <div class="list-group">
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 1
-                              <span class="badge badge-primary badge-pill badge-secondary">55</span>
-                              </a>
-
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 2
-                              <span class="badge badge-primary badge-pill badge-danger">23</span>
-                              </a>
-
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 3
-                                <span class="badge badge-primary badge-pill badge-success">109</span>
-                              </a>
-
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action">Dump 4
-                              <span class="badge badge-primary badge-pill badge-dark">10</span>
-                              </a>
-
-                              <a href="#" class="list-group-item d-flex justify-content-between align-items-center list-group-item-action disabled">Dump 5
-                              <span class="badge badge-primary badge-pill badge-warning">0</span>
-                              </a>
-                            </div>
-                              </div> -->
-                          <!--Ends here -->
-
-                          <!-- table_-->
-                          <div class="container-fluid" style="">
-                            <div class="row">
-                              <div class="col">
-                                <table class="table table-hover">
-                                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-                                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-                                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-                                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-                                  </table>
-                              </div>
-                              <div class="col">
-                                <table class="table table-hover">
-                                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-                                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-                                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-                                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-                                  </table>
-                              </div>
-                              <div class="col">
-                                <table class="table table-hover">
-                                  <tr><td><i class="fa fa fa-brain"></i><span style="margin-left:10px;">Neural Network</span></td><td><span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:33%;">57</span></td></tr>
-                                  <tr><td><i class="fa fa fa-user"></i><span style="margin-left:10px;">Interactive Network</span></td><td><span class="badge badge-primary badge-pill badge-success pull-right" style="!important; font-weight:300;margin-left:33%;">231</span></td></tr>
-                                  <tr><td><i class="fa fa fa-envelope"></i><span style="margin-left:10px;">Labeled Network</span></td><td><span class="badge badge-primary badge-pill badge-warning pull-right" style="!important; font-weight:300;margin-left:33%;">527</span></td></tr>
-                                  <tr><td><i class="fa fa fa-plane"></i><span style="margin-left:10px;">Power Network</span></td><td><span class="badge badge-primary badge-pill badge-danger pull-right" style="!important; font-weight:300;margin-left:33%;">457</span></td></tr>
-                                    </table>
-
-                            </div>
-                          </div>
-
-
-
-                          <!-- table_-->
-                          </div>
-
+                    </div>
                   </div>
-                  </div>
-
-
-              </div>
-            </div>
+                </div>
             </div>
 
+<!-- end of cell Distribution parameters - donust chart-->
+
+
+<!-- Start of Cell 2-section graphs-->
+<div class="col-xs-12
+      col-sm-12
+      col-md-4
+      col-lg-4">
+  <div class="box .row.row-eq-height zoom" >
+    <div class="w3-container" style="width:100%; ">
+        <div class="w3-card-4" style="">
+          <div class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+            <i class="fas fa-chart-line mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+            <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graphs</h3>
+          </div>
+          <div class="container">
+          <!--  <div class="card">
+              <ul class="list-group list-group-flush">
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              </ul>
+            </div> -->
+            <table class="table">
+                <tr class="tab-zoom"><td class="">|V|: </td><td>{{ page.v}}</td></tr>
+                <tr class="tab-zoom"><td class="">|E|:  </td><td>{{ page.e}}</td></tr>
+                <tr class="tab-zoom"><td class="">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                <tr class="tab-zoom"><td class="">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                <tr class="tab-zoom"><td class="">Modularity: </td><td>{{ page.modularity}}</td></tr>
+              </table>
+          </div>
+      </div>
+    </div>
+    </div>
+        <!-- end of cell 2-section graphs-->
+        <!-- Start of Cell hyper details-->
+
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%; ">
+              <div class="w3-card-4" style="">
+                <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+                  <i class="fas fa-info-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+                </header>
+                <div class="w3-container">
+                  <table class="table">
+                    <tr class="tab-zoom"><td>Categories: </td><td>{{ page.categories}}</td></tr>
+                    <tr class="tab-zoom"><td>Size: </td><td>{{ page.size}}</td></tr>
+                    <tr class="tab-zoom"><td>Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+                    <tr class="tab-zoom"><td>Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+                    <tr class="tab-zoom"><td>Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+                    <tr class="tab-zoom"><td>Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+                  </table>
+                </div>
+            </div>
+          </div>
+          </div>
+
+        <!-- end of cell hyper details-->
+
+      </div>
+    </div>
+
+<!-- Start of Cell Visualization chart with Categories-->
 
 <!-- end of cell-->
-
-
     <!-- content -->
   </article>
-</div>
 
-
-
-<script>
-  var options = {
-    seriesBarDistance: 10
-  };
-
-  var responsiveOptions = [
-    ['screen and (max-width: 640px)', {
-      seriesBarDistance: 5,
-      axisX: {
-        labelInterpolationFnc: function (value) {
-          return value[0];
-        }
-      }
-    }]
-  ];
-
-  {% assign data_file = {{page.data-name}} %}
-
-var data = {
-  labels: {{ site.data[data_file].labels | jsonify}},
-  series: {{ site.data[data_file].series | jsonify }}
-}
-
-new Chartist.Line('#line-chart', data ,options, responsiveOptions, {
-low: 0,
-showArea: true
-});
-
-  new Chartist.Bar('#bar-chart', data,options, responsiveOptions, {
-    low: 0,
-    showArea: true
-  });
-
-var data_pie = {
-  series: {{ site.data[data_file].series | jsonify }}
-};
-
-var sum = function(a, b) { return a + b };
-
-new Chartist.Pie('pie-chart', data_pie, {
-  labelInterpolationFnc: function(value) {
-return Math.round(value / data.series.reduce(sum) * 100) + '%';
-}
-});
-
-var chart = new Chartist.Pie('#pie-chart', {
-  //series index is specified bcz pie chart accepts only one sereis
-series: {{ site.data.file.series[0] | jsonify}},
-labels: {{ site.data.file.labels | jsonify }}
-}, {
-donut: true,
-showLabel: true
-});
-
-chart.on('draw', function(data) {
-if(data.type === 'slice') {
-// Get the total path length in order to use for dash array animation
-var pathLength = data.element._node.getTotalLength();
-
-// Set a dasharray that matches the path length as prerequisite to animate dashoffset
-data.element.attr({
-  'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-});
-
-// Create animation definition while also assigning an ID to the animation for later sync usage
-var animationDefinition = {
-  'stroke-dashoffset': {
-    id: 'anim' + data.index,
-    dur: 1000,
-    from: -pathLength + 'px',
-    to:  '0px',
-    easing: Chartist.Svg.Easing.easeOutQuint,
-    // We need to use `fill: 'freeze'` otherwise our animation will fall back to initial (not visible)
-    fill: 'freeze'
-  }
-};
-
-// If this was not the first slice, we need to time the animation so that it uses the end sync event of the previous animation
-if(data.index !== 0) {
-  animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-}
-
-// We need to set an initial value before the animation starts as we are not in guided mode which would do that for us
-data.element.attr({
-  'stroke-dashoffset': -pathLength + 'px'
-});
-
-// We can't use guided mode as the animations need to rely on setting begin manually
-// See http://gionkunz.github.io/chartist-js/api-documentation.html#chartistsvg-function-animate
-data.element.animate(animationDefinition, false);
-}
-});
-
-// For the sake of the example we update the chart every time it's created with a delay of 8 seconds
-chart.on('created', function() {
-if(window.__anim21278907124) {
-clearTimeout(window.__anim21278907124);
-window.__anim21278907124 = null;
-}
-window.__anim21278907124 = setTimeout(chart.update.bind(chart), 10000);
-});
-
-var data_line = new Chartist.Line('.ct-chart-line', {
-  labels: {{ site.data[data_file].labels | jsonify }},
-  series: {{ site.data[data_file].series | jsonify }}
-});
-
-// Listening for draw events that get emitted by the Chartist chart
-chart.on('draw', function(data) {
-  // If the draw event was triggered from drawing a point on the line chart
-  if(data.type === 'point') {
-    // We are creating a new path SVG element that draws a triangle around the point coordinates
-    var triangle = new Chartist.Svg('path', {
-      d: ['M',
-        data.x,
-        data.y - 15,
-        'L',
-        data.x - 15,
-        data.y + 8,
-        'L',
-        data.x + 15,
-        data.y + 8,
-        'z'].join(' '),
-      style: 'fill-opacity: 1'
-    }, 'ct-area');
-
-    // With data.element we get the Chartist SVG wrapper and we can replace the original point drawn by Chartist with our newly created triangle
-    data.element.replace(triangle);
-  }
-});
-
-var data_bar = {
-  labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-  series: [
-    [5, 4, 3, 7, 5, 10, 3, 4, 8, 10, 6, 8],
-    [3, 2, 9, 5, 4, 6, 4, 6, 7, 8, 7, 4]
-  ]
-};
-
-new Chartist.Bar('.ct-chart-bar', data, options, responsiveOptions);
-
-  </script>
 
 <!-- ChartsJS Script -->
-
-{% assign data_file_chartjs = {{page.data-name}} %}
-
 <script type="text/javascript">
+  //Data Prepration for ChartJS
+
+function _dataIntoLabelsAndSeries(data){
+  var label = [];
+  var series = [];
+  var datalist = data;
+  let dataArray = datalist.split(',');
+  for(var i=0;i<=dataArray.length-1;i++){
+
+    var list = dataArray[i].split(':');
+
+    label.push(list[0]);
+    series.push(list[1]);
+  }
+
+  var arr = [ label, series]
+  return arr
+}
+
+var dd = {{ page.degree-distribution | jsonify }}
+var _degDist_ = _dataIntoLabelsAndSeries(dd)
+
+var ed = {{ page.edges-distribution | jsonify }}
+var _edDist_ = _dataIntoLabelsAndSeries(ed)
+
+var tdd = {{ page.two-degree-distribution | jsonify }}
+var _tdegDist_ = _dataIntoLabelsAndSeries(tdd)
+//  var json = {};
+//  for (var i = 0 ; i < label.length; i++) {
+//    json[label[i] = series[i]];
+//  }
+//  console.log(json);
+
+console.log(_degDist_);
+console.log(_edDist_);
+console.log(_tdegDist_);
+
+//Mobile Browsers detection
+function detectmob() {
+ if( navigator.userAgent.match(/Android/i)
+ || navigator.userAgent.match(/webOS/i)
+ || navigator.userAgent.match(/iPhone/i)
+ || navigator.userAgent.match(/iPad/i)
+ || navigator.userAgent.match(/iPod/i)
+ || navigator.userAgent.match(/BlackBerry/i)
+ || navigator.userAgent.match(/Windows Phone/i)
+ ){
+    return true;
+  }
+ else {
+    return false;
+  }
+}
+
+{% assign data_file_chartjs =  page.data-name  %}
+
+
 var data = '';
-  var ctx = document.getElementById('myChart').getContext('2d');
+  var ctx = document.getElementById('myChart-degDist').getContext('2d');
   var myChart = new Chart(ctx, {
       type: 'bar',
       data: {
-          labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+          labels: _degDist_[0],
           datasets: [{
               label: '# of Votes',
-              data: {{ site.data[data_file_chartjs].series | jsonify}},
+              data: _degDist_[1],
               backgroundColor: [
                   'rgba(255, 99, 132, 0.2)',
                   'rgba(54, 162, 235, 0.2)',
@@ -602,6 +396,7 @@ var data = '';
           }]
       },
       options: {
+          legend: {display: !detectmob()},
           scales: {
               yAxes: [{
                   ticks: {
@@ -613,14 +408,17 @@ var data = '';
   });
 
 //DonutChart-Script
-var ctx = document.getElementById('myChart-donut').getContext('2d');
+
+//console.log(!detectmob());
+var ctx = document.getElementById('myChart-edgeDist').getContext('2d');
 var myDoughnutChart = new Chart(ctx, {
-    type: 'doughnut',
+
+    type: 'bar',
     data: {
-        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        labels: _edDist_[0],
         datasets: [{
             label: '# of Votes',
-            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            data: _edDist_[1],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -633,6 +431,7 @@ var myDoughnutChart = new Chart(ctx, {
         }]
     },
     options: {
+        legend: {display: !detectmob()},
         scales: {
             yAxes: [{
                 ticks: {
@@ -643,16 +442,16 @@ var myDoughnutChart = new Chart(ctx, {
     }
 });
 
-//Bar-chart-Script
-var ctx = document.getElementById('myChart-line').getContext('2d');
+//Bar-chart-Script//////}
+var ctx = document.getElementById('myChart-twoDeg').getContext('2d');
 
 var myLineChart = new Chart(ctx, {
-    type: 'line',
+    type: 'bar',
     data: {
-        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        labels: _tdegDist_[0],
         datasets: [{
             label: '# of Votes',
-            data: {{ site.data[data_file_chartjs].series | jsonify}},
+            data: _tdegDist_[1],
             backgroundColor: [
                 'rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
@@ -664,6 +463,7 @@ var myLineChart = new Chart(ctx, {
         }]
     },
     options: {
+        legend: {display: !detectmob()},
         scales: {
             yAxes: [{
                 ticks: {
@@ -674,13 +474,13 @@ var myLineChart = new Chart(ctx, {
     }
 });
 
-//Polar-chart-Script
+//Polar-chart-Script////
 var ctx = document.getElementById('myChart-polar').getContext('2d');
 
 var myLineChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
-        labels: {{ site.data[data_file_chartjs].labels | jsonify}},
+        labels: {{ site.data[data_file].series | jsonify }},
         datasets: [{
             label: '# of Votes',
             data: {{ site.data[data_file_chartjs].series | jsonify}},
@@ -696,6 +496,7 @@ var myLineChart = new Chart(ctx, {
         }]
     },
     options: {
+        legend: {display: !detectmob()},
         scales: {
             yAxes: [{
                 ticks: {
@@ -706,4 +507,11 @@ var myLineChart = new Chart(ctx, {
     }
 });
 
+
+
+
 </script>
+{{page.somekind}}
+{{page.somekind}}
+{{page.somekind}}
+{{page.somekind}}
