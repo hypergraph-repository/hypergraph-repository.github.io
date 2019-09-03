@@ -377,7 +377,7 @@
 </style>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-2 fixed">
+    <div class="col-md-2 col-lg-2 col-sm-12">
       <!-- Sidebar navigation -->
       <h2>Filters</h2>
 
@@ -427,7 +427,7 @@
 </div></div>
 
     </div>
-    <div class="col-10">
+    <div class="col-md-10 col-lg-10 col-sm-12">
 
       <div class="content-post">
 
@@ -511,6 +511,7 @@
                 $("#btn-date").click(function(){
                   console.log(filter_date[0].value);
                   $('#table_id').dataTable({
+                    responsive: true,
                     destroy:true,
                     "aoSearchCols": [   { "sSearch": filter_date[0].value },
                                       null,
@@ -526,6 +527,7 @@
                   $("#btn-cat").click(function(){
                     console.log(filter_cat[0].value);
                     $('#table_id').dataTable({
+                      reponsive: true,
                       destroy:true,
                       "aoSearchCols": [ null,
                                         null,
@@ -539,6 +541,7 @@
                     $("#btn-size").click(function(){
                       console.log(filter_size[0].value);
                       $('#table_id').dataTable({
+                        responsive: true,
                         destroy:true,
                         "aoSearchCols": [ null,
                                           null,
@@ -555,6 +558,7 @@
                       $("#btn-vertex").click(function(){
                         console.log(filter_vertex[0].value);
                         $('#table_id').dataTable({
+                          responsive: true,
                           destroy:true,
                           "aoSearchCols": [ null,
                                             null,
@@ -569,6 +573,7 @@
                         $("#btn-edges").click(function(){
                           console.log(filter_edges[0].value);
                           $('#table_id').dataTable({
+                            responsive: true,
                             destroy:true,
                             "aoSearchCols": [ null,
                                               null,
@@ -584,6 +589,7 @@
 		                  .split('&')[0]
 		                  .split('=')[1];
                       $('#table_id').dataTable( {
+                        responsive: true,
                                       "aoSearchCols": [ null,
                                                         null,
                                                         { "sSearch": searchString },
