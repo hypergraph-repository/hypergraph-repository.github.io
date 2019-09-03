@@ -31,6 +31,10 @@
         <p class="mx-5 mb-5">{{ page.subtitle}}</p>
         {% if page.title == "Explore"%}
             <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle" hidden><span>Explore </span> </button>
+        {% elsif page.title == "What is hypergraph?"%}
+            <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle" hidden><span>Explore </span> </button>
+        {% elsif page.title == "Simplegraphs.jl"%}
+            <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle" hidden><span>Explore </span> </button>
         {% else %}
             <button type="button" class="btn btn-outline-white btn-md"  onclick="location.href='explore'" style="vertical-align:middle"><span>Explore </span> </button>
         {% endif %}
