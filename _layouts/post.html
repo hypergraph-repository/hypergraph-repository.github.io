@@ -125,7 +125,7 @@ layout: default
         <div class="post-date" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">
         <time>{{ page.date | date_to_string }}</time>
         </div>
-          <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for karate network.
+          <p class="mx-5 mb-5" data-aos="fade-left" data-aos-delay="300" data-aos-offset="0">Here you can find visualize details of all the data for {{ page.title}} network.
           </p>
             <a class="btn btn-outline-white btn-md" href="{{site.url}}">
               <i class="fas fa-clone left"></i> Dataset files</a>
@@ -136,8 +136,8 @@ layout: default
     <!-- Start of Cell -- Description-->
     <div class="col-xs-12
           col-sm-12
-          col-md-4
-          col-lg-4">
+          col-md-6
+          col-lg-6">
         <div class="box zoom" >
         <div class="w3-container" style="width:100%; ">
             <div class="w3-card-4" style="">
@@ -181,71 +181,11 @@ layout: default
       </div>
     </div>
     </div>
-  </div>
 
 <!-- end of cell- Column 2 - Meta data-->
 
-<!-- Start of Cell Hyper degree dist- Bar Chart-->
-        <div class="col-xs-12
-              col-sm-12
-              col-md-4
-              col-lg-4">
-          <div class="box .row.row-eq-height zoom" >
-          <div class="w3-container" style="width:100%;">
-              <div class="w3-card-4">
-                <header class="w3-container text-white w3-blue w3-padding-small" style="display:flex;">
-                  <i class="fas fa-chart-bar mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                  <h3 class="ulanimate text-white">Degree Distribution</h3>
-                </header>
-                  <div class="w3-container">
-                    <canvas id="myChart-degDist"></canvas>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-
-<!-- end of cell Hyper degree dist- Bar Chart-->
-
-<!-- Start of Cell Distribution parameters - donust chart-->
-
-            <div class="box .row.row-eq-height zoom" >
-            <div class="w3-container" style="width:100%;">
-                <div class="w3-card-4">
-                  <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
-                    <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                    <h3 class="w3-text-white ulanimate">Edge Distribution</h3>
-                  </header>
-                  <div class="w3-container">
-                    <canvas id="myChart-edgeDist"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="box .row.row-eq-height zoom" >
-              <div class="w3-container" style="width:100%;">
-                  <div class="w3-card-4">
-                    <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
-                      <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                      <h3 class="w3-text-white ulanimate">Two Degree Distribution</h3>
-                    </header>
-                    <div class="w3-container">
-                      <canvas id="myChart-twoDeg"></canvas>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-
-<!-- end of cell Distribution parameters - donust chart-->
-
-
 <!-- Start of Cell 2-section graphs-->
-<div class="col-xs-12
-      col-sm-12
-      col-md-4
-      col-lg-4">
+
   <div class="box .row.row-eq-height zoom" >
     <div class="w3-container" style="width:100%; ">
         <div class="w3-card-4" style="">
@@ -297,6 +237,63 @@ layout: default
           </div>
 
         <!-- end of cell hyper details-->
+
+
+  </div>
+
+  <div class="col-xs-12
+  col-sm-12
+  col-md-6
+  col-lg-6">
+<!-- Start of Cell Distribution parameters - donust chart-->
+<!-- Start of Cell Hyper degree dist- Bar Chart-->
+
+          <div class="box .row.row-eq-height zoom" >
+          <div class="w3-container" style="width:100%;">
+              <div class="w3-card-4">
+                <header class="w3-container text-white w3-blue w3-padding-small" style="display:flex;">
+                  <i class="fas fa-chart-bar mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="ulanimate text-white">Degree Distribution</h3>
+                </header>
+                  <div class="w3-container">
+                    <canvas id="myChart-degDist"></canvas>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+<!-- end of cell Hyper degree dist- Bar Chart-->
+            <div class="box .row.row-eq-height zoom" >
+            <div class="w3-container" style="width:100%;">
+                <div class="w3-card-4">
+                  <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                    <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                    <h3 class="w3-text-white ulanimate">Edge Distribution</h3>
+                  </header>
+                  <div class="w3-container">
+                    <canvas id="myChart-edgeDist"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="box .row.row-eq-height zoom" >
+              <div class="w3-container" style="width:100%;">
+                  <div class="w3-card-4">
+                    <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
+                      <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                      <h3 class="w3-text-white ulanimate">Two Degree Distribution</h3>
+                    </header>
+                    <div class="w3-container">
+                      <canvas id="myChart-twoDeg"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+<!-- end of cell Distribution parameters - donust chart-->
+
+
 
       </div>
     </div>
