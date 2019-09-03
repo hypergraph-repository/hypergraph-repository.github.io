@@ -20,7 +20,7 @@ permalink: /explore/
 }
 
 .active, .collapsible:hover {
-  background-color: #555;
+  background-color: ;
 }
 
 .collapsible:after {
@@ -36,11 +36,13 @@ permalink: /explore/
 }
 
 .content {
-  padding: 0 18px;
+  padding: ;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
-  background-color: #f1f1f1;
+.form-control {
+
+  }
 }
 </style>
 </style>
@@ -52,23 +54,48 @@ permalink: /explore/
 
 
 <p>Select the filter type:</p>
-<button class="collapsible btn btn-success">By Date</button>
+
+<button class="collapsible btn btn-success" id="btn_date">By Date</button>
 <div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-</div>
-<button class="collapsible btn btn-danger">By Categories</button>
-<div class="content">
-  <table class="table table-dark table-hover">
-    <tr><td>Item 1</td></tr>
-    <tr><td>Item 2</td></tr>
-    <tr><td>Item 3</td></tr>
-    <tr><td>Item 4</td></tr>
-  </table>
+  <div class="input-group">
+  <input type="text" class="form-control" id="form-control-date" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <button type="input-group-text" id="btn-date" style="width:5em;">Filter</button>
   </div>
-<button class="collapsible btn btn-warning">By Size</button>
-<div class="content">
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 </div>
+  </div>
+<button class="collapsible btn btn-danger" id="btn_cat">By Categories</button>
+<div class="content">
+  <div class="input-group">
+  <input type="text" class="form-control" id="form-control-cat" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <button type="input-group-text" id="btn-cat" style="width:5em;">Filter</button>
+  </div>
+</div></div>
+<button class="collapsible btn btn-warning" id="btn_size">By Size</button>
+<div class="content">
+  <div class="input-group">
+  <input type="text" class="form-control" id="form-control-size" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <button type="input-group-text" id="btn-size" style="width:5em;">Filter</button>
+  </div>
+</div></div>
+<button class="collapsible btn btn-dark" id="btn_vertex">By Vertex</button>
+<div class="content">
+  <div class="input-group">
+  <input type="text" class="form-control" id="form-control-vertex" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <button type="input-group-text" id="btn-vertex" style="width:5em;">Filter</button>
+  </div>
+</div></div>
+<button class="collapsible btn btn-primary" id="btn_edges">By Edges</button>
+<div class="content">
+  <div class="input-group">
+  <input type="text" class="form-control" id="form-control-edges" aria-label="Amount (to the nearest dollar)">
+  <div class="input-group-append">
+    <button type="input-group-text" id="btn-edges" style="width:5em;">Filter</button>
+  </div>
+</div></div>
 
     </div>
     <div class="col-10">
@@ -114,7 +141,85 @@ permalink: /explore/
           </table>
 
           <script>
+
               $(document).ready( function() {
+                  var filter_date = $("#form-control-date");
+                  var filter_cat = $("#form-control-cat");
+                  var filter_size = $("#form-control-size");
+                  var filter_vertex = $("#form-control-vertex");
+                  var filter_edges = $("#form-control-edges");
+                //date
+                $("#btn-date").click(function(){
+                  console.log(filter_date[0].value);
+                  $('#table_id').dataTable({
+                    destroy:true,
+                    "aoSearchCols": [   { "sSearch": filter_date[0].value },
+                                      null,
+                                      null,
+                                      null
+                                      ]
+                  });
+                  });
+
+
+
+                  // category
+                  $("#btn-cat").click(function(){
+                    console.log(filter_cat[0].value);
+                    $('#table_id').dataTable({
+                      destroy:true,
+                      "aoSearchCols": [ null,
+                                        null,
+                                        { "sSearch": filter_cat[0].value },
+                                        null
+                                        ]
+                    });
+                    });
+
+                    //Size
+                    $("#btn-size").click(function(){
+                      console.log(filter_size[0].value);
+                      $('#table_id').dataTable({
+                        destroy:true,
+                        "aoSearchCols": [ null,
+                                          null,
+                                          null,
+                                          null,
+                                          null,
+                                          { "sSearch": filter_size[0].value },
+                                          null
+                                       ]
+                      });
+                      });
+
+                      //Vertex
+                      $("#btn-vertex").click(function(){
+                        console.log(filter_vertex[0].value);
+                        $('#table_id').dataTable({
+                          destroy:true,
+                          "aoSearchCols": [ null,
+                                            null,
+                                            null,
+                                            { "sSearch": filter_vertex[0].value },
+                                            null
+                                            ]
+                        });
+                        });
+
+                        //Edges
+                        $("#btn-edges").click(function(){
+                          console.log(filter_edges[0].value);
+                          $('#table_id').dataTable({
+                            destroy:true,
+                            "aoSearchCols": [ null,
+                                              null,
+                                              null,
+                                              null,
+                                              { "sSearch": filter_edges[0].value },
+                                              null
+                                              ]
+                          });
+                          });
               var searchHash = location.hash.substr(1),
               searchString = searchHash.substr(searchHash.indexOf('filter='))
 		                  .split('&')[0]
@@ -127,6 +232,7 @@ permalink: /explore/
                                                         ]
          } );
                 } )
+
           </script>
 
 
