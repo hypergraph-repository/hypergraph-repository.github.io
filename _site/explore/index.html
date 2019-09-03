@@ -413,6 +413,32 @@
                    
                    <tr >
                      <td>
+                       <a href="http://localhost:4000/hypergraph-repository.github.io/explore#filter=category1">
+                   category1
+                       </a>
+                     </td>
+                     <td>
+                       <input type="checkbox" value="category1" name="filter-datatable">
+
+                       </td>
+                     </tr>
+                     
+                   
+                   <tr >
+                     <td>
+                       <a href="http://localhost:4000/hypergraph-repository.github.io/explore#filter=category2">
+                   category2
+                       </a>
+                     </td>
+                     <td>
+                       <input type="checkbox" value="category2" name="filter-datatable">
+
+                       </td>
+                     </tr>
+                     
+                   
+                   <tr >
+                     <td>
                        <a href="http://localhost:4000/hypergraph-repository.github.io/explore#filter=social-network">
                    Social-Network
                        </a>
@@ -441,7 +467,7 @@
                    </table>
                    </div>
                </div>
-      <button type="input-group-text" id="btn-size" style="width:5em;">Filter</button>
+      <button class="btn btn-dark" type="input-group-text" id="btn-size" style="">Filter</button>
 
       </div>
 
@@ -454,16 +480,16 @@
 
 </div></div>
 <!--Other fileter with text box -->
-
+<!--
 <button class="collapsible btn btn-warning" id="btn_size" data-aos="fade-up" data-aos-delay="100">By Size</button>
 <div class="content">
   <div class="input-group">
-  <input type="text" class="form-control" id="form-control-size" aria-label="Amount (to the nearest dollar)">
+  <input type="text" class="form-control" id="form-control-size">
   <div class="input-group-append">
     <button type="input-group-text" id="btn-size2" style="width:5em;">Filter</button>
   </div>
 </div></div>
-<!--
+
 <button class="collapsible btn btn-dark" id="btn_vertex" data-aos="fade-up" data-aos-delay="100">By Vertex</button>
 <div class="content">
   <div class="input-group">
@@ -545,6 +571,32 @@
                       <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
                   </tr>
                   
+                  <tr>
+                      <td>2019-09-01 22:46:41 +0200</td>
+                      <td>Karate Network</td>
+                      <td><div style="width:10px;">category2</div></td>
+                      <td>30</td>
+                      <td>11</td>
+                      <td>15</td>
+                      <td>person</td>
+                      <td>school</td>
+                      <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
+                      <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
+                  </tr>
+                  
+                  <tr>
+                      <td>2019-09-01 22:46:41 +0200</td>
+                      <td>Karate Network</td>
+                      <td><div style="width:10px;">category1</div></td>
+                      <td>30</td>
+                      <td>11</td>
+                      <td>15</td>
+                      <td>person</td>
+                      <td>school</td>
+                      <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
+                      <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
+                  </tr>
+                  
               </tbody>
           </table>
 
@@ -585,17 +637,56 @@
                                         ]
                     });
                     });
-                    $("#btn_size2").click(function(){
-                      console.log("hi");
+
+
+                    var arr =[];
+                    $("#btn-size2").click(function(){
+                      $('input[name="filter-datatable"]:checked').each(function() {
+                          arr.push(this.value);
+                        });
+                        console.log(arr);
+                        var items = "";
+                        for(var i=0;i<=arr.length-1;i++){
+
+                           if(i == arr.length-1)
+                           {
+                             items+= arr[i]
+                           }
+                           else{
+                             items += arr[i]+"|"
+                           }
+                        }
+                        console.log(items);
+
                     });
+
                     //Size
+                    var arrCheckbox =[];
                     $("#btn-size").click(function(){
                       console.log(filter_size[0].value);
+                      $('input[name="filter-datatable"]:checked').each(function() {
+                          arrCheckbox.push(this.value);
+                        });
+                        console.log(arrCheckbox);
+                        var items = "";
+                        for(var i=0;i<=arrCheckbox.length-1;i++){
+
+                           if(i == arrCheckbox.length-1)
+                           {
+                             items+= arrCheckbox[i]
+                           }
+                           else{
+                             items += arrCheckbox[i]+"|"
+                           }
+                        }
+                        console.log(items);
                       $('#table_id').DataTable({
                         destroy: true,
                         "iDisplayLength": 100,
                          "search": {regex: true}
-                       }).column(2).search("quantum-computing|Social-network", true, false ).draw();
+                       }).column(2).search(items, true, false ).draw();
+                       items = "";
+                       arrCheckbox = [];
 
 //                      $('#table_id').dataTable({
 //                      responsive: true,

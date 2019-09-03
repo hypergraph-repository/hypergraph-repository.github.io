@@ -119,7 +119,7 @@ permalink: /explore/
                    </table>
                    </div>
                </div>
-      <button type="input-group-text" id="btn-size" style="width:5em;">Filter</button>
+      <button class="btn btn-dark" type="input-group-text" id="btn-size" style="">Filter</button>
 
       </div>
 
@@ -132,16 +132,16 @@ permalink: /explore/
 
 </div></div>
 <!--Other fileter with text box -->
-
+<!--
 <button class="collapsible btn btn-warning" id="btn_size" data-aos="fade-up" data-aos-delay="100">By Size</button>
 <div class="content">
   <div class="input-group">
-  <input type="text" class="form-control" id="form-control-size" aria-label="Amount (to the nearest dollar)">
+  <input type="text" class="form-control" id="form-control-size">
   <div class="input-group-append">
     <button type="input-group-text" id="btn-size2" style="width:5em;">Filter</button>
   </div>
 </div></div>
-<!--
+
 <button class="collapsible btn btn-dark" id="btn_vertex" data-aos="fade-up" data-aos-delay="100">By Vertex</button>
 <div class="content">
   <div class="input-group">
@@ -237,17 +237,56 @@ permalink: /explore/
                                         ]
                     });
                     });
-                    $("#btn_size2").click(function(){
-                      console.log("hi");
+
+
+                    var arr =[];
+                    $("#btn-size2").click(function(){
+                      $('input[name="filter-datatable"]:checked').each(function() {
+                          arr.push(this.value);
+                        });
+                        console.log(arr);
+                        var items = "";
+                        for(var i=0;i<=arr.length-1;i++){
+
+                           if(i == arr.length-1)
+                           {
+                             items+= arr[i]
+                           }
+                           else{
+                             items += arr[i]+"|"
+                           }
+                        }
+                        console.log(items);
+
                     });
+
                     //Size
+                    var arrCheckbox =[];
                     $("#btn-size").click(function(){
                       console.log(filter_size[0].value);
+                      $('input[name="filter-datatable"]:checked').each(function() {
+                          arrCheckbox.push(this.value);
+                        });
+                        console.log(arrCheckbox);
+                        var items = "";
+                        for(var i=0;i<=arrCheckbox.length-1;i++){
+
+                           if(i == arrCheckbox.length-1)
+                           {
+                             items+= arrCheckbox[i]
+                           }
+                           else{
+                             items += arrCheckbox[i]+"|"
+                           }
+                        }
+                        console.log(items);
                       $('#table_id').DataTable({
                         destroy: true,
                         "iDisplayLength": 100,
                          "search": {regex: true}
-                       }).column(2).search("quantum-computing|Social-network", true, false ).draw();
+                       }).column(2).search(items, true, false ).draw();
+                       items = "";
+                       arrCheckbox = [];
 
 //                      $('#table_id').dataTable({
 //                      responsive: true,
