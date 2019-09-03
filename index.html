@@ -77,8 +77,9 @@ overflow: auto;
 .table-wrapper-scroll-y {
 display: block;
 }
-.badge{
-  padding: 10px;
+.badge-pill{
+  padding: 12px;
+  text-color: black;
 }
  </style>
  <div class="container-fluid">
@@ -112,12 +113,9 @@ display: block;
                   <div class="col-12">
 
                     <div class="table-wrapper-scroll-y my-custom-scrollbar" data-aos="fade-left" data-aos-delay="100">
-                    <table class="table table-hover">
-                      <tr class="font-weight-bold">
-                        <td class="font-weight-bold">
-                          CATEGORIES
-                        </td>
-                        <td> </td>
+
+                    <table class="table table-border">
+                      <th>Categories</th>
                       {% for category in categories_list %}
                       {{category[0].index}}
                       <tr >
@@ -127,7 +125,7 @@ display: block;
                           </a>
                         </td>
                         <td>
-                          <span class="badge blue-gradient pull-right" style="!important; font-weight:300;margin-left:5px;">
+                          <span class="badge badge-pill badge-light aqua-gradient pull-right font-weight-bold text-dark" style="!important; font-weight:300;margin-left:5px;">
                               {{ category[1].size }}
                             </span>
                           </td>

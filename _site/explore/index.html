@@ -272,7 +272,7 @@
       </li>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="http://localhost:4000/simplegraphs" data-aos="fade-left" data-aos-delay="400">Simplegraphs.jl</a>
+        <a class="nav-link" href="https://github.com/pszufe/SimpleHypergraphs.jl" data-aos="fade-left" data-aos-delay="400">Simplegraphs.jl<i class="fab fa-github fa-1x"></i></a>
       </li>
     </ul>
     <!-- <form class="form-inline my-lg-0">
@@ -383,7 +383,7 @@
 
 
 <p data-aos="fade-up" data-aos-delay="100">Select the filter type:</p>
-
+<!--
 <button class="collapsible btn btn-success" id="btn_date" data-aos="fade-up" data-aos-delay="100">By Date</button>
 <div class="content">
   <div class="input-group">
@@ -392,23 +392,78 @@
     <button type="input-group-text" id="btn-date" style="width:5em;">Filter</button>
   </div>
 </div>
-  </div>
+  </div> -->
 <button class="collapsible btn btn-danger" id="btn_cat" data-aos="fade-up" data-aos-delay="100">By Categories</button>
 <div class="content">
   <div class="input-group">
-  <input type="text" class="form-control" id="form-control-cat" aria-label="Amount (to the nearest dollar)">
-  <div class="input-group-append">
-    <button type="input-group-text" id="btn-cat" style="width:5em;">Filter</button>
-  </div>
+
+
+    <div class="" data-aos="fade-left" data-aos-delay="300" data-spy="scroll" data-target=".table">
+      <div class="row">
+
+          
+          
+               <div class="col-12">
+
+                 <div class="table-wrapper-scroll-y my-custom-scrollbar" data-aos="fade-left" data-aos-delay="100">
+
+                 <table class="table table-border">
+
+                   
+                   
+                   <tr >
+                     <td>
+                       <a href="http://localhost:4000/hypergraph-repository.github.io/explore#filter=social-network">
+                   Social-Network
+                       </a>
+                     </td>
+                     <td>
+                       <input type="checkbox" value="social-network" name="filter-datatable">
+
+                       </td>
+                     </tr>
+                     
+                   
+                   <tr >
+                     <td>
+                       <a href="http://localhost:4000/hypergraph-repository.github.io/explore#filter=quantum-computing">
+                   quantum-computing
+                       </a>
+                     </td>
+                     <td>
+                       <input type="checkbox" value="quantum-computing" name="filter-datatable">
+
+                       </td>
+                     </tr>
+                     
+                   
+                 
+                   </table>
+                   </div>
+               </div>
+      <button type="input-group-text" id="btn-size" style="width:5em;">Filter</button>
+
+      </div>
+
+    </div>
+
+
+
+
+
+
 </div></div>
+<!--Other fileter with text box -->
+
 <button class="collapsible btn btn-warning" id="btn_size" data-aos="fade-up" data-aos-delay="100">By Size</button>
 <div class="content">
   <div class="input-group">
   <input type="text" class="form-control" id="form-control-size" aria-label="Amount (to the nearest dollar)">
   <div class="input-group-append">
-    <button type="input-group-text" id="btn-size" style="width:5em;">Filter</button>
+    <button type="input-group-text" id="btn-size2" style="width:5em;">Filter</button>
   </div>
 </div></div>
+<!--
 <button class="collapsible btn btn-dark" id="btn_vertex" data-aos="fade-up" data-aos-delay="100">By Vertex</button>
 <div class="content">
   <div class="input-group">
@@ -424,7 +479,7 @@
   <div class="input-group-append">
     <button type="input-group-text" id="btn-edges" style="width:5em;">Filter</button>
   </div>
-</div></div>
+</div></div> -->
 
     </div>
     <div class="col-md-10 col-lg-10 col-sm-12">
@@ -433,7 +488,7 @@
 
           <div class=" margin" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
 
-          <table id="table_id" style=" font-size: 14px;" class="table table-striped table-bordered">
+          <table id="table_id" style=" font-size: 14px;" class="table">
               <thead>
                   <tr>
                       <th>Date</th>
@@ -441,7 +496,7 @@
                       <th>Categories</th>
                       <th>|V|</th>
                       <th>|E|</th>
-                      <th>Size</th>
+                      <th>Size (MB)</th>
                       <th>Vertex Type</th>
                       <th>Edge Type</th>
                       <th>Share</th>
@@ -457,13 +512,11 @@
                       <td><div style="width:10px;">Social-Network</div></td>
                       <td>35</td>
                       <td>15</td>
-                      <td>10 MB</td>
+                      <td>10</td>
                       <td>person</td>
                       <td>school</td>
                       <td><a href="https://hypergraph-repository.github.io/new-post">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
                       <td><a href="https://hypergraph-repository.github.io/new-post">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
-
-
                   </tr>
                   
                   <tr>
@@ -472,13 +525,11 @@
                       <td><div style="width:10px;">quantum-computing</div></td>
                       <td>32</td>
                       <td>10</td>
-                      <td>5 MB</td>
+                      <td>5</td>
                       <td>person</td>
                       <td>school</td>
                       <td><a href="https://hypergraph-repository.github.io/quantum">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
                       <td><a href="https://hypergraph-repository.github.io/quantum">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
-
-
                   </tr>
                   
                   <tr>
@@ -487,13 +538,11 @@
                       <td><div style="width:10px;">Social-Network</div></td>
                       <td>30</td>
                       <td>11</td>
-                      <td>15 MB</td>
+                      <td>15</td>
                       <td>person</td>
                       <td>school</td>
                       <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-share-2" style="color:blue;"></span> </a></td>
                       <td><a href="https://hypergraph-repository.github.io/karate-network">  <span class="feather-icon icon-eye" style="color:blue;"></span> </a></td>
-
-
                   </tr>
                   
               </tbody>
@@ -536,23 +585,33 @@
                                         ]
                     });
                     });
-
+                    $("#btn_size2").click(function(){
+                      console.log("hi");
+                    });
                     //Size
                     $("#btn-size").click(function(){
                       console.log(filter_size[0].value);
-                      $('#table_id').dataTable({
-                        responsive: true,
-                        destroy:true,
-                        "aoSearchCols": [ null,
-                                          null,
-                                          null,
-                                          null,
-                                          null,
-                                          { "sSearch": filter_size[0].value },
-                                          null
-                                       ]
+                      $('#table_id').DataTable({
+                        destroy: true,
+                        "iDisplayLength": 100,
+                         "search": {regex: true}
+                       }).column(2).search("quantum-computing|Social-network", true, false ).draw();
+
+//                      $('#table_id').dataTable({
+//                      responsive: true,
+//                      destroy:true,
+//                      "aoSearchCols": [ null,
+//                                        null,
+//                                          null,
+//                                        null,
+//                                          null,
+//                                          { "sSearch": filter_size[0].value },
+//                                          null
+//                                       ]
+//                      });
                       });
-                      });
+
+
 
                       //Vertex
                       $("#btn-vertex").click(function(){

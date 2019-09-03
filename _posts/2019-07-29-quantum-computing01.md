@@ -10,7 +10,7 @@ categories: quantum-computing
 cat2: social-network
 by: 'https://en.wikipedia.org/wiki/Zachary%27s_karate_club'
 icon: 'credit-card'
-size: 5 MB
+size: 5
 vertex-type: person
 edge-type: school
 vertex-meta: personal information

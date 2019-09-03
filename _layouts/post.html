@@ -142,7 +142,7 @@ layout: default
         <div class="w3-container" style="width:100%; ">
             <div class="w3-card-4" style="">
               <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
-                <i class="fa fa-table mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                <i class="fa fa-table fa-2x mt-2 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
                 <h3 class="w3-text-white ulanimate trans" style="flex:1;margin-left:10px;">Description</h3>
               </header>
               <div class="w3-container">
@@ -154,12 +154,69 @@ layout: default
 
 
 <!-- end of cell description-->
+
+<!-- Start of Cell hyper details-->
+
+  <div class="box .row.row-eq-height zoom" >
+  <div class="w3-container" style="width:100%; ">
+      <div class="w3-card-4" style="">
+        <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+          <i class="fas fa-info-circle fa-2x mt-2 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+          <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
+        </header>
+        <div class="w3-container">
+          <table class="">
+            <tr class="zoom"><td class="tag">Categories: </td><td>{{ page.categories}}</td></tr>
+            <tr class="zoom"><td class="tag">Size: </td><td>{{ page.size}}</td></tr>
+            <tr class="zoom"><td class="tag">Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
+            <tr class="zoom"><td class="tag">Edge Type: </td><td>{{ page.edge-type}}</td></tr>
+            <tr class="zoom"><td class="tag">Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
+            <tr class="zoom"><td class="tag">Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
+          </table>
+        </div>
+    </div>
+  </div>
+  </div>
+
+<!-- end of cell hyper details-->
+<!-- Start of Cell 2-section graphs-->
+
+  <div class="box .row.row-eq-height zoom" >
+    <div class="w3-container" style="width:100%; ">
+        <div class="w3-card-4" style="">
+          <div class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
+            <i class="fas fa-chart-line fa-2x mt-2 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+            <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Metrics</h3>
+          </div>
+          <div class="container">
+          <!--  <div class="card">
+              <ul class="list-group list-group-flush">
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              <li class="list-group-item">items</li>
+              </ul>
+            </div> -->
+            <table class="">
+                <tr class="zoom"><td class="tag">|V|: </td><td>{{ page.v}}</td></tr>
+                <tr class="zoom"><td class="tag">|E|:  </td><td>{{ page.e}}</td></tr>
+                <tr class="zoom"><td class="tag">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
+                <tr class="zoom"><td class="tag">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
+                <tr class="zoom"><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
+              </table>
+          </div>
+      </div>
+    </div>
+    </div>
+        <!-- end of cell 2-section graphs-->
+
+
+
 <!-- Start of Cell columns 2-Meta data-->
 <div class="box .row.row-eq-height zoom" >
   <div class="w3-container" style="width:100%;">
     <div class="w3-card-4" style="">
       <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;display:flex;">
-        <i class="far fa-question-circle mt-3 " aria-hidden="true" style="flex:0 0 10%"></i>
+        <i class="far fa-question-circle fa-2x mt-2 " aria-hidden="true" style="flex:0 0 10%"></i>
         <h3 class="w3-text-white ulanimate" style="margin-left:10px;">2-Section Graph Metrics</h3>
       </header>
       <div class="w3-container">
@@ -184,60 +241,6 @@ layout: default
 
 <!-- end of cell- Column 2 - Meta data-->
 
-<!-- Start of Cell 2-section graphs-->
-
-  <div class="box .row.row-eq-height zoom" >
-    <div class="w3-container" style="width:100%; ">
-        <div class="w3-card-4" style="">
-          <div class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
-            <i class="fas fa-chart-line mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-            <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Metrics</h3>
-          </div>
-          <div class="container">
-          <!--  <div class="card">
-              <ul class="list-group list-group-flush">
-              <li class="list-group-item">items</li>
-              <li class="list-group-item">items</li>
-              <li class="list-group-item">items</li>
-              </ul>
-            </div> -->
-            <table class="">
-                <tr class="zoom"><td class="tag">|V|: </td><td>{{ page.v}}</td></tr>
-                <tr class="zoom"><td class="tag">|E|:  </td><td>{{ page.e}}</td></tr>
-                <tr class="zoom"><td class="tag">Max Degree: </td><td>{{ page.max-degree}}</td></tr>
-                <tr class="zoom"><td class="tag">Max Edge Size: </td><td>{{ page.max-e-size}}</td></tr>
-                <tr class="zoom"><td class="tag">Modularity: </td><td>{{ page.modularity}}</td></tr>
-              </table>
-          </div>
-      </div>
-    </div>
-    </div>
-        <!-- end of cell 2-section graphs-->
-        <!-- Start of Cell hyper details-->
-
-          <div class="box .row.row-eq-height zoom" >
-          <div class="w3-container" style="width:100%; ">
-              <div class="w3-card-4" style="">
-                <header class="w3-container w3-blue w3-padding-small ulanimate" style="display:flex;">
-                  <i class="fas fa-info-circle mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                  <h3 class="w3-text-white ulanimate" style="margin-left:10px;">Hypergraph Details</h3>
-                </header>
-                <div class="w3-container">
-                  <table class="">
-                    <tr class="zoom"><td class="tag">Categories: </td><td>{{ page.categories}}</td></tr>
-                    <tr class="zoom"><td class="tag">Size: </td><td>{{ page.size}}</td></tr>
-                    <tr class="zoom"><td class="tag">Vertex Type: </td><td>{{ page.vertex-type}}</td></tr>
-                    <tr class="zoom"><td class="tag">Edge Type: </td><td>{{ page.edge-type}}</td></tr>
-                    <tr class="zoom"><td class="tag">Vertex Meta: </td><td>{{ page.vertex-meta}}</td></tr>
-                    <tr class="zoom"><td class="tag">Edge Meta: </td><td>{{ page.edge-meta}}</td></tr>
-                  </table>
-                </div>
-            </div>
-          </div>
-          </div>
-
-        <!-- end of cell hyper details-->
-
 
   </div>
 
@@ -246,14 +249,14 @@ layout: default
   col-md-6
   col-lg-6">
 <!-- Start of Cell Distribution parameters - donust chart-->
-<!-- Start of Cell Hyper degree dist- Bar Chart-->
+
 
           <div class="box .row.row-eq-height zoom" >
           <div class="w3-container" style="width:100%;">
               <div class="w3-card-4">
                 <header class="w3-container text-white w3-blue w3-padding-small" style="display:flex;">
-                  <i class="fas fa-chart-bar mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                  <h3 class="ulanimate text-white">Degree Distribution</h3>
+                  <i class="fas fa-chart-bar fa-2x mt-2 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                  <h3 class="ulanimate text-white">Hypergraph Vertex Degree Distribution</h3>
                 </header>
                   <div class="w3-container">
                     <canvas id="myChart-degDist"></canvas>
@@ -263,12 +266,13 @@ layout: default
             </div>
 
 <!-- end of cell Hyper degree dist- Bar Chart-->
+<!-- Start of Cell Hyper degree dist- Bar Chart-->
             <div class="box .row.row-eq-height zoom" >
             <div class="w3-container" style="width:100%;">
                 <div class="w3-card-4">
                   <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
-                    <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                    <h3 class="w3-text-white ulanimate">Edge Distribution</h3>
+                    <i class="fas fa-chart-pie fa-2x mt-2 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
+                    <h3 class="w3-text-white ulanimate">HyperEdge Degree Distribution</h3>
                   </header>
                   <div class="w3-container">
                     <canvas id="myChart-edgeDist"></canvas>
@@ -276,12 +280,14 @@ layout: default
                   </div>
                 </div>
               </div>
+  <!-- end of cell Hyper degree dist- Bar Chart-->
+  <!-- Start of Cell Hyper degree dist- Bar Chart-->
               <div class="box .row.row-eq-height zoom" >
               <div class="w3-container" style="width:100%;">
                   <div class="w3-card-4">
                     <header class="w3-container w3-blue w3-padding-small " style="display:flex;">
                       <i class="fas fa-chart-pie mt-3 ml-2 " aria-hidden="true" style="flex:0 0 10%"></i>
-                      <h3 class="w3-text-white ulanimate">Two Degree Distribution</h3>
+                      <h3 class="w3-text-white ulanimate">2-Section Hypergraph Degree Distribution</h3>
                     </header>
                     <div class="w3-container">
                       <canvas id="myChart-twoDeg"></canvas>

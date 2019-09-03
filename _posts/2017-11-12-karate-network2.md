@@ -10,7 +10,7 @@ categories: Social-Network
 cat2: social-network
 by: 'https://en.wikipedia.org/wiki/Zachary%27s_karate_club'
 icon: 'credit-card'
-size: 15 MB
+size: 15
 vertex-type: person
 edge-type: school
 vertex-meta: personal information
