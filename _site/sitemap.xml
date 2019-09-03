@@ -24,4 +24,10 @@
 <url>
 <loc>http://localhost:4000/hypergraph-repository.github.io/</loc>
 </url>
+<url>
+<loc>http://localhost:4000/hypergraph-repository.github.io/simplegraphs/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/hypergraph-repository.github.io/what-is-hypergraphs/</loc>
+</url>
 </urlset>
