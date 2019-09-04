@@ -126,7 +126,7 @@ position: relative;left: 2em;
                       <tr>
                         <td>
                           <a href="{{ site.url}}/hypergraph-repository.github.io/explore#filter={{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
-                      {{ category[0] | camelcase }}
+                            {{ category[0] | camelcase }}
                           </a>
                         </td>
                         <td>
@@ -135,6 +135,7 @@ position: relative;left: 2em;
                             </span>
                           </td>
                         </tr>
+
                         {% endfor %}
                       {% endif %}
                     {% assign categories_list = nil %}
