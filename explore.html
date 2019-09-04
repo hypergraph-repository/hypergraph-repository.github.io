@@ -119,8 +119,7 @@ permalink: /explore/
                    </table>
                    </div>
                </div>
-      <button class="btn btn-dark" type="input-group-text" id="btn-size" style="">Filter</button>
-
+    
       </div>
 
     </div>
@@ -239,30 +238,12 @@ permalink: /explore/
                     });
 
 
-                    var arr =[];
-                    $("#btn-size2").click(function(){
-                      $('input[name="filter-datatable"]:checked').each(function() {
-                          arr.push(this.value);
-                        });
-                        console.log(arr);
-                        var items = "";
-                        for(var i=0;i<=arr.length-1;i++){
 
-                           if(i == arr.length-1)
-                           {
-                             items+= arr[i]
-                           }
-                           else{
-                             items += arr[i]+"|"
-                           }
-                        }
-                        console.log(items);
 
-                    });
 
                     //Size
                     var arrCheckbox =[];
-                    $("#btn-size").click(function(){
+                  $('input[name="filter-datatable"]').on("change",function(){
                       //console.log(filter_size[0].value);
                       $('input[name="filter-datatable"]:checked').each(function() {
                           arrCheckbox.push(this.value);
