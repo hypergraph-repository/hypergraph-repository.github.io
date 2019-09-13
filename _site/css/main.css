@@ -169,7 +169,7 @@ img {
         color: #0081ff; }
 
 .footer {
-  min-height: 200px;
+  min-height: 20px;
   background: #ECECEC;
   overflow: hidden; }
   .footer .footer--block a {

@@ -893,28 +893,44 @@ position: relative;left: 2em;
     
 
 <!-- Footer -->
+<style media="screen">
+  @media screen and (max-width: 1000px) {
+    .logo {
+      display: none;
+    }
+  }
+</style>
 
 
     <footer class="container-fluid pt-4 cyan" data-aos="fade-up" data-aos-delay="" data-aos-offset="0">
       <div class="row align-items-center justify-content-center">
-      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 pull-left" data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">
-        <img class="img-responsive" src="http://localhost:4000/hypergraph-repository.github.io/assets/img/unisa_logo.png" alt="unisa" style="width:5em;">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-1 " data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">
+        <img class="img-fluid logo" src="http://localhost:4000/hypergraph-repository.github.io/assets/img/unisa_logo.png" alt="unisa" style="width:5em;">
       </div>
-      <!-- Copyright -->
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-10">
         <div class="footer-copyright text-center py-3">© 2019
           <a href="/hypergraph-repository.github.io/"><span>Hypergraph Repository</span> </a>
           </div>
         </div>
-      <!-- Copyright -->
-      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1 align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="100" data-aos-offset="0">
-        <img class="img-responsive pull-right img-circle" src="http://localhost:4000/hypergraph-repository.github.io/assets/img/isislab_logo.png" alt="isislab" style="width:5em">
+
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-1 pull-right" data-aos="fade-up" data-aos-delay="200" data-aos-offset="0">
+        <img class="img-fluid pull-right img-circle logo" src="http://localhost:4000/hypergraph-repository.github.io/assets/img/isislab_logo.png" alt="isislab" style="width:5em">
       </div>
     </div>
     </footer>
 
 
   <!-- Footer -->
+
+<style media="screen">
+  @media screen and (max-width: 568px) {
+      .img-responsive{
+        font-size:10px;
+      }
+
+  }
+</style>
 
   </div>
   <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
