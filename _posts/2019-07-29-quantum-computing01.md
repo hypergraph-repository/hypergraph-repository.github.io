@@ -3,7 +3,7 @@ layout: post
 title: "Quantum Computing"
 page: quantum-computing01
 date:   2019-09-01 17:46:41 -0300
-description: "The hypergraphs of the Karate Network. A social network of a karate club was studied by Wayne W. Zachary for a period of three years from 1970 to 1972. The network captures 34 members of a karate club, documenting links between pairs of members who interacted outside the club. During the study a conflict arose between the administrator John A and instructor Mr. Hi (pseudonyms), which led to the split of the club into two. Half of the members formed a new club around Mr. Hi; members from the other part found a new instructor or gave up karate. Based on collected data Zachary correctly assigned all but one member of the club to the groups they actually joined after the split."
+description: "TQuantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically."
 data-name: file
 link: http://bo.com/karate.hgf
 categories: quantum-computing
@@ -19,8 +19,8 @@ v: 32
 e: 10
 max-e-size: 4
 max-degree: 4
-degree-distribution: 2:10,3:20,4:25,5:40
-edges-distribution: 2:10,5:20
+degree-distribution: 2:10,3:30,4:5,5:40
+edges-distribution: 2:15,5:20
 modularity: 0.40
 two-lcc: 10
 two-e: 40
@@ -33,5 +33,5 @@ two-power-law-exp: 2
 two-diameter: 4
 two-cc: 0.6
 two-modularity: 0.6
-two-degree-distribution: 2:10,5:12
+two-degree-distribution: 2:15,5:20
 ---
