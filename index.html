@@ -101,7 +101,7 @@ position: relative;left: 2em;
                <div class="col-12">
                    <a href="#{{ category | downcase | downcase | url_escape | strip | replace: ' ', '-' }}">
                      {{ category | camelcase }}</a>
-                   <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;">
+                   <span class="badge badge-primary badge-pill badge-dark pull-right" style="!important; font-weight:300;margin-left:5px;-webkit-text-stroke: medium;">
                      {{ site.tags[category].size }}
                    </span>
 
@@ -130,7 +130,7 @@ position: relative;left: 2em;
                           </a>
                         </td>
                         <td>
-                          <span class="badge badge-pill badge-light aqua-gradient pull-right font-weight-bold text-dark" style="!important; font-weight:300;margin-left:5px;">
+                          <span class="badge badge-pill badge-light aqua-gradient pull-right font-weight-bold text-dark" style="!important; font-weight:300;margin-left:5px;-webkit-text-stroke: medium;">
                               {{ category[1].size }}
                             </span>
                           </td>

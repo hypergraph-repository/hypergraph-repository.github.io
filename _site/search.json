@@ -14,7 +14,7 @@
   
     {
       "title"       : "Quantum Computing",
-      "description" : "TQuantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically.",
+      "description" : "TQuantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such compteutation, which can be implemented theoretically or physically.",
       "date"        : "2019-09-01 22:46:41 +0200",
       "categories"  : "quantum-computing",
       "by"          : "https://en.wikipedia.org/wiki/Zachary%27s_karate_club",

@@ -3,7 +3,7 @@ layout: post
 title: "Quantum Computing"
 page: quantum-computing01
 date:   2019-09-01 17:46:41 -0300
-description: "TQuantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such computation, which can be implemented theoretically or physically."
+description: "TQuantum computing is the use of quantum-mechanical phenomena such as superposition and entanglement to perform computation. A quantum computer is used to perform such compteutation, which can be implemented theoretically or physically."
 data-name: file
 link: http://bo.com/karate.hgf
 categories: quantum-computing
