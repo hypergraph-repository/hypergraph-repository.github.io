@@ -621,8 +621,6 @@
                   });
                   });
 
-
-
                   // category
                   $("#btn-cat").click(function(){
                     console.log(filter_cat[0].value);
@@ -637,11 +635,8 @@
                     });
                     });
 
-
-
-
-
                     //Size
+                    //checkboxes filter implementation
                     var arrCheckbox =[];
                   $('input[name="filter-datatable"]').on("change",function(){
                       //console.log(filter_size[0].value);
@@ -651,12 +646,11 @@
                         console.log(arrCheckbox);
                         var items = "";
                         for(var i=0;i<=arrCheckbox.length-1;i++){
-
-                           if(i == arrCheckbox.length-1)
-                           {
+                           if(i == arrCheckbox.length-1){
+                             //single_checkbox
                              items+= arrCheckbox[i]
-                           }
-                           else{
+                           } else{
+                             //multiple_boxes_checked
                              items += arrCheckbox[i]+"|"
                            }
                         }
@@ -666,8 +660,8 @@
                         "iDisplayLength": 100,
                          "search": {regex: true}
                        }).column(2).search(items, true, false ).draw();
-                       items = "";
-                       arrCheckbox = [];
+                       items = ""; //assign_null
+                       arrCheckbox = []; //empty_array
 
 //                      $('#table_id').dataTable({
 //                      responsive: true,
@@ -681,9 +675,7 @@
 //                                          null
 //                                       ]
 //                      });
-                      });
-
-
+                      }); //checkboxes-filter-implementation-end
 
                       //Vertex
                       $("#btn-vertex").click(function(){
@@ -728,18 +720,11 @@
                                                         ]
          } );
                 } )
-
           </script>
-
-
-
         </div>
-
       </div>
     </div>
-
   </div>
-
 </div>
 <script type="text/javascript">
 var coll = document.getElementsByClassName("collapsible");
